@@ -1,0 +1,15 @@
+# site rouge-rose.net
+# fichiers systemes
+.DS_Store
+
+# tout ignorer
+/*
+
+
+# sauf
+!/css
+!/img
+!index.html
+!.gitignore
+!/squelettes
+!README
