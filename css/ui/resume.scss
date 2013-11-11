@@ -1,0 +1,18 @@
+/*==============================
+=            resume            =
+==============================*/
+
+/*==========  article-resume  ==========*/
+.article-resume {
+    position: relative;
+}
+.article-resume__titre {
+    @include font-size(15px);
+    small {
+        @include font-size(13px,$line-height: false);
+
+    }
+}
+
+/*-----  End of resume  ------*/
+

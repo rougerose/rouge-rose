@@ -1,0 +1,16 @@
+/*=================================
+=            page-foot            =
+=================================*/
+
+.page-foot {
+    margin-bottom: 4em;
+    @include font-size(14px);
+    color: darken($color-soft,20%);
+    p {
+        padding-right: $base-spacing-unit/2;
+        margin-bottom: 0;
+    }
+}
+
+/*-----  End of page-foot  ------*/
+

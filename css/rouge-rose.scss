@@ -1,0 +1,25 @@
+@charset "UTF-8";
+/*------------------------------------*\
+    rouge-rose.css
+\*------------------------------------*/
+
+// setup
+@import "vars",
+        "inuit.css/inuit";
+
+// ui
+@import "ui/font",
+        "ui/typo",
+        // page
+        "ui/page",
+        "ui/page-head",
+        "ui/page-content",
+        "ui/page-foot",
+        // navigation
+        "ui/navigation",
+        // resume
+        "ui/resume",
+        // images
+        "ui/sprite",
+        // divers
+        "ui/divers";

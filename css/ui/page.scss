@@ -1,0 +1,18 @@
+/*============================
+=            page            =
+============================*/
+html{
+    font-family:$base-font-family;
+    background-color:#f9f9f9;
+    color:#444;
+    @include vendor(text-size-adjust, none);
+}
+
+.page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 $base-spacing-unit/2;
+}
+
+/*-----  End of page  ------*/
+

@@ -1,0 +1,23 @@
+/*==================================
+=            navigation            =
+==================================*/
+
+// .nav {}
+    // .nav__item {}
+
+.nav-main {
+    line-height: 110px;
+    .nav {
+        margin-bottom: 0;
+    }
+}
+    .nav-main__item {
+        @extend .grid__item;
+        @extend .one-half;
+        @include media-query(palm) {
+            text-align: center;
+        }
+    }
+
+/*-----  End of navigation  ------*/
+
