@@ -1,0 +1,25 @@
+<BOUCLE_article(ARTICLES){id_article}>
+<article class="article-self">
+    <div class="grid__item lap-and-up-two-thirds push--lap-and-up-one-third">
+        <div class="grid">
+            <div class="grid__item">
+                <header class="article-self__header">
+                    <h1 class="hN article-self__titre">#TITRE[ <small>(#SOUSTITRE)</small>]</h1>
+                </header>
+            </div><!-- /.grid__item -->
+            <div class="grid__item lap-and-up-one-half article-self__meta">
+                <p><time datetime="[(#DATE_REDAC|affdate{Y-m})]">[(#DATE_REDAC|nom_mois)][ (#DATE_REDAC|annee)]</time></p>
+            </div><!-- /.grid__item -->
+            [<div class="grid__item lap-and-up-one-half article-self__chapo">
+                (#CHAPO)
+            </div><!-- /.grid__item -->]
+        </div><!-- /.grid -->
+    </div><!-- /.grid__item -->
+
+    [<div class="grid__item article-self__texte">
+        <div class="grid">
+            (#TEXTE)
+        </div><!-- /.grid -->
+    </div>]
+</article>
+</BOUCLE_article>

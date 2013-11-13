@@ -6,8 +6,6 @@
         <div class="page-content" role="main">
             <INCLURE{fond=content/#ENV{type-page},env} />
         </div><!-- /.page-content -->
-        <footer class="page-foot" role="contentinfo">
-            <INCLURE{fond=footer/#ENV{type-page},env} />
-        </footer>
+        <INCLURE{fond=footer/#ENV{type-page},env} />
     </div><!-- /.grid -->
 </body>
