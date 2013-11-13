@@ -3,7 +3,7 @@
 ============================*/
 html{
     font-family:$base-font-family;
-    background-color:#f9f9f9;
+    background-color:#fff;
     color:#444;
     @include vendor(text-size-adjust, none);
 }

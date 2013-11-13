@@ -16,7 +16,7 @@
                 <BOUCLE_adresse(ADRESSES){id_auteur}>
                 <p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="streetAddress">#VOIE</span> <span itemprop="postalCode">#CODE_POSTAL</span> <span itemprop="addressLocality">#VILLE</span> <BOUCLE_pays(PAYS){code=#PAYS}><span itemprop="addressCountry">#NOM</span></BOUCLE_pays></p>
                 </BOUCLE_adresse>
-                <p class="message"><a href="#" class="link--soft"><:local:send_message:></a></p>
+                <p class="message"><a href="#URL_PAGE{message}" class="link--soft"><:local:send_message:></a></p>
             </section>
             </BOUCLE_contact>
         </div><!-- /.grid -->

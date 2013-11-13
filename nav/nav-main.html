@@ -3,8 +3,6 @@
         <BOUCLE_rubriques(RUBRIQUES){id_rubrique=1}>
         <li class="nav-main__item"><a href="#URL_RUBRIQUE" class="link--soft">#TITRE</a></li>
         </BOUCLE_rubriques>
-        <BOUCLE_a_propos(ARTICLES){page=a_propos}>
-        <li class="nav-main__item"><a href="[(#URL_SITE_SPIP)/#about]" class="link--soft">#TITRE</a></li>
-        </BOUCLE_a_propos>
+        <li class="nav-main__item"><a href="[(#URL_SITE_SPIP)/#about]" class="link--soft"><:local:about:></a></li>
     </ul>
 </nav><!-- /.nav-main -->

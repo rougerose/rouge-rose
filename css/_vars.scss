@@ -42,7 +42,7 @@ $use-flyout:        false;
 $use-arrows:        false;
 $use-sprite:        false;
 $use-icon-text:     false;
-$use-beautons:      false;
+$use-beautons:      true;
 $use-lozenges:      false;
 $use-rules:         false;
 $use-stats:         false;
@@ -74,4 +74,6 @@ $base-font-family: 'Plantin',Georgia,sans-serif;
  // couleurs
  $color-soft: #898989;
  $color-link: #000;
- $color-hover : #DA0F00;
+ $color-hover : #da0f00;
+ $color-ok: #c1e732;
+$color-error: #e75d32;
