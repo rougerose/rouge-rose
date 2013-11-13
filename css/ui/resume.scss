@@ -9,8 +9,7 @@
 .article-resume__titre {
     @include font-size(15px);
     small {
-        @include font-size(13px,$line-height: false);
-
+        font-size: 80%;
     }
 }
 

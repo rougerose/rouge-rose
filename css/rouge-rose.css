@@ -2983,15 +2983,29 @@ a {
 .hN {
   font-weight: normal; }
 
-.hN--separateur {
-  margin-bottom: 1em; }
-  .hN--separateur:after {
+.section-hN {
+  color: #000; }
+
+/*==========  rule  ==========*/
+.rule--top {
+  margin-top: 1em; }
+  .rule--top:before {
     display: block;
     width: 30px;
-    margin-top: .5em;
-    border-bottom: 1px solid #000;
-    content: ' '; }
+    content: ' ';
+    border-top: 1px solid #000;
+    margin-bottom: 1em; }
 
+.rule--bottom {
+  margin-bottom: 1em; }
+  .rule--bottom:after {
+    display: block;
+    width: 30px;
+    content: ' ';
+    border-bottom: 1px solid #000;
+    margin-top: 1em; }
+
+/*==========  divers  ==========*/
 small {
   font-size: 90%; }
 
@@ -3044,11 +3058,18 @@ html {
   .page-foot p {
     padding-right: 12px;
     margin-bottom: 0; }
+  .page-foot .content--aside {
+    font-size: 12px;
+    font-size: 0.75rem;
+    line-height: 2; }
 
 /*-----  End of page-foot  ------*/
 /*==================================
 =            navigation            =
 ==================================*/
+.nav__item--active a {
+  color: #000; }
+
 .nav-main {
   line-height: 110px; }
   .nav-main .nav {
@@ -3157,8 +3178,7 @@ html {
   font-size: 0.9375rem;
   line-height: 1.6; }
   .article-resume__titre small {
-    font-size: 13px;
-    font-size: 0.8125rem; }
+    font-size: 80%; }
 
 /*-----  End of resume  ------*/
 /*============================
@@ -3171,7 +3191,8 @@ html {
   padding-bottom: .75em;
   font-size: 18px;
   font-size: 1.125rem;
-  line-height: 1.33333; }
+  line-height: 1.33333;
+  color: #000; }
   .article-self__titre small {
     color: #898989; }
 

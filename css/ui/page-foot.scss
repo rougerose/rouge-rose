@@ -9,6 +9,9 @@
         padding-right: $base-spacing-unit/2;
         margin-bottom: 0;
     }
+    .content--aside {
+        @include font-size(12px);
+    }
 }
 
 /*-----  End of page-foot  ------*/

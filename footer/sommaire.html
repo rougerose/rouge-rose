@@ -4,11 +4,12 @@
         <div class="grid">
             <BOUCLE_contact(AUTEURS){id_auteur=1}>
             <section class="grid__item lap-and-up-one-half">
-                <h1 class="hN epsilon hN--separateur"><:local:about:></h1>
+                <h1 class="hN epsilon section-hN rule--bottom"><:local:about:></h1>
                 #BIO
+                #INCLURE{fond=modeles/credits}
             </section
             ><section class="grid__item lap-and-up-one-half" itemscope itemtype="http://schema.org/Person">
-                <h1 class="hN epsilon hN--separateur"><:local:contact:></h1>
+                <h1 class="hN epsilon section-hN rule--bottom"><:local:contact:></h1>
                 <h3 class="visuallyhidden" itemprop="name">#NOM</h3>
                 <BOUCLE_numero(NUMEROS){id_auteur}>
                 <p itemprop="telephone"><a href="tel:#NUMERO" class="link--soft">#NUMERO</a></p>

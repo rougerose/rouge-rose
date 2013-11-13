@@ -4,6 +4,11 @@
 
 // .nav {}
     // .nav__item {}
+    .nav__item--active {
+        a {
+            color: #000;
+        }
+    }
 
 .nav-main {
     line-height: 110px;
