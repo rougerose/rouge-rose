@@ -1,0 +1,24 @@
+    #SET{media-layout,''} #SET{media-type,''}
+[(#REM) les valeurs possibles de image_reduire ]
+    #SET{image_reduire,#ARRAY{one-third,342,two-thirds,709,three-thirds,1076}}
+[(#REM) valeur par défaut ]
+    #SET{valeur_reduction,1076}
+[(#REM) regexp ]
+    #SET{regexp,lap-and-up-|desk-|portable-|lap-|palm-}
+
+<BOUCLE_image_portfolio(DOCUMENTS){id_document}>
+<BOUCLE_mots(MOTS){id_document}{technique=oui}>
+[(#ID_GROUPE|=={1}|oui)
+    [(#TITRE|match{#GET{regexp}}|oui)
+        [(#SET{format,#TITRE|replace{#GET{regexp}}})]
+        [(#SET{valeur_reduction,#GET{image_reduire}|table_valeur{#GET{format}}})]
+    ]
+    [(#SET{media-layout, [(#GET{media-layout}|concat{[ (#TITRE*)]})]})]
+][(#ID_GROUPE|=={2}|oui)
+    [(#SET{media-type, [(#GET{media-type}|concat{[ (#TITRE*)]})]})]
+]</BOUCLE_mots>
+<div class="grid__item[ (#GET{media-layout})]">
+    <span class="media-container[ (#GET{media-type})]">
+        <a href="#URL_DOCUMENT" class="mediabox">[<img src="(#FICHIER|image_reduire{#GET{valeur_reduction},0}|extraire_attribut{src})" alt="">]</a>
+    </span>
+</div><!-- /.grid__item --></BOUCLE_image_portfolio>

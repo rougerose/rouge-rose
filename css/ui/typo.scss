@@ -4,15 +4,22 @@
 
 /*==========  liens  ==========*/
 a {
+    border-bottom: 0 dotted transparent;
     color: $color-link;
     text-decoration: none;
-    @include vendor(transition,color 0.35s ease-out);
+    @include vendor(transition,color 0.35s ease-out,border 0.35s ease-out);
     &:hover {
         color: $color-hover;
+        border-bottom-style: solid;
+        border-bottom-color: $color-hover;
     }
 }
-.link--soft {
+.link--soft {color: $color-soft;}
+.spip_url {
     color: $color-soft;
+    // border-bottom: 1px dotted $color-soft;
+    border-bottom-width: 1px;
+    border-bottom-color: $color-soft;
 }
 
 /*==========  headings  ==========*/

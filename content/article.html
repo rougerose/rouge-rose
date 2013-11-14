@@ -8,18 +8,20 @@
                 </header>
             </div><!-- /.grid__item -->
             <div class="grid__item lap-and-up-one-half article-self__meta">
-                <p><time datetime="[(#DATE_REDAC|affdate{Y-m})]">[(#DATE_REDAC|nom_mois)][ (#DATE_REDAC|annee)]</time></p>
+                [<p><time datetime="(#DATE_REDAC|affdate{Y-m})">[(#DATE_REDAC|nom_mois) ][(#DATE_REDAC|annee)]</time></p>]
             </div><!-- /.grid__item -->
-            [<div class="grid__item lap-and-up-one-half article-self__chapo">
-                (#CHAPO)
+            [<div class="grid__item lap-and-up-one-half article-self__texte">
+                (#TEXTE)
             </div><!-- /.grid__item -->]
         </div><!-- /.grid -->
     </div><!-- /.grid__item -->
 
-    [<div class="grid__item article-self__texte">
+    <div class="grid__item article-self__portfolio">
         <div class="grid">
-            (#TEXTE)
+            <BOUCLE_documents(DOCUMENTS){id_article}{par titre,id_document}>[
+            (#INCLURE{fond=modeles/media_portfolio,id_document})
+            ]</BOUCLE_documents>
         </div><!-- /.grid -->
-    </div>]
+    </div><!-- /.grid__item -->
 </article>
 </BOUCLE_article>
