@@ -1,0 +1,22 @@
+/*================================
+=            colorbox            =
+================================*/
+
+/*  Plugin spip mediabox/colorbox
+    -------------------------------
+    content-box au lieu de border-box sur le conteneur 
+    sinon l'image est partiellement masquée. 
+*/
+#colorbox {
+   &,
+   &:before,
+   &:after{
+       @include vendor(box-sizing, content-box);
+   }
+}
+#cboxLoadedContent {
+    @include vendor(box-sizing,content-box);
+}
+
+/*-----  End of colorbox  ------*/
+

@@ -19,9 +19,27 @@
     <div class="grid__item article-self__portfolio">
         <div class="grid">
             <BOUCLE_documents(DOCUMENTS){id_article}{par titre,id_document}>[
-            (#INCLURE{fond=modeles/media_portfolio,id_document})
+            (#INCLURE{fond=modeles/media_portfolio,id_document,id_article})
             ]</BOUCLE_documents>
         </div><!-- /.grid -->
     </div><!-- /.grid__item -->
+    <div class="grid__item">
+        <div class="grid grid--center">
+            <nav class="grid__item lap-and-up-one-third">
+                <ul class="nav nav-prev_next">
+                    <BOUCLE_precedent(ARTICLES){id_rubrique}{precedent}{!par date_redac}>
+                    [<li class="nav-prev_next__item"><a href="(#URL_ARTICLE)" rel="prev" class="sprite s s--prev" title="[(#TITRE|couper{20}|attribut_html)]"><:local:previous:></a></li>]
+                    </BOUCLE_precedent>
+                    <li class="nav-prev_next__item"><span class="sprite s s--prev"><:local:previous:></span></li>
+                    <//B_precedent>
+                    <BOUCLE_suivant(ARTICLES){id_rubrique}{suivant}{!par date_redac}>
+                    [<li class="nav-prev_next__item"><a href="(#URL_ARTICLE)" rel="next" class="sprite s s--next" title="[(#TITRE|couper{20}|attribut_html)]"><:local:next:></a></li>]
+                    </BOUCLE_suivant>
+                    <li class="nav-prev_next__item"><span class="sprite s s--next"><:local:next:></span></li>
+                    <//B_suivant>
+                </ul>
+            </nav>
+        </div><!-- /.grid -->
+    </div>
 </article>
 </BOUCLE_article>

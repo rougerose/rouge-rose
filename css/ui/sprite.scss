@@ -3,13 +3,19 @@
 ===============================*/
 
 .s{
-    background-image:url(../img/css/rouge-rose_sprite.svg);
+    background: url(../img/css/rouge-rose_sprite.svg) no-repeat 0 0;
 }
 .s--rouge-rose-logo{
     width:204px;
     height:70px;
-    background-position:0 0;
-    background-repeat: no-repeat;
+}
+.s--next {
+    background-position: 100% -173px;
+    width: 100%;
+}
+.s--prev {
+    background-position: 0 -127px;
+    width: 100%;
 }
 
 /*-----  End of sprites  ------*/

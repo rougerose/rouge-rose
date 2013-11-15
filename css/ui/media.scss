@@ -4,7 +4,7 @@
 
 /*==========  media-container  ==========*/
 .media-container {
-    display: block;
+    display: inline-block;
     background: #b9b9b9;
     margin-bottom: 1.5em;
     -webkit-box-shadow: 0 0 5px rgba(185,185,185,0.5);
@@ -21,22 +21,6 @@
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
 }
-
-/*==========  mediabox  ==========*/
-
-/*  Plugin spip mediabox/colorbox
-    -------------------------------
-    content-box au lieu de border-box sur le conteneur 
-    sinon l'image est partiellement masquée. 
-*/
-#colorbox {
-   &,
-   &:before,
-   &:after{
-       @include vendor(box-sizing, content-box);
-   }
-}
-#cboxLoadedContent{overflow:hidden !important;}
 
 /*-----  End of media  ------*/
 
