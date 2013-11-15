@@ -3200,7 +3200,7 @@ html {
   width: 50%;
   padding-left: 24px; }
   .nav-prev_next__item > a {
-    opacity: 0.5;
+    opacity: 0.3;
     -webkit-transition: opacity 0.35s ease-out;
     -moz-transition: opacity 0.35s ease-out;
     -ms-transition: opacity 0.35s ease-out;
@@ -3209,7 +3209,7 @@ html {
     .nav-prev_next__item > a:hover {
       opacity: 1; }
   .nav-prev_next__item > span {
-    opacity: 0.2; }
+    opacity: 0.1; }
 
 /*-----  End of navigation  ------*/
 /*=============================
@@ -3306,6 +3306,7 @@ html {
 =============================*/
 /*==========  media-container  ==========*/
 .media-container {
+  width: 100%;
   display: inline-block;
   background: #b9b9b9;
   margin-bottom: 1.5em;
@@ -3390,18 +3391,13 @@ html {
 =            sprites            =
 ===============================*/
 .s {
-  background: url(../img/css/rouge-rose_sprite.png) no-repeat 0 0; }
-
-.s--rouge-rose-logo {
-  width: 204px;
-  height: 70px; }
+  background: url(../img/css/rouge-rose_sprite.svg) no-repeat 0 0; }
 
 .s--next {
-  background-position: 100% -173px;
+  background-position: 100% -47px;
   width: 100%; }
 
 .s--prev {
-  background-position: 0 -127px;
   width: 100%; }
 
 /*-----  End of sprites  ------*/

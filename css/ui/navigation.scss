@@ -29,14 +29,14 @@
     width: 50%;
     padding-left: 24px;
     > a {
-        opacity: 0.5;
+        opacity: 0.3;
         @include vendor(transition,opacity 0.35s ease-out);
         &:hover {
             opacity: 1;
         }
     }
     > span {
-        opacity: 0.2;
+        opacity: 0.1;
     } 
 }
 

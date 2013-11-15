@@ -1,17 +1,34 @@
-    #SET{media-layout,''} #SET{media-type,''}
+#SET{media-layout,''} #SET{media-type,''}
 [(#REM) les valeurs possibles de image_reduire ]
-    #SET{image_reduire,#ARRAY{one-third,342,two-thirds,709,three-thirds,1076}}
-[(#REM) valeur par défaut ]
-    #SET{valeur_reduction,1076}
+[(#REM)
+    breakpoints -> 1100 - 24px padding / 1024 / 480
+    desk -> 1076
+    lap/portable -> 1024
+    palm -> 480
+]
+    #SET{taux-reduction,#ARRAY{one-third,0.333,two-thirds,0.666,three-thirds,1,one-half,0.5}}
+    #SET{breakpoints,#ARRAY{desk-,1076,lap-and-up-,1076,lap-,1024,portable-,1024,palm-,480}}
+[(#REM) valeurs par défaut ]
+    #SET{reduction,480} #SET{valeur_tmp,''}
 [(#REM) regexp ]
-    #SET{regexp,lap-and-up-|desk-|portable-|lap-|palm-}
-
+    #SET{regexp,desk-|lap-and-up-|portable-|lap-|palm-}
 <BOUCLE_image_portfolio(DOCUMENTS){id_document}>
 <BOUCLE_mots(MOTS){id_document}{technique=oui}>
 [(#ID_GROUPE|=={1}|oui)
     [(#TITRE|match{#GET{regexp}}|oui)
-        [(#SET{format,#TITRE|replace{#GET{regexp}}})]
-        [(#SET{valeur_reduction,#GET{image_reduire}|table_valeur{#GET{format}}})]
+        [(#REM) récupérer valeur de colonne et valeur d'appareil. Ce qui donne après multiplication de l'un par l'autre, le taux de réduction optimale de l'image. ]
+        [(#SET{cle-taux-reduction,#TITRE|replace{#GET{regexp}}})]
+        
+        [(#SET{cle-breakpoints,#TITRE|match{#GET{regexp}}})]
+        
+        [(#SET{val-reduction,#GET{taux-reduction}|table_valeur{#GET{cle-taux-reduction}}})]
+        
+        [(#SET{val-breakpoints,#GET{breakpoints}|table_valeur{#GET{cle-breakpoints}}})]
+        
+        [(#SET{reduction-tmp,#GET{val-breakpoints}|mult{#GET{val-reduction}}|round})]
+        
+        [(#REM) La valeur temporaire est-elle plus grande que celle déjà définie par défaut ou précédemment dans la boucle ? ]
+        [(#GET{reduction-tmp}|>{#GET{reduction}}|?{#SET{reduction,#GET{reduction-tmp}}})] 
     ]
     [(#SET{media-layout, [(#GET{media-layout}|concat{[ (#TITRE*)]})]})]
 ][(#ID_GROUPE|=={2}|oui)
@@ -19,6 +36,6 @@
 ]</BOUCLE_mots>
 <div class="grid__item[ (#GET{media-layout})]">
     <span class="media-container[ (#GET{media-type})]">
-        <a href="#URL_DOCUMENT" class="mediabox" rel="portfolio#ID_ARTICLE">[<img src="(#FICHIER|image_reduire{#GET{valeur_reduction},0}|extraire_attribut{src})" alt="">]</a>
+        <a href="#URL_DOCUMENT" class="mediabox" rel="portfolio#ID_ARTICLE">[<img src="(#FICHIER|image_reduire{#GET{reduction},0}|extraire_attribut{src})" alt="">]</a>
     </span>
 </div><!-- /.grid__item --></BOUCLE_image_portfolio>
