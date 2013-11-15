@@ -2173,7 +2173,7 @@ html.flexbox {
  * Demo: jsfiddle.net/inuitcss/WS4Ge
  *
  */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 480px) {
   /**
   * Whole
   */
@@ -2272,7 +2272,7 @@ html.flexbox {
 
   .palm-eleven-twelfths {
     width: 91.666%; } }
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
   /**
   * Whole
   */
@@ -2371,7 +2371,7 @@ html.flexbox {
 
   .lap-eleven-twelfths {
     width: 91.666%; } }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 481px) {
   /**
   * Whole
   */
@@ -2959,7 +2959,7 @@ html.flexbox {
   position: absolute !important;
   width: 1px !important; }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 480px) {
   .accessibility--palm,
   .visuallyhidden--palm {
     border: 0 !important;
@@ -2970,7 +2970,7 @@ html.flexbox {
     padding: 0 !important;
     position: absolute !important;
     width: 1px !important; } }
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
   .accessibility--lap,
   .visuallyhidden--lap {
     border: 0 !important;
@@ -2981,7 +2981,7 @@ html.flexbox {
     padding: 0 !important;
     position: absolute !important;
     width: 1px !important; } }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 481px) {
   .accessibility--lap-and-up,
   .visuallyhidden--lap-and-up {
     border: 0 !important;
@@ -3117,7 +3117,7 @@ small {
 [class*="push--"] {
   position: relative; }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 481px) {
   .push--lap-and-up-one-third {
     left: 33.333%; } }
 .grid--center {
@@ -3147,10 +3147,12 @@ html {
 =            page-head            =
 =================================*/
 .page-head {
-  margin-top: 2em;
+  margin-top: 3em;
   margin-bottom: 3em; }
 
 .site-logo {
+  margin-top: -1.2em;
+  margin-bottom: 3em;
   float: left; }
 
 /*-----  End of page-head  ------*/
@@ -3184,12 +3186,10 @@ html {
 .nav__item--active a {
   color: #000; }
 
-.nav-main {
-  line-height: 110px; }
-  .nav-main .nav {
-    margin-bottom: 0; }
+.nav-main .nav {
+  margin-bottom: 0; }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 480px) {
   .nav-main__item {
     text-align: center; } }
 
@@ -3390,7 +3390,7 @@ html {
 =            sprites            =
 ===============================*/
 .s {
-  background: url(../img/css/rouge-rose_sprite.svg) no-repeat 0 0; }
+  background: url(../img/css/rouge-rose_sprite.png) no-repeat 0 0; }
 
 .s--rouge-rose-logo {
   width: 204px;
