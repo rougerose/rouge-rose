@@ -3350,14 +3350,19 @@ html {
 ==============================*/
 /*==========  article-resume  ==========*/
 .article-resume {
-  position: relative; }
+  border-top: 1px solid #000;
+  padding-top: 6px; }
 
 .article-resume__titre {
   font-size: 15px;
   font-size: 0.9375rem;
   line-height: 1.6; }
+  .link--soft .article-resume__titre {
+    color: #565656; }
   .article-resume__titre small {
     font-size: 80%; }
+    .link--soft .article-resume__titre small {
+      color: #898989; }
 
 /*-----  End of resume  ------*/
 /*============================

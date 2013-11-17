@@ -4,12 +4,20 @@
 
 /*==========  article-resume  ==========*/
 .article-resume {
-    position: relative;
+    // position: relative;
+    border-top: 1px solid #000;
+    padding-top: 6px;
 }
 .article-resume__titre {
     @include font-size(15px);
+    .link--soft & {
+        color: darken($color-soft,20%);
+    }
     small {
         font-size: 80%;
+        .link--soft & {
+            color: $color-soft;
+        }
     }
 }
 
