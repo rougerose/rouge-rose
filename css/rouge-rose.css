@@ -3351,7 +3351,8 @@ html {
 ==============================*/
 /*==========  article-resume  ==========*/
 .article-resume {
-  margin-bottom: 3em; }
+  margin-bottom: 3em;
+  margin-right: 2em; }
   .article-resume img {
     -webkit-box-shadow: 0 0 5px rgba(185, 185, 185, 0.5);
     box-shadow: 0 0 5px rgba(185, 185, 185, 0.5);
