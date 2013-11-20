@@ -4,21 +4,26 @@
 
 /*==========  article-resume  ==========*/
 .article-resume {
-    // position: relative;
-    border-top: 1px solid #000;
-    padding-top: 6px;
+    margin-bottom: 3em;
+    img {
+        -webkit-box-shadow: 0 0 5px rgba(185,185,185,0.5);
+        box-shadow: 0 0 5px rgba(185,185,185,0.5);
+        @include vendor(transition,box-shadow 0.35s ease-out);
+    }
+    a h1 {
+        color: #000;
+        @include vendor(transition,color 0.35s ease-out,border 0.35s ease-out);
+    }
+    a:hover {
+        img {
+            box-shadow: 0 0 5px rgba(240,240,240,0.3);
+        }
+        h1 {color: $color-hover;}
+    }
 }
 .article-resume__titre {
     @include font-size(15px);
-    .link--soft & {
-        color: darken($color-soft,20%);
-    }
-    small {
-        font-size: 80%;
-        .link--soft & {
-            color: $color-soft;
-        }
-    }
+    small {color: $color-soft}
 }
 
 /*-----  End of resume  ------*/

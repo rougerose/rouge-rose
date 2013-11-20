@@ -15,9 +15,10 @@ a {
     }
 }
 .link--soft {color: $color-soft;}
-.spip_url {
+.spip_url,
+.spip_out,
+.spip_in {
     color: $color-soft;
-    // border-bottom: 1px dotted $color-soft;
     border-bottom-width: 1px;
     border-bottom-color: $color-soft;
 }

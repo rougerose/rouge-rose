@@ -3075,7 +3075,9 @@ a {
 .link--soft {
   color: #898989; }
 
-.spip_url {
+.spip_url,
+.spip_out,
+.spip_in {
   color: #898989;
   border-bottom-width: 1px;
   border-bottom-color: #898989; }
@@ -3306,12 +3308,8 @@ html {
 =============================*/
 /*==========  media-container  ==========*/
 .media-container {
-  width: 100%;
   display: inline-block;
-  background: #b9b9b9;
-  margin-bottom: 1.5em;
-  -webkit-box-shadow: 0 0 5px rgba(185, 185, 185, 0.5);
-  box-shadow: 0 0 5px rgba(185, 185, 185, 0.5); }
+  margin-bottom: 1.5em; }
   .media-container img {
     display: block; }
 
@@ -3319,7 +3317,10 @@ html {
 .browser {
   padding-top: 3%;
   border-top-left-radius: 3px;
-  border-top-right-radius: 3px; }
+  border-top-right-radius: 3px;
+  background: #b9b9b9;
+  -webkit-box-shadow: 0 0 5px rgba(185, 185, 185, 0.5);
+  box-shadow: 0 0 5px rgba(185, 185, 185, 0.5); }
 
 /*-----  End of media  ------*/
 /*================================
@@ -3350,19 +3351,33 @@ html {
 ==============================*/
 /*==========  article-resume  ==========*/
 .article-resume {
-  border-top: 1px solid #000;
-  padding-top: 6px; }
+  margin-bottom: 3em; }
+  .article-resume img {
+    -webkit-box-shadow: 0 0 5px rgba(185, 185, 185, 0.5);
+    box-shadow: 0 0 5px rgba(185, 185, 185, 0.5);
+    -webkit-transition: box-shadow 0.35s ease-out;
+    -moz-transition: box-shadow 0.35s ease-out;
+    -ms-transition: box-shadow 0.35s ease-out;
+    -o-transition: box-shadow 0.35s ease-out;
+    transition: box-shadow 0.35s ease-out; }
+  .article-resume a h1 {
+    color: #000;
+    -webkit-transition: color 0.35s ease-out, border 0.35s ease-out;
+    -moz-transition: color 0.35s ease-out, border 0.35s ease-out;
+    -ms-transition: color 0.35s ease-out, border 0.35s ease-out;
+    -o-transition: color 0.35s ease-out, border 0.35s ease-out;
+    transition: color 0.35s ease-out, border 0.35s ease-out; }
+  .article-resume a:hover img {
+    box-shadow: 0 0 5px rgba(240, 240, 240, 0.3); }
+  .article-resume a:hover h1 {
+    color: #da0f00; }
 
 .article-resume__titre {
   font-size: 15px;
   font-size: 0.9375rem;
   line-height: 1.6; }
-  .link--soft .article-resume__titre {
-    color: #565656; }
   .article-resume__titre small {
-    font-size: 80%; }
-    .link--soft .article-resume__titre small {
-      color: #898989; }
+    color: #898989; }
 
 /*-----  End of resume  ------*/
 /*============================

@@ -4,12 +4,9 @@
 
 /*==========  media-container  ==========*/
 .media-container {
-    width: 100%;
+    // width: 100%;
     display: inline-block;
-    background: #b9b9b9;
     margin-bottom: 1.5em;
-    -webkit-box-shadow: 0 0 5px rgba(185,185,185,0.5);
-    box-shadow: 0 0 5px rgba(185,185,185,0.5);
     img {
         display: block;
     }
@@ -21,6 +18,9 @@
     padding-top: 3%;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
+    background: #b9b9b9;
+    -webkit-box-shadow: 0 0 5px rgba(185,185,185,0.5);
+    box-shadow: 0 0 5px rgba(185,185,185,0.5);
 }
 
 /*-----  End of media  ------*/
