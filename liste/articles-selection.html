@@ -1,0 +1,13 @@
+<B_projet>
+#ANCRE_PAGINATION
+<BOUCLE_projet(ARTICLES){id_article IN #ENV{selection}}{!par date_redac}{pagination 10}>
+[<div class="grid__item lap-and-up-one-third">
+    (#INCLURE{fond=inclure/resumes/article,id_article})
+</div><!-- /.grid__item -->]
+</BOUCLE_projet>
+[<div class="grid__item">
+    <nav class="pagination pagination--bottom pagination--page">
+        (#PAGINATION{li})
+    </nav>
+</div>]
+</B_projet>

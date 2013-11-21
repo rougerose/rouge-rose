@@ -4,15 +4,17 @@
         <div class="grid">
             <div class="grid__item">
                 <header class="self__header">
-                    <h1 class="hN self__titre">#TITRE[ <small>(#SOUSTITRE)</small>]</h1>
+                    <h1 class="hN self__titre">
+                        #TITRE[ <small>(#SOUSTITRE)</small>]</h1>
                 </header>
             </div><!-- /.grid__item -->
             <div class="grid__item lap-and-up-one-half self__meta">
                 [<p><time datetime="(#DATE_REDAC|affdate{Y-m})">[(#DATE_REDAC|nom_mois) ][(#DATE_REDAC|annee)]</time></p>]
             </div><!-- /.grid__item -->
-            [<div class="grid__item lap-and-up-one-half self__texte">
-                (#TEXTE)
-            </div><!-- /.grid__item -->]
+            <div class="grid__item lap-and-up-one-half self__texte">
+                [(#TEXTE)]
+                <p>Ce projet s'inscrit dans une collaboration régulière. <a href="#URL_RUBRIQUE" class="spip_in">Afficher tous les projets réalisés pour Vacarme</a>.</p>
+            </div><!-- /.grid__item -->
         </div><!-- /.grid -->
     </div><!-- /.grid__item -->
 
