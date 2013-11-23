@@ -1,0 +1,78 @@
+/*==================================
+=            pagination            =
+==================================*/
+
+.pagination {
+    position: relative;
+    @include font-size(15px);
+    text-align: center;
+}
+.pagination__label {
+    @include media-query(lap-and-up) {
+        position: absolute;
+        left: 0;
+        padding-top: .6em;
+    }
+    @include font-size(15px);
+    color: $color-soft;
+
+}
+.pagination__item {
+    @include media-query(palm) {
+        margin-bottom: .2em;
+        margin-top: .2em;
+    }
+    a,span,strong {
+        display: inline-block;
+        margin-left: .2em;
+        margin-right: .2em;
+        padding-left: .5em;
+        padding-right: .5em;
+    }
+    .on {
+        color: #000;
+    }
+}
+
+.pagination--top {
+    border-bottom: 1px solid #ccc;
+
+    .nav {
+        margin-bottom: 0;
+    }
+   .pagination__item {
+    margin-bottom: -1px;
+   }
+}
+.pagination--bottom {
+    border-top: 1px solid #ccc;
+    .pagination__item {
+        margin-top: -1px;
+    }
+    @include media-query(palm) {
+        padding-top: 6px;
+    }
+    a,
+    span,
+    strong {
+        @include media-query(lap-and-up) {
+            padding-top: 6px;
+            border-width: 1px 0 0;
+            border-top: 1px solid transparent;
+        }
+    }
+    a {
+        &:hover {
+            @include media-query(lap-and-up) {
+                border-top-color: #000;
+            }
+        }
+    }
+    .on {
+        @include media-query(lap-and-up) {
+            border-top: 1px solid #000;
+        }
+    }
+}
+
+/*-----  End of pagination  ------*/

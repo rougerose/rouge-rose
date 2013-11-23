@@ -22,6 +22,20 @@
     -webkit-box-shadow: 0 0 5px rgba(185,185,185,0.5);
     box-shadow: 0 0 5px rgba(185,185,185,0.5);
 }
+.tablet {
+    padding: 9% 2.9%;
+    background: #000;
+    border-radius: 4.2% / 6.2%;
+}
+.tablet--landscape {
+    padding: 2.9% 9%;
+}
+.phone {
+    padding: 20% 7%;
+    margin: 0 5%;
+    border-radius: 7.7% / 4.3%;
+    background: #000;
+}
 
 /*-----  End of media  ------*/
 

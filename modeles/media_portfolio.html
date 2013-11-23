@@ -13,7 +13,7 @@
 [(#REM) regexp ]
     #SET{regexp,desk-|lap-and-up-|portable-|lap-|palm-}
 <BOUCLE_image_portfolio(DOCUMENTS){id_document}>
-<BOUCLE_mots(MOTS){id_document}{technique=oui}>
+<BOUCLE_mots(MOTS){id_document}{id_groupe IN 1,2}{technique=oui}>
 [(#ID_GROUPE|=={1}|oui)
     [(#TITRE|match{#GET{regexp}}|oui)
         [(#REM) récupérer valeur de colonne et valeur d'appareil. Ce qui donne après multiplication de l'un par l'autre, le taux de réduction optimale de l'image. ]

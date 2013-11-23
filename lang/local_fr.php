@@ -11,6 +11,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
     'form_message_confirm' => "confirmer l'envoi",
     'form_message_send' => "envoyer votre message",
 
+    // I
+    'info_page' => "Page",
+
     // N
     'next' => 'suivant',
     
