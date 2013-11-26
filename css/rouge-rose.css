@@ -3175,14 +3175,16 @@ html {
   margin-bottom: 4em;
   font-size: 14px;
   font-size: 0.875rem;
-  line-height: 1.71429; }
+  line-height: 1.5; }
+  .page-foot section {
+    margin-bottom: 2em; }
   .page-foot p {
     padding-right: 12px;
     margin-bottom: 0; }
-  .page-foot .content--aside {
+  .page-foot .credits {
     font-size: 12px;
     font-size: 0.75rem;
-    line-height: 2; }
+    line-height: 1.5; }
 
 /*-----  End of page-foot  ------*/
 /*==================================
