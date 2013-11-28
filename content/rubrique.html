@@ -1,0 +1,33 @@
+#SET{selection,#ARRAY}
+<BOUCLE_rubrique_projets(RUBRIQUES){id_rubrique}>
+    <BOUCLE_articles(ARTICLES){id_rubrique}{!par date_redac}>
+        #SET_PUSH{selection,#ID_ARTICLE}
+    </BOUCLE_articles>
+    <BOUCLE_sous_rubrique(RUBRIQUES){id_parent}>
+        <BOUCLE_dernier_article(ARTICLES){id_rubrique}{!par date_redac}{0,1}>
+            #SET_PUSH{selection,#ID_ARTICLE}
+        </BOUCLE_dernier_article>
+    </BOUCLE_sous_rubrique>
+
+<article class="rubrique-self">
+    <div class="grid__item lap-and-up-two-thirds push--lap-and-up-one-third">
+        <div class="grid">
+            <div class="grid__item">
+                <header class="self__header">
+                    <h1 class="hN self__titre">#TITRE</h1>
+                </header>
+            </div><!-- /.grid__item -->
+        </div><!-- /.grid -->
+    </div><!-- /.grid__item -->
+    <section class="self__portfolio">
+        <div class="grid__item">
+            <div class="grid">
+                [(#INCLURE{fond=liste/articles-selection,selection=#GET{selection},pagination=18,env,ajax})]
+            </div><!-- /.grid -->
+        </div><!-- /.grid__item -->
+    </section><!-- /.self__portfolio -->
+    <div class="grid__item lap-and-up-two-thirds push--lap-and-up-one-third">
+        <INCLURE{fond=breadcrumb/#ENV{type-page},env} />
+    </div><!-- /.grid__item -->
+</article>
+</BOUCLE_rubrique_projets>

@@ -1,0 +1,11 @@
+<body class="page">
+    <div class="grid">
+        <header class="page-head" role="banner">
+            <INCLURE{fond=header/#ENV{type-page},env} />
+        </header><!-- /.page-head -->
+        <div class="page-content" role="main">
+            <INCLURE{fond=content/#ENV{type-page},env} />
+        </div><!-- /.page-content -->
+        <INCLURE{fond=footer/#ENV{type-page},env} />
+    </div><!-- /.grid -->
+</body>

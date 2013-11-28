@@ -1,0 +1,36 @@
+/*=============================
+=            media            =
+=============================*/
+
+/*==========  media-container  ==========*/
+.media-container {
+    display: block;
+    margin-bottom: 1.5em;
+}
+
+/*==========  appareils  ==========*/
+
+.browser {
+    padding-top: 3%;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background: #b9b9b9;
+    -webkit-box-shadow: 0 0 5px rgba(185,185,185,0.5);
+    box-shadow: 0 0 5px rgba(185,185,185,0.5);
+}
+.tablet {
+    padding: 9% 2.9%;
+    background: #000;
+    border-radius: 4.2% / 6.2%;
+}
+.tablet--landscape {
+    padding: 2.9% 9%;
+}
+.phone {
+    padding: 20% 7%;
+    border-radius: 7.7% / 4.3%;
+    background: #000;
+}
+
+/*-----  End of media  ------*/
+
