@@ -43,18 +43,61 @@
 #cboxOverlay{background:#fff;}
 
 #colorbox{}
-    #cboxContent{margin: 72px 40px 0;}
+    #cboxContent{
+        margin: 72px 40px 0;
+        @include media-query(palm) {
+            margin: 36px 20px 0;
+        }
+    }
         #cboxLoadedContent{background:#fff;}
         #cboxLoadingGraphic{background:url(../img/css/loading.gif) center center no-repeat;}
         #cboxLoadingOverlay{background:#000;}
         #cboxTitle{position:absolute; top:-22px; left:0; color:#000;}
         #cboxCurrent{position:absolute; top:-22px; right:205px; text-indent:-9999px;}
-        #cboxSlideshow, #cboxPrevious, #cboxNext, #cboxClose{text-indent:-9999px; width:64px; height:64px; position:absolute; background:url(../img/css/rouge-rose_sprite.svg) 0 0 no-repeat;}
-        #cboxPrevious{background-position:-100px -120px; width: 32px; left: -40px; top: 45%;}
+        #cboxSlideshow, #cboxPrevious, #cboxNext, #cboxClose{
+            text-indent:-9999px;
+            width:64px;
+            height:64px; 
+            position:absolute; 
+            background:url(../img/css/rouge-rose_sprite.svg) 0 0 no-repeat;
+            @include media-query(palm) {
+                width: 32px;
+                height: 32px;
+            }
+        }
+        #cboxPrevious{
+            background-position:-100px -120px; 
+            width: 32px; 
+            left: -40px; 
+            top: 45%;
+            @include media-query(palm) {
+                background-position: -224px -120px;
+                width: 16px;
+                left: -20px;
+            }
+        }
         // #cboxPrevious.hover{}
-        #cboxNext{background-position:-170px -120px; right:-40px; top: 45%; width: 32px;}
+        #cboxNext{
+            background-position:-170px -120px;
+            right:-40px;
+            top: 45%;
+            width: 32px;
+            @include media-query(palm) {
+                width: 16px;
+                right: -20px;
+                background-position: -273px -120px;
+            }
+        }
         // #cboxNext.hover{}
-        #cboxClose{background-position:0 -120px; top: -72px; left: 50%;}
+        #cboxClose{
+            background-position:0 -120px;
+            top: -72px;
+            left: 50%;
+            @include media-query(palm) {
+                background-position: -305px -119px;
+                top: -36px;
+            }
+        }
         // #cboxClose.hover{}
         // .cboxSlideshow_on #cboxPrevious, .cboxSlideshow_off #cboxPrevious{}
         // .cboxSlideshow_on #cboxSlideshow{}
