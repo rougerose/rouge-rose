@@ -4,4 +4,10 @@
 [<link rel="canonical" href="(#URL_RUBRIQUE|url_absolue)" />]
 [(#REM) Lien vers le flux RSS de la rubrique ]
 <link rel="alternate" type="application/rss+xml" title="<:syndiquer_rubrique:>" href="[(#URL_PAGE{backend}|parametre_url{id_rubrique,#ID_RUBRIQUE})]" />
+<meta property="og:title" content="(#TITRE|textebrut) :: ][(#NOM_SITE_SPIP|textebrut)[ / (#SLOGAN_SITE_SPIP|typo|textebrut)]]" />
+[<meta property="og:description" content="(#DESCRIPTIF_SITE_SPIP|textebrut)" />]
+<meta property="og:url" content="[(#URL_RUBRIQUE|url_absolue)]" />
+[<meta property="og:image" content="(#LOGO_SITE_SPIP|extraire_attribut{src}|url_absolue)" />]
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:site_name" content="#NOM_SITE_SPIP" />
 </BOUCLE_rubrique_head>

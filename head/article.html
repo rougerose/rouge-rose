@@ -2,4 +2,10 @@
 <title>[(#TITRE|textebrut) :: ][(#NOM_SITE_SPIP|textebrut)[ / (#SLOGAN_SITE_SPIP|typo|textebrut)]]</title>
 [<meta name="description" content="(#INTRODUCTION|attribut_html)" />]
 [<link rel="canonical" href="(#URL_ARTICLE|url_absolue)" />]
+<meta property="og:title" content="[(#NOM_SITE_SPIP|typo|textebrut)][ / (#SLOGAN_SITE_SPIP|typo|textebrut)]" />
+[<meta property="og:description" content="(#DESCRIPTIF_SITE_SPIP|textebrut)" />]
+<meta property="og:url" content="[(#URL_ARTICLE|url_absolue)]" />
+[<meta property="og:image" content="(#LOGO_ARTICLE|extraire_attribut{src}|url_absolue)" />]
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:site_name" content="#NOM_SITE_SPIP" />
 </BOUCLE_article_head>
