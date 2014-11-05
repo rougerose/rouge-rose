@@ -1,0 +1,13 @@
+{
+  "name": "rouge-rose.net",
+  "version": "0.2.1",
+  "authors": [
+    "christophe le drean <christophe@rouge-rose.net>"
+  ],
+  "license": "N/A",
+  "private": true,
+  "dependencies": {
+    "inuit.css": "~5.0.1",
+    "bourbon": "~4.0.0"
+  }
+}
