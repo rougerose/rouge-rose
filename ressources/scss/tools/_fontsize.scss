@@ -1,0 +1,6 @@
+//
+// inuit-font-size shorthand
+//
+@mixin font-size($arguments...) {
+  @include inuit-font-size($arguments...);
+}

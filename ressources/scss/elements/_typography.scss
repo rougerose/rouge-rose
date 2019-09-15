@@ -1,0 +1,64 @@
+/* =====================================
+*  typography
+*  ===================================== */
+
+/*
+*  webfonts
+*  ------------------------------------- */
+
+  @font-face {
+    font-family: 'Plantin'; // roman
+    src: url('../webfonts/PlantinStd/PlantinStd.eot?') format('eot'),
+    url('../webfonts/PlantinStd/PlantinStd.otf')  format('opentype'),
+    url('../webfonts/PlantinStd/PlantinStd.woff') format('woff'),
+    url('../webfonts/PlantinStd/PlantinStd.ttf')  format('truetype'),
+    url('../webfonts/PlantinStd/PlantinStd.svg#PlantinStd') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Plantin'; // italic
+    src: url('../webfonts/PlantinStd-Italic/PlantinStd-Italic.eot?') format('eot'),
+    url('../webfonts/PlantinStd-Italic/PlantinStd-Italic.otf')  format('opentype'),
+    url('../webfonts/PlantinStd-Italic/PlantinStd-Italic.woff') format('woff'),
+    url('../webfonts/PlantinStd-Italic/PlantinStd-Italic.ttf')  format('truetype'),
+    url('../webfonts/PlantinStd-Italic/PlantinStd-Italic.svg#PlantinStd-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Plantin'; // bold
+    src: url('../webfonts/PlantinStd-Bold/PlantinStd-Bold.eot?') format('eot'),
+    url('../webfonts/PlantinStd-Bold/PlantinStd-Bold.otf')  format('opentype'),
+    url('../webfonts/PlantinStd-Bold/PlantinStd-Bold.woff') format('woff'),
+    url('../webfonts/PlantinStd-Bold/PlantinStd-Bold.ttf')  format('truetype'),
+    url('../webfonts/PlantinStd-Bold/PlantinStd-Bold.svg#PlantinStd-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Plantin'; // bold italic
+    src: url('../webfonts/PlantinStd-BoldItalic/PlantinStd-BoldItalic.eot?') format('eot'),
+    url('../webfonts/PlantinStd-BoldItalic/PlantinStd-BoldItalic.otf')  format('opentype'),
+    url('../webfonts/PlantinStd-BoldItalic/PlantinStd-BoldItalic.woff') format('woff'),
+    url('../webfonts/PlantinStd-BoldItalic/PlantinStd-BoldItalic.ttf')  format('truetype'),
+    url('../webfonts/PlantinStd-BoldItalic/PlantinStd-BoldItalic.svg#PlantinStd-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+  }
+
+html,
+body {
+  color: $c-text;
+  font-family: $font-body;
+  font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}

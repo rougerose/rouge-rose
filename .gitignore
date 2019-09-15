@@ -1,10 +1,10 @@
 # site rouge-rose.net
 # fichiers systemes
 .DS_Store
+yarn*
+node_modules
 
-# éléments à ignorer
+
+# éléments spécifiques à ignorer
 /projets
 googlehostedservice.html
-
-
-# sauf
