@@ -1,0 +1,15 @@
+/* =====================================
+*  link
+*  ===================================== */
+
+
+a {
+  border: 1px solid transparent;
+  color: $c-link;
+  text-decoration: none;
+  transition: color .2s ease;
+
+  &:hover {
+    color: $c-link-hover;
+  }
+}

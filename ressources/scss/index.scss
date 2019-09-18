@@ -92,8 +92,7 @@
 
 
 // OBJECTS
-// @import "inuitcss/objects/objects.wrapper";
-
+@import "inuitcss/objects/objects.wrapper";
 @import "inuit-flexgrid/objects/objects.grid";
 // @import "inuitcss/objects/objects.layout";
 // @import "inuitcss/objects/objects.media";
@@ -109,7 +108,9 @@
 
 
 // COMPONENTS
-
+@import "components/page";
+@import "components/site-nav";
+@import "components/spip-admin";
 
 
 // UTILITIES
@@ -120,7 +121,7 @@
 // Only set this to `true` if you are absolutely sure about what you are doing.
 // $inuit-offsets: true;
 
-// @import "inuitcss/utilities/utilities.widths";
+@import "inuitcss/utilities/utilities.widths";
 // @import "inuitcss/utilities/utilities.headings";
 // @import "inuitcss/utilities/utilities.spacings";
 // @import "inuitcss/utilities/utilities.responsive-spacings";

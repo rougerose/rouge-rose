@@ -1,0 +1,6 @@
+<ul class="c-site-nav__list">
+  <BOUCLE_realisations(RUBRIQUES){id_rubrique=1}>
+    <li class="c-site-nav__item"><a href="#URL_RUBRIQUE{1}" class="c-site-nav__link #EXPOSE">#INFO_TITRE{rubrique, 1}</a></li>
+  </BOUCLE_realisations>
+  <li class="c-site-nav__item"><a href="[(#URL_SITE_SPIP)|ancre_url{about}]" class="c-site-nav__link"><:local:about:></a></li>
+</ul>

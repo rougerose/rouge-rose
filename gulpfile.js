@@ -25,11 +25,12 @@ const options = {
 
 // scss + minify
 function scssTask(cb) {
-  var plugins = [autoprefixer(), cssnano()];
+  var plugins = [autoprefixer()];
   src(options.scss.src)
     .pipe(sass(options.scss.opts)).on('error', sass.logError)
     .pipe(postcss(plugins))
-    .pipe(rename({basename: options.css.name, suffix: '.min'}))
+    // .pipe(rename({basename: options.css.name, suffix: '.min'}))
+    .pipe(rename({basename: options.css.name}))
     .pipe(dest(options.scss.dest));
   cb();
 }

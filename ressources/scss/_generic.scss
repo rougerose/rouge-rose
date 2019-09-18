@@ -2,7 +2,11 @@
 // GENERIC
 //
 @import "inuitcss/generic/generic.box-sizing";
+
+// normalize.css, version v8.0.1
 // @import "inuitcss/generic/generic.normalize";
 @import "generic/normalize";
+
 @import "inuitcss/generic/generic.reset";
 @import "inuitcss/generic/generic.shared";
+@import "generic/link";

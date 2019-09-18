@@ -3,15 +3,27 @@
 *  ===================================== */
 
 // Baseline
-$baseline:           $inuit-global-line-height;
+$baseline:                $inuit-global-line-height;
 
 // Fonts
-$font-body:          "Plantin", Georgia, sans-serif;
-
+$font-body:               "Plantin", Georgia, sans-serif;
+$font-monospace:          monospace;
 
 // $spacing-unit shorthands
-$spacing-unit:       $inuit-global-spacing-unit;
-$spacing-unit-tiny:  $inuit-global-spacing-unit-tiny;
-$spacing-unit-small: $inuit-global-spacing-unit-small;
-$spacing-unit-large: $inuit-global-spacing-unit-large;
-$spacing-unit-huge:  $inuit-global-spacing-unit-huge;
+$spacing-unit:            $inuit-global-spacing-unit;
+$spacing-unit-tiny:       $inuit-global-spacing-unit-tiny;
+$spacing-unit-small:      $inuit-global-spacing-unit-small;
+$spacing-unit-large:      $inuit-global-spacing-unit-large;
+$spacing-unit-huge:       $inuit-global-spacing-unit-huge;
+
+
+// Layout
+$inuit-fractions:         1 2 3 4;
+$inuit-wrapper-width:     1100px;
+
+// Mediaqueries
+$mq-breakpoints:          (s: 320px, m: 640px, l: 768px, xl: 1024px);
+
+
+// z-index
+$zindex-spip-admin-float: 200;
