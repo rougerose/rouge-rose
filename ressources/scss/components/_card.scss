@@ -1,0 +1,45 @@
+/* =====================================
+*  c-card
+*  ===================================== */
+
+.c-card {}
+
+
+  .c-card__link {
+
+    &:hover {
+      small {
+        color: $c-text;
+      }
+      picture,
+      img {
+        box-shadow: none;
+      }
+    }
+
+  }
+
+
+    .c-card__logo {
+      display: flex;
+      margin-bottom: $spacing-unit-tiny;
+
+      > picture,
+      > img {
+        box-shadow: 0 0 5px rgba($c-black,0.5);
+        transition: box-shadow .3s ease-out;
+      }
+
+    }
+
+
+    .c-card__header {}
+
+
+      .c-card__title {
+
+        > small {
+          color: $c-text-grey;
+          transition: color .2s ease-in;
+        }
+      }

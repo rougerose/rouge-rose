@@ -1,0 +1,12 @@
+/* =====================================
+*  link utilities
+*  ===================================== */
+
+.u-link {
+  border-bottom: 1px solid transparent;
+  transition: color .2s ease-in, border-color .2s ease-in;
+
+  &:hover {
+    border-color: $c-link-hover;
+  }
+}

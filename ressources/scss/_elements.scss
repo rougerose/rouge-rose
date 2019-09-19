@@ -5,4 +5,10 @@
 @import "inuitcss/elements/elements.page";
 @import "inuitcss/elements/elements.headings";
 @import "inuitcss/elements/elements.images";
+
+// Les images ont toutes un max-width à 100%, y compris celles dont la taille est explicite ($inuit-static-images: false). Pour garder un affichage proportionnel de l'image, la hauteur est calée sur auto.
+img {
+  height: auto;
+}
+
 @import "inuitcss/elements/elements.tables";

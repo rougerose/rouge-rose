@@ -1,0 +1,16 @@
+<BOUCLE_selection(SELECTIONS_CONTENUS){id_selections_contenu}>
+  [(#SET{soustitre, ''})]
+  [(#OBJET|=={article}|oui)
+    [(#SET{soustitre, #INFO_SOUSTITRE{article, #ID_OBJET}})]
+  ]
+  <article class="c-card">
+      <a href="#URL" class="c-card__link">
+        <div class="c-card__logo">
+          [(#LOGO_SELECTIONS_CONTENU|adaptive_images{450})]
+        </div>
+        <header class="c-card__header">
+          <h1 class="c-card__title u-text+">#TITRE[ <small>(#GET{soustitre})</small>]</h1>
+        </header>
+      </a>
+  </article>
+</BOUCLE_selection>

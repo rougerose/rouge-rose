@@ -2,13 +2,12 @@
 *  c-site-nav
 *  ===================================== */
 
-.c-site-nav {
-  // margin: 3em 0;
-}
+// .c-site-nav {}
 
 
   .c-site-nav__logo {
     display: block;
+    margin-bottom: 2em;
 
     > svg {
       max-width: 200px;
@@ -17,19 +16,19 @@
 
 
   .c-site-nav__list {
-    display: flex;
-    height: 65px;
-    margin: 0;
+    margin-bottom: 0;
     list-style: none;
+
+    @include mq(l) {
+      height: 65px;
+    }
   }
 
 
     .c-site-nav__item {
-      flex: 1;
-      margin: auto;
+      margin-top: auto;
+      margin-bottom: auto;
     }
 
 
-      .c-site-nav__link {
-
-      }
+      // .c-site-nav__link {}

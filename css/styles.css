@@ -465,10 +465,9 @@ dd, ol, ul {
 *  link
 *  ===================================== */
 a {
-  border: 1px solid transparent;
   color: black;
   text-decoration: none;
-  transition: color .2s ease; }
+  transition: color .2s ease-in; }
   a:hover {
     color: #e53734; }
 
@@ -596,13 +595,8 @@ img {
   vertical-align: middle;
   /* [3] */ }
 
-/**
-   * If a `width` and/or `height` attribute has been explicitly defined, let’s
-   * not make the image fluid.
-   */
-img[width],
-img[height] {
-  max-width: none; }
+img {
+  height: auto; }
 
 /* ==========================================================================
    #TABLES
@@ -817,23 +811,50 @@ table {
 /* =====================================
 *  c-page
 *  ===================================== */
+.c-page__head {
+  margin: 3em 0; }
+
 /* =====================================
 *  c-site-nav
 *  ===================================== */
 .c-site-nav__logo {
-  display: block; }
+  display: block;
+  margin-bottom: 2em; }
   .c-site-nav__logo > svg {
     max-width: 200px; }
 
 .c-site-nav__list {
-  display: flex;
-  height: 65px;
-  margin: 0;
+  margin-bottom: 0;
   list-style: none; }
+  @media (min-width: 48em) {
+    .c-site-nav__list {
+      height: 65px; } }
 
 .c-site-nav__item {
-  flex: 1;
-  margin: auto; }
+  margin-top: auto;
+  margin-bottom: auto; }
+
+/* =====================================
+*  c-card
+*  ===================================== */
+.c-card__link:hover small {
+  color: #424242; }
+
+.c-card__link:hover picture,
+.c-card__link:hover img {
+  box-shadow: none; }
+
+.c-card__logo {
+  display: flex;
+  margin-bottom: 6px; }
+  .c-card__logo > picture,
+  .c-card__logo > img {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: box-shadow .3s ease-out; }
+
+.c-card__title > small {
+  color: #9e9e9e;
+  transition: color .2s ease-in; }
 
 /* =====================================
 *  spip-admin
@@ -949,6 +970,28 @@ table {
   .u-4\/4\@s {
     width: 100% !important; } }
 
+@media (min-width: 31.25em) {
+  .u-1\/1\@m- {
+    width: 100% !important; }
+  .u-1\/2\@m- {
+    width: 50% !important; }
+  .u-2\/2\@m- {
+    width: 100% !important; }
+  .u-1\/3\@m- {
+    width: 33.33333% !important; }
+  .u-2\/3\@m- {
+    width: 66.66667% !important; }
+  .u-3\/3\@m- {
+    width: 100% !important; }
+  .u-1\/4\@m- {
+    width: 25% !important; }
+  .u-2\/4\@m- {
+    width: 50% !important; }
+  .u-3\/4\@m- {
+    width: 75% !important; }
+  .u-4\/4\@m- {
+    width: 100% !important; } }
+
 @media (min-width: 40em) {
   .u-1\/1\@m {
     width: 100% !important; }
@@ -1014,3 +1057,53 @@ table {
     width: 75% !important; }
   .u-4\/4\@xl {
     width: 100% !important; } }
+
+/* =====================================
+*  link utilities
+*  ===================================== */
+.u-link {
+  border-bottom: 1px solid transparent;
+  transition: color .2s ease-in, border-color .2s ease-in; }
+  .u-link:hover {
+    border-color: #e53734; }
+
+/* =====================================
+*  text utilities
+*  ===================================== */
+/*
+*  font-sizes
+*  ------------------------------------- */
+.u-text\+\+\+ {
+  font-size: 30px !important;
+  font-size: 1.875rem !important;
+  line-height: 1.2 !important; }
+
+.u-text\+\+ {
+  font-size: 24px !important;
+  font-size: 1.5rem !important;
+  line-height: 1.3 !important; }
+
+.u-text\+ {
+  font-size: 20px !important;
+  font-size: 1.25rem !important;
+  line-height: 1.4 !important; }
+
+.u-text {
+  font-size: 16px !important;
+  font-size: 1rem !important;
+  line-height: 1.5 !important; }
+
+.u-text- {
+  font-size: 14px !important;
+  font-size: 0.875rem !important;
+  line-height: 1.5 !important; }
+
+.u-text-- {
+  font-size: 12px !important;
+  font-size: 0.75rem !important;
+  line-height: 1.5 !important; }
+
+.u-text--- {
+  font-size: 10px !important;
+  font-size: 0.625rem !important;
+  line-height: 1.5 !important; }

@@ -1,1 +1,13 @@
-<!-- vide -->
+<div class="o-wrapper">
+  <div class="o-grid">
+    <BOUCLE_selection_sommaire(SELECTIONS){identifiant=sommaire}>
+      <B_contenus_selection>
+        <BOUCLE_contenus_selection(SELECTIONS_CONTENUS){id_selection}{par rang}>
+          <div class="o-grid__cell u-1/2@m- u-1/3@l">
+            <INCLURE{fond=inclure/selections/card, id_selections_contenu} />
+          </div>
+        </BOUCLE_contenus_selection>
+      </B_contenus_selection>
+    </BOUCLE_selection_sommaire>
+  </div>
+</div>

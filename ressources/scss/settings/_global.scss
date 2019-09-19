@@ -9,6 +9,18 @@ $baseline:                $inuit-global-line-height;
 $font-body:               "Plantin", Georgia, sans-serif;
 $font-monospace:          monospace;
 
+// Font-sizes
+$font-size-9:           36px; // x 2.25
+$font-size-8:           30px; // x 1.875
+$font-size-7:           24px; // x 1.5
+$font-size-6:           20px; // x 1.25
+$font-size-5:           16px; // x 1
+$font-size-4:           14px; // x 0.825
+$font-size-3:           12px; // x 0.75
+$font-size-2:           10px; // x 0.625
+$font-size-1:           9px; // x 0.5625
+$font-size-0:           8px; // x 0.5
+
 // $spacing-unit shorthands
 $spacing-unit:            $inuit-global-spacing-unit;
 $spacing-unit-tiny:       $inuit-global-spacing-unit-tiny;
@@ -16,13 +28,15 @@ $spacing-unit-small:      $inuit-global-spacing-unit-small;
 $spacing-unit-large:      $inuit-global-spacing-unit-large;
 $spacing-unit-huge:       $inuit-global-spacing-unit-huge;
 
+// Images
+$inuit-static-images: false;
 
 // Layout
 $inuit-fractions:         1 2 3 4;
 $inuit-wrapper-width:     1100px;
 
 // Mediaqueries
-$mq-breakpoints:          (s: 320px, m: 640px, l: 768px, xl: 1024px);
+$mq-breakpoints:          (s: 320px, m-:500px, m: 640px, l: 768px, xl: 1024px);
 
 
 // z-index

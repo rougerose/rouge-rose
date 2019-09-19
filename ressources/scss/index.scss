@@ -110,6 +110,7 @@
 // COMPONENTS
 @import "components/page";
 @import "components/site-nav";
+@import "components/card";
 @import "components/spip-admin";
 
 
@@ -127,3 +128,5 @@
 // @import "inuitcss/utilities/utilities.responsive-spacings";
 // @import "inuitcss/utilities/utilities.print";
 // @import "inuitcss/utilities/utilities.hide";
+@import "utilities/link";
+@import "utilities/text";
