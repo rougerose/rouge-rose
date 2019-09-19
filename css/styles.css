@@ -501,12 +501,18 @@ a {
   font-weight: bold;
   font-style: italic; }
 
+/*
+*  
+*  ------------------------------------- */
 html,
 body {
   color: #424242;
   font-family: "Plantin", Georgia, sans-serif;
   font-weight: normal; }
 
+/*
+*  Headings
+*  ------------------------------------- */
 h1,
 h2,
 h3,
@@ -849,8 +855,8 @@ table {
   margin-bottom: 6px; }
   .c-card__logo > picture,
   .c-card__logo > img {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    transition: box-shadow .3s ease-out; }
+    box-shadow: 0 0 5px rgba(158, 158, 158, 0.5);
+    transition: box-shadow .2s ease-out; }
 
 .c-card__title > small {
   color: #9e9e9e;

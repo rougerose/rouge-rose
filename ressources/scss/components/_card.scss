@@ -11,6 +11,7 @@
       small {
         color: $c-text;
       }
+
       picture,
       img {
         box-shadow: none;
@@ -26,8 +27,8 @@
 
       > picture,
       > img {
-        box-shadow: 0 0 5px rgba($c-black,0.5);
-        transition: box-shadow .3s ease-out;
+        box-shadow: 0 0 5px rgba($c-grey-500,0.5);
+        transition: box-shadow .2s ease-out;
       }
 
     }
