@@ -12,9 +12,8 @@
         color: $c-text;
       }
 
-      picture,
-      img {
-        box-shadow: none;
+      .c-card__logo {
+        opacity: 0.9;
       }
     }
 
@@ -24,13 +23,9 @@
     .c-card__logo {
       display: flex;
       margin-bottom: $spacing-unit-tiny;
-
-      > picture,
-      > img {
-        box-shadow: 0 0 5px rgba($c-grey-500,0.5);
-        transition: box-shadow .2s ease-out;
-      }
-
+      opacity: 1;
+      transition: opacity 0.1s;
+      will-change: opacity;
     }
 
 
