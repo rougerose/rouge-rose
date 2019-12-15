@@ -8,6 +8,6 @@
 >
     <nom>rouge-rose</nom>
     <auteur>christophe le drean</auteur>
-    <necessite nom="SPIP" compatibilite="[3.0.0;3.0.*]" />
+    <necessite nom="SPIP" compatibilite="[3.0.0;3.2.*]" />
     <necessite nom="Zcore" compatibilite="[2.2.0;[" />
 </paquet>
