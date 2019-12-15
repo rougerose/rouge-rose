@@ -1,13 +1,13 @@
 <paquet
     prefix="rouge_rose"
     categorie="squelette"
-    version="1.0.0"
+    version="1.1.0"
     etat="stable"
     compatibilite="[3.0.0;["
     logo="img/rougerose-48.png"
 >
     <nom>rouge-rose</nom>
     <auteur>christophe le drean</auteur>
-    <necessite nom="SPIP" compatibilite="[3.0.0;3.0.*]" />
+    <necessite nom="SPIP" compatibilite="[3.0.0;3.2.*]" />
     <necessite nom="Zcore" compatibilite="[2.2.0;[" />
 </paquet>
