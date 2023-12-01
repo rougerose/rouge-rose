@@ -1,11 +1,11 @@
 #SET{selection,#ARRAY}
 <BOUCLE_rubrique_projets(RUBRIQUES){id_rubrique}>
     <BOUCLE_articles(ARTICLES){id_rubrique}{!par date_redac}>
-        #SET_PUSH{selection,#ID_ARTICLE}
+        [(#SET{selection, #GET{selection}|push{#ID_ARTICLE}})]
     </BOUCLE_articles>
     <BOUCLE_sous_rubrique(RUBRIQUES){id_parent}>
         <BOUCLE_dernier_article(ARTICLES){id_rubrique}{!par date_redac}{0,1}>
-            #SET_PUSH{selection,#ID_ARTICLE}
+            [(#SET{selection, #GET{selection}|push{#ID_ARTICLE}})]
         </BOUCLE_dernier_article>
     </BOUCLE_sous_rubrique>
 
