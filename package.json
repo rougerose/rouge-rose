@@ -1,0 +1,36 @@
+{
+  "name": "rouge-rose",
+  "version": "2.0.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rougerose/rouge-rose.git"
+  },
+  "author": "christophe le drean",
+  "homepage": "https://rouge-rose.net",
+  "description": "",
+  "browserslist": ["defaults"],
+  "scripts": {
+    "autoprefixer": "postcss dist/css/rouge-rose.css --no-map --replace --config package-scripts/postcss.config.js",
+    "bs": "browser-sync start -c package-scripts/browsersync.config.cjs",
+    "bs:log": "node package-scripts/browsersync-proxy-log.js",
+    "build": "run-s clean && run-p build:* && run-s autoprefixer",
+    "build:scss": "sass --no-source-map --load-path=node_modules src/scss/index.scss dist/css/rouge-rose.css",
+    "clean": "rimraf -g 'dist/css/*'",
+    "publish": "NODE_ENV=production run-s build",
+    "watch": "run-p build bs bs:log watch:*",
+    "watch:css": "chokidar 'src/scss/**/*.scss' -c 'npm run build:scss && npm run autoprefixer'"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "browser-sync": "^3.0.2",
+    "chalk": "^5.3.0",
+    "chokidar-cli": "^3.0.0",
+    "npm-run-all2": "^6.2.2",
+    "postcss": "^8.4.39",
+    "postcss-cli": "^11.0.0",
+    "postcss-csso": "^6.0.1",
+    "rimraf": "^6.0.1",
+    "sass": "^1.32.13"
+  }
+}
