@@ -500,7 +500,6 @@ dfn {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -696,8 +695,6 @@ input[type=radio] {
 input[type=search] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box;
 }
@@ -753,8 +750,6 @@ table {
 * Let’s make the box model all nice, shall we...?
 */
 *, *:before, *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
@@ -3446,25 +3441,25 @@ html.flexbox {
 ============================*/
 @font-face {
   font-family: "Plantin";
-  src: url("font/PlantinStd/PlantinStd.eot?") format("eot"), url("font/PlantinStd/PlantinStd.otf") format("opentype"), url("font/PlantinStd/PlantinStd.woff") format("woff"), url("font/PlantinStd/PlantinStd.ttf") format("truetype"), url("font/PlantinStd/PlantinStd.svg#PlantinStd") format("svg");
+  src: url("../font/PlantinStd/PlantinStd.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Plantin";
-  src: url("font/PlantinStd-Italic/PlantinStd-Italic.eot?") format("eot"), url("font/PlantinStd-Italic/PlantinStd-Italic.otf") format("opentype"), url("font/PlantinStd-Italic/PlantinStd-Italic.woff") format("woff"), url("font/PlantinStd-Italic/PlantinStd-Italic.ttf") format("truetype"), url("font/PlantinStd-Italic/PlantinStd-Italic.svg#PlantinStd-Italic") format("svg");
+  src: url("../font/PlantinStd-Italic/PlantinStd-Italic.woff") format("woff");
   font-weight: normal;
   font-style: italic;
 }
 @font-face {
   font-family: "Plantin";
-  src: url("font/PlantinStd-Bold/PlantinStd-Bold.eot?") format("eot"), url("font/PlantinStd-Bold/PlantinStd-Bold.otf") format("opentype"), url("font/PlantinStd-Bold/PlantinStd-Bold.woff") format("woff"), url("font/PlantinStd-Bold/PlantinStd-Bold.ttf") format("truetype"), url("font/PlantinStd-Bold/PlantinStd-Bold.svg#PlantinStd-Bold") format("svg");
+  src: url("../font/PlantinStd-Bold/PlantinStd-Bold.woff") format("woff");
   font-weight: 800;
   font-style: normal;
 }
 @font-face {
   font-family: "Plantin";
-  src: url("font/PlantinStd-BoldItalic/PlantinStd-BoldItalic.eot?") format("eot"), url("font/PlantinStd-BoldItalic/PlantinStd-BoldItalic.otf") format("opentype"), url("font/PlantinStd-BoldItalic/PlantinStd-BoldItalic.woff") format("woff"), url("font/PlantinStd-BoldItalic/PlantinStd-BoldItalic.ttf") format("truetype"), url("font/PlantinStd-BoldItalic/PlantinStd-BoldItalic.svg#PlantinStd-BoldItalic") format("svg");
+  src: url("../font/PlantinStd-BoldItalic/PlantinStd-BoldItalic.woff") format("woff");
   font-weight: 800;
   font-style: italic;
 }
@@ -3477,10 +3472,6 @@ a {
   border-bottom: 0 dotted transparent;
   color: #000;
   text-decoration: none;
-  -webkit-transition: color 0.35s ease-out, border 0.35s ease-out;
-  -moz-transition: color 0.35s ease-out, border 0.35s ease-out;
-  -ms-transition: color 0.35s ease-out, border 0.35s ease-out;
-  -o-transition: color 0.35s ease-out, border 0.35s ease-out;
   transition: color 0.35s ease-out, border 0.35s ease-out;
 }
 a:hover {
@@ -3569,7 +3560,6 @@ html {
   color: #444;
   -webkit-text-size-adjust: none;
   -moz-text-size-adjust: none;
-  -ms-text-size-adjust: none;
   -o-text-size-adjust: none;
   text-size-adjust: none;
 }
@@ -3656,10 +3646,6 @@ html {
 }
 .nav-prev_next__item > a {
   opacity: 0.3;
-  -webkit-transition: opacity 0.35s ease-out;
-  -moz-transition: opacity 0.35s ease-out;
-  -ms-transition: opacity 0.35s ease-out;
-  -o-transition: opacity 0.35s ease-out;
   transition: opacity 0.35s ease-out;
 }
 .nav-prev_next__item > a:hover {
@@ -3790,7 +3776,6 @@ html {
 
 .reponse_formulaire {
   padding: 0.2em 0.5em 0.1em;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
 }
 
@@ -3847,10 +3832,6 @@ html {
 =            buttons            =
 ===============================*/
 .btn {
-  -webkit-transition: color 0.35s ease-out, border-color 0.35s ease-out;
-  -moz-transition: color 0.35s ease-out, border-color 0.35s ease-out;
-  -ms-transition: color 0.35s ease-out, border-color 0.35s ease-out;
-  -o-transition: color 0.35s ease-out, border-color 0.35s ease-out;
   transition: color 0.35s ease-out, border-color 0.35s ease-out;
 }
 
@@ -3893,7 +3874,6 @@ html {
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
   background: #b9b9b9;
-  -webkit-box-shadow: 0 0 5px rgba(185, 185, 185, 0.5);
   box-shadow: 0 0 5px rgba(185, 185, 185, 0.5);
 }
 
@@ -3923,16 +3903,12 @@ html {
     sinon l'image est partiellement masquée. 
 */
 #colorbox, #colorbox:before, #colorbox:after {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
   -ms-box-sizing: content-box;
   -o-box-sizing: content-box;
   box-sizing: content-box;
 }
 
 #cboxLoadedContent {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
   -ms-box-sizing: content-box;
   -o-box-sizing: content-box;
   box-sizing: content-box;
@@ -4123,20 +4099,11 @@ html {
   margin-right: 2em;
 }
 .article-resume img {
-  -webkit-box-shadow: 0 0 5px rgba(185, 185, 185, 0.5);
   box-shadow: 0 0 5px rgba(185, 185, 185, 0.5);
-  -webkit-transition: box-shadow 0.35s ease-out;
-  -moz-transition: box-shadow 0.35s ease-out;
-  -ms-transition: box-shadow 0.35s ease-out;
-  -o-transition: box-shadow 0.35s ease-out;
   transition: box-shadow 0.35s ease-out;
 }
 .article-resume a h1 {
   color: #000;
-  -webkit-transition: color 0.35s ease-out, border 0.35s ease-out;
-  -moz-transition: color 0.35s ease-out, border 0.35s ease-out;
-  -ms-transition: color 0.35s ease-out, border 0.35s ease-out;
-  -o-transition: color 0.35s ease-out, border 0.35s ease-out;
   transition: color 0.35s ease-out, border 0.35s ease-out;
 }
 .article-resume a:hover img {
@@ -4218,10 +4185,6 @@ body .spip-admin-float {
   top: 10%;
   left: auto;
   right: -3%;
-  -webkit-transition: right 0.35s ease-in 0.1s;
-  -moz-transition: right 0.35s ease-in 0.1s;
-  -ms-transition: right 0.35s ease-in 0.1s;
-  -o-transition: right 0.35s ease-in 0.1s;
   transition: right 0.35s ease-in 0.1s;
 }
 body .spip-admin-bloc:hover,
