@@ -2,6 +2,7 @@
   "name": "rouge-rose",
   "version": "2.0.0",
   "private": true,
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rougerose/rouge-rose.git"
@@ -11,7 +12,7 @@
   "description": "",
   "browserslist": ["defaults"],
   "scripts": {
-    "autoprefixer": "postcss dist/css/rouge-rose.css --no-map --replace --config package-scripts/postcss.config.js",
+    "autoprefixer": "postcss dist/css/rouge-rose.css --no-map --replace --config package-scripts/postcss.config.cjs",
     "bs": "browser-sync start -c package-scripts/browsersync.config.cjs",
     "bs:log": "node package-scripts/browsersync-proxy-log.js",
     "build": "run-s clean && run-p build:* && run-s autoprefixer",
