@@ -1,11 +1,5 @@
-<BOUCLE_article_head(ARTICLES) {page=message}>
-<title>[(#TITRE|textebrut) :: ][(#NOM_SITE_SPIP|textebrut)[ / (#SLOGAN_SITE_SPIP|typo|textebrut)]]</title>
-[<meta name="description" content="(#DESCRIPTIF_SITE_SPIP|textebrut)" />]
-[<link rel="canonical" href="(#URL_PAGE{message}|url_absolue)" />]
-<meta property="og:title" content="[(#NOM_SITE_SPIP|typo|textebrut)][ / (#SLOGAN_SITE_SPIP|typo|textebrut)]" />
-[<meta property="og:description" content="(#DESCRIPTIF_SITE_SPIP|textebrut)" />]
-<meta property="og:url" content="[(#URL_PAGE{message}|url_absolue)]" />
-[<meta property="og:image" content="(#LOGO_SITE_SPIP|extraire_attribut{src}|url_absolue)" />]
-<meta property="og:locale" content="fr_FR" />
-<meta property="og:site_name" content="#NOM_SITE_SPIP" />
+<BOUCLE_article_head(ARTICLES){page=message}>
+	<title>[(#TITRE|textebrut)][ | (#NOM_SITE_SPIP|textebrut)][ : (#SLOGAN_SITE_SPIP|textebrut)]</title>
+	[<meta name="description" content="(#DESCRIPTIF|sinon{#INTRODUCTION|couper{200}}|textebrut)" />]
+	[<link rel="canonical" href="(#URL_ARTICLE|url_absolue)" />]
 </BOUCLE_article_head>
