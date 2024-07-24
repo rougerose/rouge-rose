@@ -1,33 +1,4 @@
-@charset "UTF-8";
-/*------------------------------------*\
-    rouge-rose.css
-\*------------------------------------*/
+@charset "utf-8";
 
-// setup
-@import "vars";
-@import "./inuit.css-5.0.1/inuit";
-
-// ui
-@import "./ui/font.scss";
-@import "./ui/typo.scss";
-// grid push
-@import "./ui/push.scss";
-// page
-@import "./ui/page.scss";
-@import "./ui/page-head.scss";
-@import "./ui/page-content.scss";
-@import "./ui/page-foot.scss";
-// navigation
-@import "./ui/navigation.scss";
-//
-@import "./ui/pagination.scss";
-@import "./ui/forms.scss";
-@import "./ui/buttons.scss";
-@import "./ui/list.scss";
-@import "./ui/media.scss";
-@import "./ui/colorbox.scss";
-@import "./ui/resume.scss";
-@import "./ui/self.scss";
-@import "./ui/sprite.scss";
-@import "./ui/divers.scss";
-@import "./ui/print.scss";
+// Fichiers de base (reset, font-face, etc.)
+@use "base";

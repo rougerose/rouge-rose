@@ -1,0 +1,11 @@
+// ========================================
+// Styles globaux
+// ========================================
+
+@use "sass:string";
+@use "../abstract" as variables;
+
+body {
+	margin: 0;
+	font-family: variables.$text-font-sans;
+}
