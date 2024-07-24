@@ -1,5 +1,7 @@
 /* Modern reset: https://piccalil.li/blog/a-more-modern-css-reset/ */
 
+@use "../abstract" as variables;
+
 /* Box sizing rules */
 *,
 *::before,
@@ -37,7 +39,7 @@ ol[role="list"] {
 /* Set core body defaults */
 body {
 	min-height: 100vh;
-	line-height: 1.5;
+	line-height: variables.$text-line-height-normal;
 }
 
 /* Set shorter line heights on headings and interactive elements */

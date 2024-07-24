@@ -1,0 +1,24 @@
+@use "../tools" as tools;
+
+.grid {
+	display: grid;
+	gap: var(--grid-gutter, var(--gutter));
+	grid-template-columns: repeat(
+		var(--grid-placement, auto-fill),
+		minmax(var(--grid-min-item-size, 20rem), 1fr)
+	);
+
+	// 3 tiers
+	&[data-layout="thirds"] {
+		--grid-gutter: var(--space-3xl) var(--space-l);
+		grid-template-columns: 1fr;
+
+		@include tools.mq($from: medium) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include tools.mq($from: large) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+}

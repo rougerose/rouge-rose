@@ -1,0 +1,102 @@
+{
+    "color": {
+        "base": {
+            "black": {
+                "$value": "#000",
+                "$type": "color"
+            },
+            "white": {
+                "$value": "#fff",
+                "$type": "color"
+            },
+            "red": {
+                "$value": "#cf0505",
+                "$type": "color"
+            },
+            "magenta": {
+                "$value": "#d926a5",
+                "$type": "color"
+            },
+            "gray-storm": {
+                "50": {
+                    "$value": "hsl(233,9%,82%)",
+                    "$type": "color"
+                },
+                "100": {
+                    "$value": "hsl(234,9%,78%)",
+                    "$type": "color"
+                },
+                "200": {
+                    "$value": "hsl(236,9%,70%)",
+                    "$type": "color"
+                },
+                "300": {
+                    "$value": "hsl(233,9%,62%)",
+                    "$type": "color"
+                },
+                "400": {
+                    "$value": "hsl(234,9%,54%)",
+                    "$type": "color"
+                },
+                "500": {
+                    "$value": "hsl(237,9%,46%)",
+                    "$type": "color"
+                },
+                "600": {
+                    "$value": "hsl(232,9%,35%)",
+                    "$type": "color"
+                },
+                "700": {
+                    "$value": "hsl(235,9%,24%)",
+                    "$type": "color"
+                },
+                "800": {
+                    "$value": "hsl(230,9%,13%)",
+                    "$type": "color"
+                },
+                "900": {
+                    "$value": "hsl(240,9%,2%)",
+                    "$type": "color"
+                }
+            }
+        },
+        "theme": {
+            "ink": {
+                "$value": "{color.base.black.value}",
+                "$type": "color"
+            },
+            "paper": {
+                "$value": "{color.base.white.value}",
+                "$type": "color"
+            },
+            "primary": {
+                "red": {
+                    "$value": "{color.base.red.value}",
+                    "$type": "color"
+                },
+                "pink": {
+                    "$value": "{color.base.magenta.value}",
+                    "$type": "color"
+                }
+            },
+            "admin": {
+                "bg": {
+                    "$value": "{color.base.gray-storm.200.value}",
+                    "$type": "color"
+                },
+                "bg-hover": {
+                    "$value": "{color.base.gray-storm.700.value}",
+                    "$type": "color"
+                },
+                "hover": {
+                    "$value": "{color.base.gray-storm.50.value}",
+                    "$type": "color"
+                },
+                "shadow": {
+                    "$value": "{color.base.gray-storm.900.value}",
+                    "$type": "color"
+                }
+            }
+        }
+    }
+}

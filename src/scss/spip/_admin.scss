@@ -1,0 +1,42 @@
+/// Spip : Boutons d'administration
+
+@use "sass:color";
+@use "sass:map";
+@use "../abstract" as variables;
+
+// Conteneur
+.spip-admin-float {
+	display: flex;
+	flex-flow: row wrap;
+	gap: 0.5rem;
+	justify-content: flex-end;
+	top: auto !important;
+	right: 1rem !important;
+	bottom: 1.5rem;
+	left: auto;
+	z-index: 999 !important;
+}
+
+// Boutons
+.spip-admin-float {
+	& .spip-admin-boutons {
+		color: variables.$color-theme-ink;
+		background-color: variables.$color-theme-admin-bg;
+		font-family: variables.$text-font-monospace;
+		font-weight: variables.$text-font-weight-medium;
+		font-size: var(--step--3);
+		border-radius: 4px;
+		box-shadow: 0 2px 4px
+				color.scale(variables.$color-theme-admin-shadow, $alpha: -60%),
+			0 3px 6px
+				color.scale(variables.$color-theme-admin-shadow, $alpha: -65%);
+		text-align: left;
+		opacity: 1;
+		transition: color 0.2s, background-color 0.2s;
+
+		&:hover {
+			background-color: variables.$color-theme-admin-bg-hover;
+			color: variables.$color-theme-admin-hover;
+		}
+	}
+}

@@ -1,9 +1,13 @@
-<div class="grid__item lap-and-up-one-third">
-    <a href="#URL_SITE_SPIP" class="site-logo">[<img src="(#CHEMIN{img/rouge-rose.svg})" alt="#NOM_SITE_SPIP / #SLOGAN_SITE_SPIP">]</a>
-</div><!-- /.grid__item -->
-<div class="grid__item lap-and-up-two-thirds">
-    <div class="grid">
-        <INCLURE{fond=nav/nav-main,env} />
-    </div><!-- /.grid -->
-</div><!-- /.grid__item -->
-#FILTRE{mini_html}
+<div class="site-header_name">
+	<a href="#URL_SITE_SPIP" class="site-header_name" aria-label="#NOM_SITE_SPIP">
+		<span>rouge</span>[ (#CHEMIN{img/rouge-rose_symbole.svg}|balise_svg) ]<span>rose</span>
+	</a>
+</div>
+<nav class="site-header_nav" aria-label="Menu principal">
+    <ul role="list">
+        <BOUCLE_rubriques(RUBRIQUES){id_rubrique=1}>
+        	<li class="nav-main__item[ (#EXPOSE|oui)nav__item--active]"><a href="#URL_RUBRIQUE" class="link--soft">#TITRE</a></li>
+        </BOUCLE_rubriques>
+        <li class="nav-main__item"><a href="[(#URL_SITE_SPIP)/#about]" class="link--soft"><:local:about:></a></li>
+    </ul>
+</nav>

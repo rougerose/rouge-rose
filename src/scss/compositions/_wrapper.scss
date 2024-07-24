@@ -1,0 +1,8 @@
+@use "../abstract" as variables;
+
+.wrapper {
+	margin-inline: auto;
+	max-width: variables.$dimension-viewport-max;
+	padding-left: var(--gutter);
+	padding-right: var(--gutter);
+}

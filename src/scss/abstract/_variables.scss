@@ -1,7 +1,39 @@
 
 // Do not edit directly
-// Generated on Wed, 24 Jul 2024 15:06:05 GMT
+// Generated on Thu, 25 Jul 2024 10:58:50 GMT
 
+$text-font-weight-black: 900;
+$text-font-weight-bold: 700;
+$text-font-weight-medium: 500;
+$text-font-weight-regular: 400;
 $text-line-height-large: 1.8;
-$text-line-height-normal: 1.2;
+$text-line-height-normal: 1.5;
+$text-line-height-body: 1.35;
+$text-line-height-snug: 1.15;
+$text-line-height-tight: 1;
+$text-font-monospace: monospace, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 $text-font-sans: NewPanamSkyline, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+$color-base-gray-storm-900: hsl(240, 9%, 2%);
+$color-base-gray-storm-800: hsl(230, 9%, 13%);
+$color-base-gray-storm-700: hsl(235, 9%, 24%);
+$color-base-gray-storm-600: hsl(232, 9%, 35%);
+$color-base-gray-storm-500: hsl(237, 9%, 46%);
+$color-base-gray-storm-400: hsl(234, 9%, 54%);
+$color-base-gray-storm-300: hsl(233, 9%, 62%);
+$color-base-gray-storm-200: hsl(236, 9%, 70%);
+$color-base-gray-storm-100: hsl(234, 9%, 78%);
+$color-base-gray-storm-50: hsl(233, 9%, 82%);
+$color-base-magenta: hsl(317, 70%, 50%);
+$color-base-red: hsl(0, 95%, 42%);
+$color-base-white: hsl(0, 0%, 100%);
+$color-base-black: hsl(0, 0%, 0%);
+$dimension-viewport-max: 90rem;
+$dimension-viewport-min: 20rem;
+$color-theme-admin-shadow: $color-base-gray-storm-900;
+$color-theme-admin-hover: $color-base-gray-storm-50;
+$color-theme-admin-bg-hover: $color-base-gray-storm-700;
+$color-theme-admin-bg: $color-base-gray-storm-200;
+$color-theme-primary-pink: $color-base-magenta;
+$color-theme-primary-red: $color-base-red;
+$color-theme-paper: $color-base-white;
+$color-theme-ink: $color-base-black;

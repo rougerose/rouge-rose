@@ -2,10 +2,18 @@
 // Styles globaux
 // ========================================
 
-@use "sass:string";
 @use "../abstract" as variables;
 
 body {
 	margin: 0;
+	color: variables.$color-theme-ink;
+	background-color: variables.$color-theme-paper;
 	font-family: variables.$text-font-sans;
+	font-size: var(--step-0);
+	line-height: variables.$text-line-height-body;
+}
+
+[role="list"] {
+	padding: 0;
+	margin-bottom: 0;
 }

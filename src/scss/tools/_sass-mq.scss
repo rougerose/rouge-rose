@@ -1,0 +1,21 @@
+// @use "sass:map";
+// @use "sass:math";
+// @use "../abstract" as variables;
+// @use "./strip-unit" as func;
+
+// $viewport-max-width: func.strip-unit(
+// 	map.get(variables.$tokens, "size", "viewports", "max")
+// );
+
+@use "sass-mq/mq" with (
+	$media-type: screen,
+	$breakpoints: (
+		"small": 320px,
+		"medium": 740px,
+		"large": 1024px,
+		"xlarge": 1200px,
+		// 1600px //
+		// "max-width": calc(($viewport-max-width * 16px) + 112px),,,
+	)
+);
+@forward "sass-mq/mq";

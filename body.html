@@ -1,12 +1,11 @@
 <body class="page">
-    <div class="grid">
-        <header class="page-head" role="banner">
+    <div class="wrapper">
+        <header class="site-header grid" role="banner">
             <INCLURE{fond=header/#ENV{type-page},env} />
-        </header><!-- /.page-head -->
-        <div class="page-content" role="main">
+        </header>
+        <div class="site-content" role="main">
             <INCLURE{fond=content/#ENV{type-page},env} />
-        </div><!-- /.page-content -->
+        </div>
         <INCLURE{fond=footer/#ENV{type-page},env} />
-    </div><!-- /.grid -->
+    </div>
 </body>
-#FILTRE{mini_html}

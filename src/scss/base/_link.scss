@@ -1,0 +1,18 @@
+// ========================================
+// Styles des liens
+// ========================================
+
+@use "../abstract" as variables;
+
+a {
+	color: currentColor;
+	text-decoration-color: variables.$color-theme-primary-pink;
+	text-underline-offset: 4px;
+	text-decoration-thickness: 2px;
+	transition: all 0.3s ease;
+
+	&:hover {
+		color: variables.$color-theme-primary-pink;
+		text-decoration-color: variables.$color-theme-ink;
+	}
+}

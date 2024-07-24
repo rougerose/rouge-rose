@@ -1,0 +1,14 @@
+{
+    "dimension": {
+        "viewport": {
+            "min": {
+                "$type": "dimension",
+                "$value": "20rem"
+            },
+            "max": {
+                "$type": "dimension",
+                "$value": "90rem"
+            }
+        }
+    }
+}

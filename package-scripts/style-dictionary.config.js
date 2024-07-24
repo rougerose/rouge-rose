@@ -12,6 +12,7 @@ const config = {
 				"content/icon",
 				"size/rem",
 				"color/hsl",
+				"fontWeight/number",
 				// utiliser fontFamily/css. Permet d'entourer de guillemets simples
 				// les noms de fontes avec espace.
 				"fontFamily/css",

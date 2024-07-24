@@ -1,4 +1,15 @@
 @charset "utf-8";
 
+// Mixins
+@use "tools";
+
 // Fichiers de base (reset, font-face, etc.)
 @use "base";
+
+// Compositions
+@use "compositions";
+
+@use "blocks";
+
+// Spip
+@use "spip";
