@@ -3,9 +3,11 @@
         <header class="site-header grid" role="banner">
             <INCLURE{fond=header/#ENV{type-page},env} />
         </header>
-        <div class="site-content" role="main">
-            <INCLURE{fond=content/#ENV{type-page},env} />
-        </div>
-        <INCLURE{fond=footer/#ENV{type-page},env} />
+		<main class="site-content">
+			<INCLURE{fond=content/#ENV{type-page},env} />
+		</main>
+		<footer id="about" class="site-footer">
+			<INCLURE{fond=footer/#ENV{type-page},env} />
+		</footer>
     </div>
 </body>
