@@ -1,8 +1,10 @@
 <BOUCLE_grappe_accueil(GRAPPES){id_grappe=1}>
-  <BOUCLE_projet(ARTICLES){id_grappe}{par rang_lien}>
-    [<div class="grid__item lap-and-up-one-third">
-        (#INCLURE{fond=inclure/resumes/article,id_article})
-    </div><!-- /.grid__item -->]
-  </BOUCLE_projet>
+	<B_projet>
+		<div class="grid" data-layout="thirds">
+			<BOUCLE_projet(ARTICLES){id_grappe}{par rang_lien}>
+				<INCLURE{fond=inclure/resumes/article, id_article}/>
+			</BOUCLE_projet>
+		</div>
+	</B_projet>
 </BOUCLE_grappe_accueil>
-#FILTRE{mini_html}
+#FILTRE{trim}
