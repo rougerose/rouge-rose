@@ -9,8 +9,8 @@
     <feGaussianBlur in="SourceGraphic" stdDeviation="4"/>
   </filter>
   <circle class="shadow-red" cx="53" cy="50" r="37" fill="#cf0505" filter="url(#c)" />
-  <circle class="shadow-red" cx="49" cy="56" r="37" fill="#cf0505" filter="url(#b)"/>
+  <circle class="shadow-red" cx="49" cy="56" r="37" fill="#cf0505" filter="url(#c)"/>
   <circle class="shadow-pink" cx="62" cy="54" r="37" fill="#d926a5" filter="url(#c)"/>
-  <circle class="shadow-pink" cx="58" cy="59" r="37" fill="#d926a5" filter="url(#b)"/>
+  <circle class="shadow-pink" cx="58" cy="59" r="37" fill="#d926a5" filter="url(#c)"/>
   <circle cx="56" cy="55" r="37.5" fill="#fff" filter="url(#a)"/>
 </svg>
