@@ -1,0 +1,8 @@
+// ========================================
+// Flow composition
+// @link https://every-layout.dev/layouts/stack/
+// ========================================
+
+.flow > * + * {
+	margin-top: var(--flow-space, var(--space-s));
+}

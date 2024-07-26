@@ -57,7 +57,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 700;
+  font-weight: 500;
   text-wrap: balance;
   text-wrap: pretty;
 }
@@ -217,11 +217,8 @@ a:hover {
   text-decoration-color: hsl(0, 0%, 0%);
 }
 
-.wrapper {
-  margin-inline: auto;
-  max-width: 90rem;
-  padding-left: var(--gutter);
-  padding-right: var(--gutter);
+.flow > * + * {
+  margin-top: var(--flow-space, var(--space-s));
 }
 
 .grid {
@@ -244,6 +241,46 @@ a:hover {
   }
 }
 
+.wrapper {
+  margin-inline: auto;
+  max-width: 90rem;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+.gap-top-3xl-4xl {
+  margin-top: var(--space-3xl-4xl);
+}
+
+.spip-admin-float {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  top: auto !important;
+  right: 1rem !important;
+  bottom: 1.5rem;
+  left: auto;
+  z-index: 999 !important;
+}
+
+.spip-admin-float .spip-admin-boutons {
+  color: hsl(0, 0%, 0%);
+  background-color: hsl(0, 7%, 79%);
+  font-family: monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 500;
+  font-size: var(--step--3);
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(32, 29, 29, 0.4), 0 3px 6px rgba(32, 29, 29, 0.35);
+  text-align: left;
+  opacity: 1;
+  transition: color 0.2s, background-color 0.2s;
+}
+.spip-admin-float .spip-admin-boutons:hover {
+  background-color: hsl(0, 5%, 35%);
+  color: hsl(0, 5%, 96%);
+}
+
 .site-header {
   --grid-gutter: var(--space-s) var(--space-l);
   grid-template-columns: 1fr;
@@ -261,6 +298,9 @@ a:hover {
   font-weight: 500;
   text-decoration: none;
 }
+.site-header_name:hover span:first-child {
+  color: hsl(0, 95%, 42%);
+}
 .site-header_name svg {
   width: 50px;
   margin-left: var(--space-xs);
@@ -269,12 +309,11 @@ a:hover {
 }
 .site-header_name svg circle {
   transform-origin: center;
+  animation: 5s linear normal infinite rotate;
 }
-.site-header_name svg .shadow-red {
-  animation: 7s linear normal infinite rotate;
-}
-.site-header_name svg .shadow-pink {
-  animation: 7s linear normal infinite rotate;
+.site-header_name svg circle:nth-child(even) {
+  animation-delay: 0.2s;
+  animation-direction: reverse;
 }
 
 .site-header_nav ul {
@@ -325,31 +364,54 @@ a:hover {
     transform: rotate(360deg);
   }
 }
-.spip-admin-float {
-  display: flex;
-  flex-flow: row wrap;
-  gap: 0.5rem;
-  justify-content: flex-end;
-  top: auto !important;
-  right: 1rem !important;
-  bottom: 1.5rem;
-  left: auto;
-  z-index: 999 !important;
+.block-link-parent {
+  position: relative;
+}
+.block-link-parent .block-link:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  content: "";
 }
 
-.spip-admin-float .spip-admin-boutons {
-  color: hsl(0, 0%, 0%);
-  background-color: hsl(236, 9%, 70%);
-  font-family: monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-weight: 500;
-  font-size: var(--step--3);
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(5, 5, 6, 0.4), 0 3px 6px rgba(5, 5, 6, 0.35);
-  text-align: left;
-  opacity: 1;
-  transition: color 0.2s, background-color 0.2s;
+.card:hover img {
+  transform: scale(1.03);
+  box-shadow: 0 0 5px hsl(0, 7%, 84%);
 }
-.spip-admin-float .spip-admin-boutons:hover {
-  background-color: hsl(235, 9%, 24%);
-  color: hsl(233, 9%, 82%);
+
+.card_media {
+  border: 1px solid rgba(236, 233, 233, 0.7);
+}
+.card_media img {
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  transition: transform 0.3s linear;
+}
+
+.card_content {
+  --flow-space: var(--space-2xs);
+  margin-top: var(--space-xs);
+}
+
+.card_title {
+  font-size: var(--step-1);
+}
+.card_title small {
+  font-size: 0.7em;
+  font-weight: 400;
+  color: hsl(0, 5%, 41%);
+}
+
+.card_link {
+  text-decoration: none;
+}
+
+.card_tags {
+  font-size: var(--step--1);
+  color: hsl(0, 5%, 41%);
 }

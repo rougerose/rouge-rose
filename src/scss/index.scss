@@ -9,7 +9,11 @@
 // Compositions
 @use "compositions";
 
-@use "blocks";
+// Utilities
+@use "utilities";
 
 // Spip
 @use "spip";
+
+// Blocks, components
+@use "blocks";

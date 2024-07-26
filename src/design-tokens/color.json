@@ -17,45 +17,81 @@
                 "$value": "#d926a5",
                 "$type": "color"
             },
-            "gray-storm": {
+            "gray-warm": {
                 "50": {
-                    "$value": "hsl(233,9%,82%)",
+                    "$value": "#f5f4f4",
                     "$type": "color"
                 },
                 "100": {
-                    "$value": "hsl(234,9%,78%)",
+                    "$value": "#ebe8e8",
+                    "$type": "color"
+                },
+                "150": {
+                    "$value": "#e2dddd",
                     "$type": "color"
                 },
                 "200": {
-                    "$value": "hsl(236,9%,70%)",
+                    "$value": "#d8d2d2",
+                    "$type": "color"
+                },
+                "250": {
+                    "$value": "#cec7c7",
                     "$type": "color"
                 },
                 "300": {
-                    "$value": "hsl(233,9%,62%)",
+                    "$value": "#c4bbbb",
+                    "$type": "color"
+                },
+                "350": {
+                    "$value": "#bab0b0",
                     "$type": "color"
                 },
                 "400": {
-                    "$value": "hsl(234,9%,54%)",
+                    "$value": "#b1a5a5",
+                    "$type": "color"
+                },
+                "450": {
+                    "$value": "#a79999",
                     "$type": "color"
                 },
                 "500": {
-                    "$value": "hsl(237,9%,46%)",
+                    "$value": "#928181",
+                    "$type": "color"
+                },
+                "550": {
+                    "$value": "#8d8080",
                     "$type": "color"
                 },
                 "600": {
-                    "$value": "hsl(232,9%,35%)",
+                    "$value": "#7e7272",
+                    "$type": "color"
+                },
+                "650": {
+                    "$value": "#6e6363",
                     "$type": "color"
                 },
                 "700": {
-                    "$value": "hsl(235,9%,24%)",
+                    "$value": "#5e5555",
+                    "$type": "color"
+                },
+                "750": {
+                    "$value": "#4f4747",
                     "$type": "color"
                 },
                 "800": {
-                    "$value": "hsl(230,9%,13%)",
+                    "$value": "#3f3939",
+                    "$type": "color"
+                },
+                "850": {
+                    "$value": "#2f2b2b",
                     "$type": "color"
                 },
                 "900": {
-                    "$value": "hsl(240,9%,2%)",
+                    "$value": "#1f1c1c",
+                    "$type": "color"
+                },
+                "950": {
+                    "$value": "#100e0e",
                     "$type": "color"
                 }
             }
@@ -79,21 +115,31 @@
                     "$type": "color"
                 }
             },
+            "card": {
+                "shadow": {
+                    "$value": "{color.base.gray-warm.200.value}",
+                    "$type": "color"
+                },
+                "border": {
+                    "$value": "{color.base.gray-warm.100.value}",
+                    "$type": "color"
+                }
+            },
             "admin": {
                 "bg": {
-                    "$value": "{color.base.gray-storm.200.value}",
+                    "$value": "{color.base.gray-warm.250.value}",
                     "$type": "color"
                 },
                 "bg-hover": {
-                    "$value": "{color.base.gray-storm.700.value}",
+                    "$value": "{color.base.gray-warm.700.value}",
                     "$type": "color"
                 },
                 "hover": {
-                    "$value": "{color.base.gray-storm.50.value}",
+                    "$value": "{color.base.gray-warm.50.value}",
                     "$type": "color"
                 },
                 "shadow": {
-                    "$value": "{color.base.gray-storm.900.value}",
+                    "$value": "{color.base.gray-warm.900.value}",
                     "$type": "color"
                 }
             }
