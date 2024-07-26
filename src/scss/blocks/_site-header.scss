@@ -22,12 +22,6 @@
 	font-weight: variables.$text-font-weight-medium;
 	text-decoration: none;
 
-	&:hover {
-		& span:first-child {
-			color: variables.$color-theme-primary-red;
-		}
-	}
-
 	& svg {
 		width: 50px;
 		margin-left: var(--space-xs);
