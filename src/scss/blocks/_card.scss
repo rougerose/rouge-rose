@@ -35,7 +35,7 @@
 	& small {
 		font-size: 0.7em;
 		font-weight: variables.$text-font-weight-regular;
-		color: variables.$color-base-gray-warm-650;
+		color: variables.$color-theme-text-light;
 	}
 }
 
@@ -45,5 +45,5 @@
 
 .card_tags {
 	font-size: var(--step--1);
-	color: variables.$color-base-gray-warm-650;
+	color: variables.$color-theme-text-light;
 }

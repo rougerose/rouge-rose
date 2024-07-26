@@ -364,6 +364,25 @@ a:hover {
     transform: rotate(360deg);
   }
 }
+.site-footer {
+  --grid-gutter: 0 var(--space-l);
+  padding-top: var(--space-4xl-5xl);
+  padding-bottom: var(--space-l);
+}
+html[data-admin-status=on] .site-footer {
+  padding-bottom: var(--space-2xl);
+}
+@media screen and (min-width: 46.25em) {
+  .site-footer .credits {
+    grid-column: 2/-1;
+  }
+}
+@media screen and (min-width: 64em) {
+  .site-footer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 .block-link-parent {
   position: relative;
 }
@@ -414,4 +433,13 @@ a:hover {
 .card_tags {
   font-size: var(--step--1);
   color: hsl(0, 5%, 41%);
+}
+
+.credits::before {
+  display: block;
+  margin-bottom: var(--space-s);
+  width: var(--space-xl);
+  height: 1px;
+  background-color: hsl(0, 0%, 0%);
+  content: "";
 }

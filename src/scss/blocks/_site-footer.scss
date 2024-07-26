@@ -1,0 +1,26 @@
+// ========================================
+// site-footer
+// ========================================
+
+@use "../tools" as tools;
+
+.site-footer {
+	--grid-gutter: 0 var(--space-l);
+	padding-top: var(--space-4xl-5xl);
+	padding-bottom: var(--space-l);
+
+	// Augmenter la marge basse si les boutons d'admin sont présents
+	html[data-admin-status="on"] & {
+		padding-bottom: var(--space-2xl);
+	}
+
+	@include tools.mq($from: medium) {
+		& .credits {
+			grid-column: 2/-1;
+		}
+	}
+
+	@include tools.mq($from: large) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
