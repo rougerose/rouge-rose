@@ -8,11 +8,12 @@
 >
     <nom>rouge-rose</nom>
     <auteur>christophe le drean</auteur>
-    <necessite nom="Zcore" />
-    <necessite nom="suivant_precedent" />
     <necessite nom="coordonnees" />
+    <necessite nom="critere_mots" />
     <necessite nom="grappes" />
     <necessite nom="mots_techniques" />
-    <necessite nom="pages" />
     <necessite nom="oembed" />
+    <necessite nom="pages" />
+    <necessite nom="suivant_precedent" />
+    <necessite nom="Zcore" />
 </paquet>
