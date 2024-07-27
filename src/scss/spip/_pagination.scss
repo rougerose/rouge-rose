@@ -48,6 +48,7 @@
 		& a,
 		& span {
 			background-color: variables.$color-theme-button-pagination-link-active-bg;
+			color: variables.$color-theme-button-pagination-link-active-label;
 		}
 	}
 }

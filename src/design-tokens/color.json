@@ -174,7 +174,11 @@
                         "$type": "color"
                     },
                     "activeBg": {
-                        "$value": "{color.theme.primary.pink.value}",
+                        "$value": "{color.theme.ink.value}",
+                        "$type": "color"
+                    },
+                    "activeLabel": {
+                        "$value": "{color.theme.paper.value}",
                         "$type": "color"
                     }
                 },

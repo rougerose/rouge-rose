@@ -438,7 +438,8 @@ legend {
   border-color: hsl(317, 70%, 50%);
 }
 .pagination_item.active a, .pagination_item.active span {
-  background-color: hsl(317, 70%, 50%);
+  background-color: hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 100%);
 }
 
 .pagination_button {
