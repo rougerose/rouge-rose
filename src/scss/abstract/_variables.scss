@@ -1,6 +1,6 @@
 
 // Do not edit directly
-// Generated on Fri, 26 Jul 2024 11:28:44 GMT
+// Generated on Sat, 27 Jul 2024 13:40:52 GMT
 
 $text-font-weight-black: 900;
 $text-font-weight-bold: 700;
@@ -13,6 +13,7 @@ $text-line-height-snug: 1.15;
 $text-line-height-tight: 1;
 $text-font-monospace: monospace, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 $text-font-sans: NewPanamSkyline, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+$color-theme-button-disabled-bg: hsla(0, 0%, 0%, 0);
 $color-base-gray-warm-950: hsl(0, 7%, 6%);
 $color-base-gray-warm-900: hsl(0, 5%, 12%);
 $color-base-gray-warm-850: hsl(0, 4%, 18%);
@@ -38,14 +39,34 @@ $color-base-white: hsl(0, 0%, 100%);
 $color-base-black: hsl(0, 0%, 0%);
 $dimension-viewport-max: 90rem;
 $dimension-viewport-min: 20rem;
+$dimension-button-pagination-link-border: 2px;
+$dimension-button-pagination-border: 0px;
+$dimension-button-default-min-height: 44px;
+$dimension-button-default-min-width: 10ch;
+$dimension-button-default-padding: 0.3em 0.3em;
+$dimension-button-default-border: 2px;
 $color-theme-admin-shadow: $color-base-gray-warm-900;
 $color-theme-admin-hover: $color-base-gray-warm-50;
 $color-theme-admin-bg-hover: $color-base-gray-warm-700;
 $color-theme-admin-bg: $color-base-gray-warm-250;
 $color-theme-card-border: $color-base-gray-warm-100;
 $color-theme-card-shadow: $color-base-gray-warm-200;
+$color-theme-button-disabled-label: $color-base-gray-warm-600;
+$color-theme-button-disabled-border: $color-base-gray-warm-150;
 $color-theme-text-light: $color-base-gray-warm-650;
 $color-theme-primary-pink: $color-base-magenta;
 $color-theme-primary-red: $color-base-red;
 $color-theme-paper: $color-base-white;
 $color-theme-ink: $color-base-black;
+$color-theme-button-pagination-link-active-bg: $color-theme-primary-pink;
+$color-theme-button-pagination-link-hover-label: $color-theme-ink;
+$color-theme-button-pagination-link-hover-border: $color-theme-primary-pink;
+$color-theme-button-pagination-hover-label: $color-theme-ink;
+$color-theme-button-pagination-hover-bg: $color-theme-primary-pink;
+$color-theme-button-pagination-label: $color-theme-primary-pink;
+$color-theme-button-pagination-bg: $color-theme-primary-pink;
+$color-theme-button-hover-label: $color-theme-primary-pink;
+$color-theme-button-hover-border: $color-theme-primary-pink;
+$color-theme-button-default-label: $color-theme-ink;
+$color-theme-button-default-border: $color-theme-ink;
+$color-theme-button-default-bg: $color-theme-paper;

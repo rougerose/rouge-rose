@@ -1,0 +1,77 @@
+// ========================================
+// Pagination
+// ========================================
+
+@use "../abstract/" as variables;
+@use "../tools" as tools;
+
+.pagination {
+	display: grid;
+	place-content: center;
+	grid-template-columns: max-content minmax(0, 1fr) max-content;
+	gap: var(--space-xs);
+	border-top: 1px solid variables.$color-theme-ink;
+	margin-top: var(--space-2xl-3xl);
+	padding-top: var(--space-xs);
+	font-size: var(--step--1);
+}
+
+.pagination_list {
+	--cluster-horizontal-alignment: center;
+	--cluster-gap: 0.5em;
+	margin: 0;
+}
+
+.pagination_item {
+	display: block;
+	& a,
+	& span {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		border: variables.$dimension-button-pagination-link-border solid
+			transparent;
+		padding: variables.$dimension-button-default-padding;
+		min-height: variables.$dimension-button-default-min-height;
+		text-decoration: none;
+		transition: background-color 0.3s, color 0.3s;
+	}
+
+	& a {
+		&:hover {
+			color: variables.$color-theme-button-pagination-link-hover-label;
+			border-color: variables.$color-theme-button-pagination-link-hover-border;
+		}
+	}
+
+	&.active {
+		& a,
+		& span {
+			background-color: variables.$color-theme-button-pagination-link-active-bg;
+		}
+	}
+}
+
+.pagination_button {
+	gap: 0.3em;
+
+	&.button {
+		min-width: unset;
+	}
+
+	& .icon {
+		margin: 0 !important;
+	}
+}
+
+.pagination_prev-next {
+	--icon-arrow-left-short-size: 0.75em;
+	--icon-arrow-right-short-size: 0.75em;
+	justify-self: center;
+
+	@include tools.mq($until: 700px) {
+		& span {
+			display: none;
+		}
+	}
+}

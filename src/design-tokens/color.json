@@ -121,6 +121,78 @@
                     "$type": "color"
                 }
             },
+            "button": {
+                "default": {
+                    "bg": {
+                        "$value": "{color.theme.paper.value}",
+                        "$type": "color"
+                    },
+                    "border": {
+                        "$value": "{color.theme.ink.value}",
+                        "$type": "color"
+                    },
+                    "label": {
+                        "$value": "{color.theme.ink.value}",
+                        "$type": "color"
+                    }
+                },
+                "hover": {
+                    "border": {
+                        "$value": "{color.theme.primary.pink.value}",
+                        "$type": "color"
+                    },
+                    "label": {
+                        "$value": "{color.theme.primary.pink.value}",
+                        "$type": "color"
+                    }
+                },
+                "pagination": {
+                    "bg": {
+                        "$value": "{color.theme.primary.pink.value}",
+                        "$type": "color"
+                    },
+                    "label": {
+                        "$value": "{color.theme.primary.pink.value}",
+                        "$type": "color"
+                    },
+                    "hoverBg": {
+                        "$value": "{color.theme.primary.pink.value}",
+                        "$type": "color"
+                    },
+                    "hoverLabel": {
+                        "$value": "{color.theme.ink.value}",
+                        "$type": "color"
+                    }
+                },
+                "paginationLink": {
+                    "hoverBorder": {
+                        "$value": "{color.theme.primary.pink.value}",
+                        "$type": "color"
+                    },
+                    "hoverLabel": {
+                        "$value": "{color.theme.ink.value}",
+                        "$type": "color"
+                    },
+                    "activeBg": {
+                        "$value": "{color.theme.primary.pink.value}",
+                        "$type": "color"
+                    }
+                },
+                "disabled": {
+                    "bg": {
+                        "$value": "transparent",
+                        "$type": "color"
+                    },
+                    "border": {
+                        "$value": "{color.base.gray-warm.150.value}",
+                        "$type": "color"
+                    },
+                    "label": {
+                        "$value": "{color.base.gray-warm.600.value}",
+                        "$type": "color"
+                    }
+                }
+            },
             "card": {
                 "shadow": {
                     "$value": "{color.base.gray-warm.200.value}",

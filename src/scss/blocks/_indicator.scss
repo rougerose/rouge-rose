@@ -1,0 +1,17 @@
+// ========================================
+// indicator
+//
+// Compteur utilisé avec les filtres
+// ========================================
+
+@use "../abstract" as variables;
+
+.indicator {
+	font-size: 0.7em;
+	font-weight: variables.$text-font-weight-bold;
+	color: variables.$color-theme-primary-pink;
+
+	& span {
+		vertical-align: super;
+	}
+}

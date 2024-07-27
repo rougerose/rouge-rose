@@ -26,7 +26,7 @@
         "watch": "run-p build bs bs:log watch:*",
         "watch:css": "chokidar 'src/scss/**/*.scss' -c 'npm run build:scss && npm run autoprefixer'",
         "watch:js": "chokidar 'src/js/**/*.js' -c 'npm run build:js'",
-        "watch:tokens": "chokidar 'src/design-tokens/**/*.json' -c 'npm run build:tokens'"
+        "watch:tokens": "chokidar 'src/design-tokens/**/*.json' -c 'npm run build'"
     },
     "devDependencies": {
         "@rollup/plugin-commonjs": "^26.0.1",
@@ -36,6 +36,7 @@
         "browser-sync": "^3.0.2",
         "chalk": "^5.3.0",
         "chokidar-cli": "^3.0.0",
+        "dom-parents": "^1.1.4",
         "npm-run-all2": "^6.2.2",
         "postcss": "^8.4.39",
         "postcss-cli": "^11.0.0",

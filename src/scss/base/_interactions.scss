@@ -1,0 +1,17 @@
+// ========================================
+// interactions
+//
+// Styles liés à la sélection, au focus...
+// ========================================
+
+@use "../abstract" as variables;
+
+:focus-visible {
+	outline: max(2px, 0.08em) solid variables.$color-theme-primary-pink;
+	outline-offset: 0.125rem;
+}
+
+::selection {
+	background-color: variables.$color-theme-primary-pink;
+	color: variables.$color-theme-paper;
+}

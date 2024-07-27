@@ -1,0 +1,55 @@
+<B_filtres>
+	[(#REM)
+		<!-- Définir une légende selon la rubrique, sinon une légende par défaut -->
+	][
+	(#SET{legend, <:formulaire_filtrer_articles_legend:>})]
+
+	<div class="formulaire_spip formulaire_#FORM">
+		[<p class="formulaire_ok">(#ENV*{message_ok})</p>]
+		[<p class="formulaire_erreur">(#ENV*{message_erreur})</p>]
+		<form action="#ENV{action}" method="post" class="flow">
+			#ACTION_FORMULAIRE
+			<div class="editer-groupe">
+				<fieldset>
+					<legend>
+						#GET{legend}
+					</legend>
+					<div class="cluster filters_list">
+						<BOUCLE_filtres(MOTS mots_liens)
+							{mots.id_groupe=#ENV{id_groupe}}
+							{mots_liens.id_objet IN #ENV{articles}}
+							{mots_liens.objet=article}{par titre}>
+							<B_mot_occurrences>
+								#SET{occurrences, #TOTAL_BOUCLE}
+								<BOUCLE_mot_occurrences(ARTICLES)
+									{id_mot}{id_rubrique=#ENV{id_rubrique}}>
+								</BOUCLE_mot_occurrences>
+							</B_mot_occurrences>
+							<div class="filters_item choix checkbox[ (#ENV{mots}|find{#ID_MOT}|oui)is-checked]">
+								<input type="checkbox" name="mots\[\]" id="mot#ID_MOT"
+									value="#ID_MOT" [(#ENV{mots}|find{#ID_MOT}|oui) checked]
+									data-title="[(#TITRE|attribut_html)]">
+								<label for="mot#ID_MOT">#TITRE
+									<span class="indicator"><span>#GET{occurrences}</span></span>
+								</label>
+							</div>
+						</BOUCLE_filtres>
+						<div
+							class="choix bouton filters_item button-reset[ (#ENV{mots}|is_array|non)is-disabled]">
+							<button class="button with-icon-left" type="reset"[(#ENV{mots}|is_array|non) disabled]
+								data-self="[(#SELF|parametre_url{mots\[\],''})]">
+								<:formulaire_filtrer_articles_btn_reset:>
+							</button>
+						</div>
+					</div>
+				</fieldset>
+			</div>
+			<noscript>
+				<p class="boutons cluster">
+					<button class="button" name="submit" value="filtrer" type="submit"><:apt:formulaire_filtrer_articles_btn_submit:></button>
+					<span class="image_loading">&nbsp;</span>
+				</p>
+			</noscript>
+		</form>
+	</div>
+</B_filtres>

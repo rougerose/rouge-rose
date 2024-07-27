@@ -1,0 +1,32 @@
+<BOUCLE_projets(RUBRIQUES){id_rubrique}>
+	#SET{id_groupe, 5}
+	[(#SET{self, #SELF|parametre_url{mots, ''}})]
+
+	<B_articles_projet>
+		#ANCRE_PAGINATION
+		<BOUCLE_test_filtres(MOTS mots_liens){mots.id_groupe=#GET{id_groupe}}{mots_liens.objet=article}{mots_liens.id_objet IN #ENV{articles}}{0,1}> </BOUCLE_test_filtres>
+			<div class="filters grid">
+				<div class="ajax">
+					[(#FORMULAIRE_FILTRER_ARTICLES{#ID_RUBRIQUE, #GET{id_groupe}, #ENV{articles}, #GET{self}})]
+					<B_compteur_articles>
+						<BOUCLE_compteur_articles(ARTICLES){id_rubrique}{mots_selon_id? 1 #ENV{mots}}> </BOUCLE_compteur_articles>
+						<p class="filters_count">[
+							(#TOTAL_BOUCLE|singulier_ou_pluriel{projets_nb_singulier, projets_nb_pluriel})]<:projets_total{nb=#ENV{articles_total}}:>.
+						</p>
+					</B_compteur_articles>
+				</div>
+			</div>
+		</B_test_filtres>
+
+		<div class="grid pad-top-4xl" data-layout="thirds">
+			<BOUCLE_articles_projet(ARTICLES){mots_selon_id? 1 #ENV{mots}}{id_rubrique}{!par date_redac}{pagination #ENV{pagination, 12} _projets}>
+				<INCLURE{fond=inclure/resumes/article, id_article} />
+			</BOUCLE_articles_projet>
+		</div>
+		[<nav class="pagination" role="navigation" aria-label="Pagination">
+			(#PAGINATION{prev_next_rr, afficher_lien_precedent=1, afficher_lien_suivant=1, nombre_liens_max=6})
+		</nav>]
+	</B_articles_projet>
+
+</BOUCLE_projets>
+#FILTRE{trim}

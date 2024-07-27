@@ -10,6 +10,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = [
 	'contact'      => 'contact',
 
 	// F
+	'formulaire_filtrer_articles_btn_reset' => 'Effacer votre sélection',
+	'formulaire_filtrer_articles_legend' => 'Filtrer par catégorie',
 	'form_message_confirm' => "confirmer l'envoi",
 	'form_message_send' => 'envoyer votre message',
 
@@ -20,6 +22,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = [
 	'next' => 'suivant',
 
 	//P
+	'projets_nb_singulier' => '1 projet affiché',
+	'projets_nb_pluriel' => '@nb@ projets affichés',
+	'projets_total' => ', sur @nb@ disponibles',
 	'previous' => 'précédent',
 
 	// S

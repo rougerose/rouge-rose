@@ -1,0 +1,158 @@
+// ========================================
+// Styles des formulaires Spip
+// ========================================
+
+@use "../abstract" as variables;
+
+.formulaire_spip {
+	// Styles communs //
+	& .choix {
+		display: grid;
+		place-content: center;
+		gap: 0 0.35em;
+
+		&.checkbox {
+			grid-template-columns: 1fr auto;
+		}
+	}
+	// Formulaire Recherche //
+	// &.formulaire_recherche {
+	// 	& div.editer-groupe > div {
+	// 		// Affichage en mode sidebar à droite //
+	// 		display: flex;
+	// 		flex-wrap: wrap;
+	// 		gap: var(--space-s);
+	// 		margin-top: var(--space-s);
+	// 		font-size: var(--step--1);
+
+	// 		& > :first-child {
+	// 			flex-basis: 0;
+	// 			flex-grow: 999;
+	// 			min-width: 55%;
+	// 		}
+
+	// 		& > :last-child {
+	// 			flex-grow: 1;
+	// 		}
+	// 	}
+
+	// 	& label.dot-title {
+	// 		gap: var(--dot-title-gap);
+	// 	}
+	// }
+
+	// Formulaire filtres articles (expos et œuvres)
+	&.formulaire_filtrer_articles {
+		margin-top: var(--space-m);
+
+		fieldset {
+			border: none;
+			padding: 0;
+		}
+
+		button[type="submit"] {
+			width: min(40ch, 100%);
+		}
+	}
+
+	// Formulaire de contact
+	// &.formulaire_ecrire_auteur {
+	// 	& fieldset {
+	// 		border: none;
+	// 		padding: 0;
+
+	// 		& + fieldset {
+	// 			margin-top: var(--space-l);
+	// 		}
+	// 	}
+
+	// 	& legend {
+	// 		font-weight: 750;
+
+	// 		& + div {
+	// 			margin-top: var(--space-l);
+	// 		}
+	// 	}
+
+	// 	& legend,
+	// 	& label {
+	// 		font-family: var(--font-monospace);
+	// 		font-feature-settings: map.get(
+	// 			variables.$tokens,
+	// 			"font-feature-settings",
+	// 			"auger",
+	// 			"angular"
+	// 		);
+	// 	}
+
+	// 	& .editer-groupe,
+	// 	& .editer {
+	// 		margin-top: var(--space-m);
+	// 	}
+
+	// 	& .editer {
+	// 		& > * + * {
+	// 			margin-top: var(--space-xs);
+	// 		}
+	// 	}
+
+	// 	& .previsu {
+	// 		& > div {
+	// 			& > * + * {
+	// 				margin-top: var(--space-xs);
+	// 			}
+	// 		}
+	// 	}
+
+	// 	& p.boutons {
+	// 		max-width: none;
+	// 		margin-top: var(--space-m);
+	// 	}
+
+	// 	& input[type="submit"] {
+	// 		background-color: map.get(
+	// 			variables.$tokens,
+	// 			"color",
+	// 			"theme",
+	// 			"ink"
+	// 		);
+	// 		border: 2px solid
+	// 			map.get(variables.$tokens, "color", "theme", "ink");
+	// 		color: map.get(variables.$tokens, "color", "theme", "paper");
+
+	// 		&:focus-visible,
+	// 		&:hover {
+	// 			color: map.get(variables.$tokens, "color", "theme", "link");
+	// 		}
+	// 	}
+	// }
+
+	// .reponse_formulaire {
+	// 	padding: 1rem;
+	// 	margin-bottom: var(--space-m);
+	// 	background-color: map.get(
+	// 		variables.$tokens,
+	// 		"color",
+	// 		"theme",
+	// 		"message-bg"
+	// 	);
+	// 	border-left: 0.5rem solid
+	// 		map.get(variables.$tokens, "color", "theme", "message-border");
+
+	// 	&.reponse_formulaire_erreur {
+	// 		background-color: map.get(
+	// 			variables.$tokens,
+	// 			"color",
+	// 			"theme",
+	// 			"message-error-bg"
+	// 		);
+	// 		border-left: 0.5rem solid
+	// 			map.get(
+	// 				variables.$tokens,
+	// 				"color",
+	// 				"theme",
+	// 				"message-error-border"
+	// 			);
+	// 	}
+	// }
+}

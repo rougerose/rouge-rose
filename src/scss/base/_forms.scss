@@ -1,0 +1,85 @@
+// ========================================
+// formulaires
+//
+// Styles génériques pour tous les éléments
+// de formulaires
+// ========================================
+
+@use "../abstract" as variables;
+
+// label
+label {
+	display: flex;
+	gap: 0.1em;
+}
+
+// Input et Textarea //
+input:not([type]),
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="submit"],
+input[type="file"],
+textarea {
+	display: block;
+	background-color: variables.$color-theme-paper;
+	border: 1px solid variables.$color-theme-ink;
+	// color: map.get(variables.$tokens, "color", "theme", "ink");
+	// padding: map.get(variables.$tokens, "button", "padding");
+	width: 100%;
+	appearance: none;
+}
+
+input,
+textarea {
+	&:focus-visible {
+		outline-offset: 0;
+	}
+}
+
+// Chexbox //
+input[type="checkbox"] {
+	appearance: none;
+	margin: 0;
+	font: inherit;
+	width: 1em;
+	height: 1em;
+	border: 0.1em solid currentColor;
+	transform: translateY(0.075em);
+	display: grid;
+	place-content: center;
+
+	&::before {
+		// [1] Windows High Contrast Mode @link https://moderncss.dev/pure-css-custom-checkbox-style //
+		content: "";
+		width: 0.65em;
+		height: 0.65em;
+		transform: scale(0);
+		transform-origin: bottom left;
+		transition: 0.3s transform ease-in-out;
+		box-shadow: inset 1em 1em variables.$color-theme-primary-pink;
+		background-color: CanvasText; // [1] //
+		clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+	}
+
+	&:checked {
+		&::before {
+			transform: scale(1);
+		}
+	}
+
+	&:focus-visible {
+		outline-offset: 0.125em;
+	}
+}
+
+fieldset {
+	border: 2px solid;
+	padding: var(--space-s-m);
+}
+
+legend {
+	font-family: inherit;
+	font-weight: variables.$text-font-weight-medium;
+}

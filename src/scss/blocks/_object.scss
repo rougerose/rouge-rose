@@ -1,0 +1,26 @@
+// ========================================
+// object (rubrique, article)
+// ========================================
+
+@use "../abstract" as variables;
+@use "../tools" as tools;
+
+// .object {}
+
+.object_header {
+	--grid-gutter: 0 var(--space-l);
+	grid-template-columns: 1fr;
+
+	& h1 {
+		border-bottom: 2px solid variables.$color-theme-ink;
+		padding-bottom: var(--space-m);
+	}
+
+	@include tools.mq($from: large) {
+		grid-template-columns: repeat(3, 1fr);
+
+		& h1 {
+			grid-column: 2/-1;
+		}
+	}
+}

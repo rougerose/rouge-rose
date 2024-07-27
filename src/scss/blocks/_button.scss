@@ -1,0 +1,94 @@
+// ========================================
+// button et .button
+// ========================================
+
+@use "../abstract" as variables;
+
+// Box-shadow elevations //
+// low: box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+// middle: box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+// high: box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+// xhigh: box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+a.button {
+	text-decoration: none;
+}
+
+button.button {
+	cursor: pointer;
+}
+
+.button {
+	background-color: variables.$color-theme-button-default-bg;
+	border: variables.$dimension-button-default-border solid
+		variables.$color-theme-button-default-border;
+	// elevation middle
+	box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+	color: variables.$color-theme-button-default-label;
+	display: inline-flex;
+	align-items: center;
+	// justify-content: center;
+	padding: variables.$dimension-button-default-padding;
+	min-width: variables.$dimension-button-default-min-width;
+	min-height: variables.$dimension-button-default-min-height;
+	text-align: center;
+	transition: color 0.3s ease, box-shadow 0.3s ease;
+
+	&.with-icon-left {
+		& .icon {
+			margin-right: 0.5em;
+			margin-top: 0.1em;
+		}
+	}
+
+	&.with-icon-right {
+		& .icon {
+			margin-left: 0.5em;
+			margin-top: 0.1em;
+		}
+	}
+
+	// &.grow {
+	// 	flex: 1 0 100%;
+	// }
+
+	&:disabled {
+		background-color: variables.$color-theme-button-disabled-bg;
+		border-color: variables.$color-theme-button-disabled-border;
+		box-shadow: none;
+		color: variables.$color-theme-button-disabled-label;
+		cursor: not-allowed;
+
+		&:focus-visible,
+		&:hover {
+			box-shadow: none;
+			color: variables.$color-theme-button-disabled-label;
+		}
+	}
+
+	&[data-type="pagination"] {
+		box-shadow: none;
+		border-width: variables.$dimension-button-pagination-border;
+
+		&:focus-visible,
+		&:hover,
+		&:active {
+			box-shadow: none;
+			color: variables.$color-theme-button-hover-label;
+		}
+	}
+
+	&:focus-visible,
+	&:hover {
+		// elevation high
+		box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+			0 4px 6px -4px rgb(0 0 0 / 0.1);
+		color: variables.$color-theme-button-hover-label;
+	}
+
+	&:active {
+		// elevation low
+		box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1),
+			0 1px 2px -1px rgb(0 0 0 / 0.1);
+	}
+}

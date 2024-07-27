@@ -1,0 +1,40 @@
+// ========================================
+// filters
+// ========================================
+
+@use "../abstract" as variables;
+@use "../tools" as tools;
+
+.filters {
+	--grid-gutter: 0 var(--space-l);
+	grid-template-columns: 1fr;
+
+	@include tools.mq($from: large) {
+		grid-template-columns: repeat(3, 1fr);
+
+		& > div {
+			grid-column: 2/-1;
+		}
+	}
+}
+
+.filters_item {
+	padding: 0;
+	min-height: variables.$dimension-button-default-min-height;
+
+	&.button-reset {
+		html.no-js &,
+		&.is-disabled {
+			display: none;
+		}
+	}
+}
+
+.filters_list {
+	--cluster-gap: 0 var(--space-xs);
+}
+
+.filters_count {
+	margin-top: var(--space-l);
+	font-style: italic;
+}
