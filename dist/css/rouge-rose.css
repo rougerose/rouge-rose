@@ -692,9 +692,6 @@ html.no-js .filters_item.button-reset, .filters_item.button-reset.is-disabled {
   grid-template-columns: 1fr;
   align-items: baseline;
   margin-top: var(--space-l);
-  position: sticky;
-  top: 0;
-  z-index: 100;
 }
 
 .site-header_name {
