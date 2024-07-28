@@ -1,0 +1,18 @@
+// ========================================
+// .prose
+//
+// Règles pour le contenu produit par Spip
+// ========================================
+
+.prose {
+	& .prose_metadata,
+	& .prose_text {
+		--flow-space: var(--space-s);
+	}
+
+	& .prose_metadata {
+		& .tags {
+			--cluster-gap: 0 var(--space-xs);
+		}
+	}
+}

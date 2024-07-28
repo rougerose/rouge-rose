@@ -8,9 +8,9 @@
 			<a href="#URL_ARTICLE" class="card_link block-link">#TITRE[ <small>(#SOUSTITRE)</small>]</a>
 		</h2>
 		<B_mots_article>
-			<p class="card_tags">
+			<p class="card_tags cluster">
 				<BOUCLE_mots_article(MOTS){id_article}{id_groupe=5}{par titre}>
-					#TITRE
+					<span class="tag">#TITRE</span>
 				</BOUCLE_mots_article>
 			</p>
 		</B_mots_article>
