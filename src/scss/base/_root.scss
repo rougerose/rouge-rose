@@ -2,17 +2,19 @@
 
 :root {
 	--gutter: var(--space-m);
+	--layout-grid-gutter-column: var(--space-l);
+	--layout-grit-gutter-row: var(--space-3xl);
 
 	// Utopia Type
 	// ===============
-	// @link https://utopia.fyi/type/calculator?c=320,18,1.125,1440,20,1.2,6,3,&s=0.75|0.5|0.25,1.5|2|3|3.5|4|4.5|5|6,s-l&g=s,m,4xl,12
+	// @link https://utopia.fyi/type/calculator?c=320,18,1.125,1440,18,1.2,6,3,&s=0.75|0.5|0.25,1.5|2|3|3.5|4|4.5|5|6,s-l&g=s,m,4xl,12
 
 	@include utopia.generateTypeScale(
 		(
 			"minWidth": 320,
 			"maxWidth": 1440,
 			"minFontSize": 18,
-			"maxFontSize": 20,
+			"maxFontSize": 18,
 			"minTypeScale": 1.125,
 			"maxTypeScale": 1.2,
 			"positiveSteps": 6,
@@ -24,13 +26,14 @@
 
 	// Utopia Space
 	// =======================
-	// @link https://utopia.fyi/space/calculator?c=320,18,1.125,1440,20,1.2,6,3,&s=0.75|0.5|0.25,1.5|2|3|3.5|4|4.5|5|6,s-l&g=s,m,4xl,12
+	// @link https://utopia.fyi/space/calculator?c=320,18,1.125,1440,18,1.2,6,3,&s=0.75|0.5|0.25,1.5|2|3|3.5|4|4.5|5|6,s-l&g=s,l,4xl,12
+
 	@include utopia.generateSpaceScale(
 		(
 			"minWidth": 320,
 			"maxWidth": 1440,
 			"minSize": 18,
-			"maxSize": 20,
+			"maxSize": 18,
 			"positiveSteps": (
 				1.5,
 				2,
