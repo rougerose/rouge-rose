@@ -5,12 +5,13 @@
 	]</BOUCLE_articles>
 	[(#SET{articles_total, #GET{articles}|count})]
 	<div class="object rubrique gap-top-5xl-6xl">
-		<header class="object_header grid">
+		<header class="object_header grid" data-layout="master">
 			<div class="cluster">
 				<h1>#TITRE</h1>
 			</div>
 		</header>
 		<INCLURE{fond=inclure/contenu/projets, id_rubrique, articles_total=#GET{articles_total}, articles=#GET{articles}, ajax=projets, env}/>
 	</div>
+	<INCLURE{fond=breadcrumb/rubrique, id_rubrique}/>
 </BOUCLE_rubrique_projets>
 #FILTRE{trim}

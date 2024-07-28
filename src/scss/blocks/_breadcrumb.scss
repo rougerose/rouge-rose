@@ -1,0 +1,42 @@
+// ========================================
+// Breadcrumb
+// ========================================
+
+@use "../tools" as tools;
+@use "../abstract" as variables;
+
+.breadcrumb {
+	margin-top: var(--space-5xl);
+}
+
+.breadcrumb_list {
+	--cluster-gap: 0 0.4em;
+	border-top: 1px solid variables.$color-theme-ink;
+	margin-top: 0;
+	padding-top: var(--space-s);
+
+	// & li {}
+
+	& a,
+	& span {
+		display: inline-flex;
+		column-gap: 0.4em;
+
+		&::before {
+			content: "/";
+			font-weight: variables.$text-font-weight-regular;
+		}
+	}
+
+	& a {
+		text-decoration: none;
+	}
+
+	& span {
+		font-weight: variables.$text-font-weight-medium;
+	}
+
+	@include tools.mq($from: large) {
+		grid-column: 2/-1;
+	}
+}

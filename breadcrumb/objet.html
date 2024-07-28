@@ -1,8 +1,0 @@
-<li class="nav-breadcrumb__item"><a href="#URL_SITE_SPIP/" class="link--soft">#NOM_SITE_SPIP</a></li>
-<BOUCLE_contexte_rubrique(RUBRIQUES) {id_rubrique=(#OBJET|=={rubrique}|?{#INFO_ID_PARENT{#OBJET,#ID_OBJET},#INFO_ID_RUBRIQUE{#OBJET,#ID_OBJET}})}>
-<BOUCLE_ariane_hier(HIERARCHIE) {id_rubrique}{tout}>
-<li class="nav-breadcrumb__item"><a href="#URL_RUBRIQUE" class="link--soft">[(#TITRE)]</a></li>
-</BOUCLE_ariane_hier>
-</BOUCLE_contexte_rubrique>
-<li class="nav-breadcrumb__item[ (#ENV{expose,' '}|oui)nav__item--active]"><span>#INFO_TITRE{#OBJET,#ID_OBJET}</span></li>
-#FILTRE{mini_html}

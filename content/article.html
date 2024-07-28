@@ -1,16 +1,16 @@
 <BOUCLE_article(ARTICLES){id_article}>
-	<div class="object article gap-top-5xl-6xl">
-		<header class="object_header grid">
+	<article class="object article gap-top-5xl-6xl">
+		<header class="object_header grid" data-layout="master">
 			<div class="cluster">
 				<h1>#TITRE</h1>
 				[<p>(#SOUSTITRE)</p>]
 			</div>
 		</header>
-		<div class="object_prose prose grid">
+		<div class="object_prose prose grid" data-layout="master">
 			<div class="prose_metadata flow">
 				<B_categories>
-					<p class="cluster">
-						<BOUCLE_categories(MOTS){id_article}{id_groupe=5}{par titre}><span>#TITRE</span></BOUCLE_categories>
+					<p class="cluster tags">
+						<BOUCLE_categories(MOTS){id_article}{id_groupe=5}{par titre}><span class="tag">#TITRE</span></BOUCLE_categories>
 					</p>
 				</B_categories>
 				[<p>
@@ -19,7 +19,7 @@
 					</time>
 				</p>]
 			</div>
-			[<div class="prose_text">(#TEXTE)</div>]
+			[<div class="prose_text flow">(#TEXTE)</div>]
 		</div>
 		<B_albums_article>
 			<div class="object_portfolio gap-top-5xl-6xl">
@@ -28,6 +28,7 @@
 				</BOUCLE_albums_article>
 			</div>
 		</B_albums_article>
-	</div>
+	</article>
+	<INCLURE{fond=breadcrumb/article, id_article}/>
 </BOUCLE_article>
 #FILTRE{trim}
