@@ -169,40 +169,42 @@ body {
 
 :root {
   --gutter: var(--space-m);
-  --step--3: clamp(0.7234rem, 0.8092rem + -0.0953vw, 0.7901rem);
-  --step--2: clamp(0.8681rem, 0.8948rem + -0.0298vw, 0.8889rem);
-  --step--1: clamp(1rem, 0.9881rem + 0.0595vw, 1.0417rem);
-  --step-0: clamp(1.125rem, 1.0893rem + 0.1786vw, 1.25rem);
-  --step-1: clamp(1.2656rem, 1.1987rem + 0.3348vw, 1.5rem);
-  --step-2: clamp(1.4238rem, 1.3164rem + 0.5374vw, 1.8rem);
-  --step-3: clamp(1.6018rem, 1.4423rem + 0.7974vw, 2.16rem);
-  --step-4: clamp(1.802rem, 1.5763rem + 1.1285vw, 2.592rem);
-  --step-5: clamp(2.0273rem, 1.7178rem + 1.5473vw, 3.1104rem);
-  --step-6: clamp(2.2807rem, 1.8659rem + 2.074vw, 3.7325rem);
+  --layout-grid-gutter-column: var(--space-l);
+  --layout-grid-gutter-row: var(--space-2xl-3xl);
+  --step--3: clamp(0.651rem, 0.8299rem + -0.1987vw, 0.7901rem);
+  --step--2: clamp(0.7813rem, 0.9196rem + -0.1538vw, 0.8889rem);
+  --step--1: clamp(0.9375rem, 1.0179rem + -0.0893vw, 1rem);
+  --step-0: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  --step-1: clamp(1.2656rem, 1.2415rem + 0.1205vw, 1.35rem);
+  --step-2: clamp(1.4238rem, 1.3678rem + 0.2802vw, 1.62rem);
+  --step-3: clamp(1.6018rem, 1.504rem + 0.4888vw, 1.944rem);
+  --step-4: clamp(1.802rem, 1.6504rem + 0.7582vw, 2.3328rem);
+  --step-5: clamp(2.0273rem, 1.8067rem + 1.103vw, 2.7994rem);
+  --step-6: clamp(2.2807rem, 1.9725rem + 1.5408vw, 3.3592rem);
   --space-3xs: clamp(0.3125rem, 0.3125rem + 0vw, 0.3125rem);
-  --space-2xs: clamp(0.5625rem, 0.5446rem + 0.0893vw, 0.625rem);
-  --space-xs: clamp(0.875rem, 0.8571rem + 0.0893vw, 0.9375rem);
-  --space-s: clamp(1.125rem, 1.0893rem + 0.1786vw, 1.25rem);
-  --space-m: clamp(1.6875rem, 1.6339rem + 0.2679vw, 1.875rem);
-  --space-l: clamp(2.25rem, 2.1786rem + 0.3571vw, 2.5rem);
-  --space-xl: clamp(3.375rem, 3.2679rem + 0.5357vw, 3.75rem);
-  --space-2xl: clamp(3.9375rem, 3.8125rem + 0.625vw, 4.375rem);
-  --space-3xl: clamp(4.5rem, 4.3571rem + 0.7143vw, 5rem);
-  --space-4xl: clamp(5.0625rem, 4.9018rem + 0.8036vw, 5.625rem);
-  --space-5xl: clamp(5.625rem, 5.4464rem + 0.8929vw, 6.25rem);
-  --space-6xl: clamp(6.75rem, 6.5357rem + 1.0714vw, 7.5rem);
-  --space-3xs-2xs: clamp(0.3125rem, 0.2232rem + 0.4464vw, 0.625rem);
-  --space-2xs-xs: clamp(0.5625rem, 0.4554rem + 0.5357vw, 0.9375rem);
-  --space-xs-s: clamp(0.875rem, 0.7679rem + 0.5357vw, 1.25rem);
-  --space-s-m: clamp(1.125rem, 0.9107rem + 1.0714vw, 1.875rem);
-  --space-m-l: clamp(1.6875rem, 1.4554rem + 1.1607vw, 2.5rem);
-  --space-l-xl: clamp(2.25rem, 1.8214rem + 2.1429vw, 3.75rem);
-  --space-xl-2xl: clamp(3.375rem, 3.0893rem + 1.4286vw, 4.375rem);
-  --space-2xl-3xl: clamp(3.9375rem, 3.6339rem + 1.5179vw, 5rem);
-  --space-3xl-4xl: clamp(4.5rem, 4.1786rem + 1.6071vw, 5.625rem);
-  --space-4xl-5xl: clamp(5.0625rem, 4.7232rem + 1.6964vw, 6.25rem);
-  --space-5xl-6xl: clamp(5.625rem, 5.0893rem + 2.6786vw, 7.5rem);
-  --space-s-l: clamp(1.125rem, 0.7321rem + 1.9643vw, 2.5rem);
+  --space-2xs: clamp(0.5625rem, 0.5625rem + 0vw, 0.5625rem);
+  --space-xs: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
+  --space-s: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  --space-m: clamp(1.6875rem, 1.6875rem + 0vw, 1.6875rem);
+  --space-l: clamp(2.25rem, 2.25rem + 0vw, 2.25rem);
+  --space-xl: clamp(3.375rem, 3.375rem + 0vw, 3.375rem);
+  --space-2xl: clamp(3.9375rem, 3.9375rem + 0vw, 3.9375rem);
+  --space-3xl: clamp(4.5rem, 4.5rem + 0vw, 4.5rem);
+  --space-4xl: clamp(5.0625rem, 5.0625rem + 0vw, 5.0625rem);
+  --space-5xl: clamp(5.625rem, 5.625rem + 0vw, 5.625rem);
+  --space-6xl: clamp(6.75rem, 6.75rem + 0vw, 6.75rem);
+  --space-3xs-2xs: clamp(0.3125rem, 0.2411rem + 0.3571vw, 0.5625rem);
+  --space-2xs-xs: clamp(0.5625rem, 0.4732rem + 0.4464vw, 0.875rem);
+  --space-xs-s: clamp(0.875rem, 0.8036rem + 0.3571vw, 1.125rem);
+  --space-s-m: clamp(1.125rem, 0.9643rem + 0.8036vw, 1.6875rem);
+  --space-m-l: clamp(1.6875rem, 1.5268rem + 0.8036vw, 2.25rem);
+  --space-l-xl: clamp(2.25rem, 1.9286rem + 1.6071vw, 3.375rem);
+  --space-xl-2xl: clamp(3.375rem, 3.2143rem + 0.8036vw, 3.9375rem);
+  --space-2xl-3xl: clamp(3.9375rem, 3.7768rem + 0.8036vw, 4.5rem);
+  --space-3xl-4xl: clamp(4.5rem, 4.3393rem + 0.8036vw, 5.0625rem);
+  --space-4xl-5xl: clamp(5.0625rem, 4.9018rem + 0.8036vw, 5.625rem);
+  --space-5xl-6xl: clamp(5.625rem, 5.3036rem + 1.6071vw, 6.75rem);
+  --space-s-l: clamp(1.125rem, 0.8036rem + 1.6071vw, 2.25rem);
 }
 
 a {
@@ -310,8 +312,8 @@ legend {
   grid-template-columns: repeat(var(--grid-placement, auto-fill), minmax(var(--grid-min-item-size, 20rem), 1fr));
 }
 .grid[data-layout=thirds] {
-  --grid-gutter: var(--space-3xl) var(--space-l);
-  grid-template-columns: 1fr;
+  --grid-gutter: var(--layout-grid-gutter-row)
+  	var(--layout-grid-gutter-column);
 }
 @media screen and (min-width: 46.25em) {
   .grid[data-layout=thirds] {
@@ -337,6 +339,10 @@ legend {
   gap: var(--cluster-gap, var(--gutter));
   justify-content: var(--cluster-horizontal-alignment, flex-start);
   align-items: var(--cluster-vertical-alignment, center);
+}
+
+.gap-top-3xl {
+  margin-top: var(--space-3xl);
 }
 
 .gap-top-5xl-6xl {
@@ -411,7 +417,6 @@ legend {
   border-top: 1px solid hsl(0, 0%, 0%);
   margin-top: var(--space-2xl-3xl);
   padding-top: var(--space-xs);
-  font-size: var(--step--1);
 }
 
 .pagination_list {
@@ -575,7 +580,7 @@ button.button {
   display: block;
   margin-bottom: var(--space-s);
   width: var(--space-xl);
-  height: 2px;
+  height: 1px;
   background-color: hsl(0, 0%, 0%);
   content: "";
 }
@@ -671,25 +676,87 @@ html.no-js .filters_item.button-reset, .filters_item.button-reset.is-disabled {
   vertical-align: super;
 }
 
-.object_header {
-  --grid-gutter: 0 var(--space-l);
+.object_header,
+.object_prose {
+  --grid-gutter: 0 var(--layout-grid-gutter-column);
   grid-template-columns: 1fr;
 }
+
+.object_header > div {
+  --cluster-gap: var(--space-xs);
+  --cluster-vertical-alignment: baseline;
+  border-bottom: 1px solid hsl(0, 0%, 0%);
+  padding-bottom: var(--space-s);
+}
 .object_header h1 {
-  border-bottom: 2px solid hsl(0, 0%, 0%);
-  padding-bottom: var(--space-m);
+  font-size: var(--step-3);
+}
+.object_header p {
+  color: hsl(0, 5%, 41%);
+}
+
+.object_prose {
+  padding-top: var(--space-s);
+  color: hsl(0, 5%, 41%);
+}
+
+@media screen and (min-width: 46.25em) {
+  .object_prose {
+    grid-template-columns: 1fr 1fr;
+  }
+  .object_prose .prose_metadata {
+    grid-column: 1/2;
+  }
 }
 @media screen and (min-width: 64em) {
-  .object_header {
+  .object_header,
+  .object_prose {
     grid-template-columns: repeat(3, 1fr);
   }
-  .object_header h1 {
+  .object_header > div {
     grid-column: 2/-1;
   }
+  .object_prose .prose_metadata {
+    grid-column: 2/3;
+  }
+}
+.album.grid[data-layout] {
+  --grid-gutter: var(--layout-grid-gutter-row)
+  	var(--layout-grid-gutter-column);
+  grid-template-columns: 1fr;
+}
+@media screen and (min-width: 46.25em) {
+  .album.grid[data-layout=thirds] {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 64em) {
+  .album.grid[data-layout=thirds] {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.album.grid[data-layout="50-50"] {
+  --layout-grit-gutter-row: var(--space-xl);
+}
+@media screen and (min-width: 46.25em) {
+  .album.grid[data-layout="50-50"] {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 46.25em) {
+  .album.grid[data-layout=thirds-one-two-alternate] {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .album.grid[data-layout=thirds-one-two-alternate] > *:nth-child(4n+1), .album.grid[data-layout=thirds-one-two-alternate] > *:nth-child(4n+4) {
+    grid-column: auto/span 2;
+  }
+}
+.album + .album {
+  margin-top: var(--layout-grid-gutter-row);
 }
 
 .site-header {
-  --grid-gutter: var(--space-s) var(--space-l);
+  --grid-gutter: var(--space-s) var(--layout-grid-gutter-column);
   grid-template-columns: 1fr;
   align-items: baseline;
   margin-top: var(--space-l);
@@ -718,9 +785,8 @@ html.no-js .filters_item.button-reset, .filters_item.button-reset.is-disabled {
 }
 
 .site-header_nav ul {
-  display: grid;
+  gap: var(--layout-grid-gutter-column);
   grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-l);
   margin: 0;
   font-size: var(--step-2);
 }

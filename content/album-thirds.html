@@ -1,0 +1,42 @@
+[(#REM)
+	<!--
+		Formats d'images
+		==================
+		Device		Mediaquery		 x1		 x2
+		========================================
+		1440		min 1024		438		876
+		1023		min 740			466		932
+		739							685		1370
+		375							320		640
+
+		Formats retenus : 320, 466, 685, 932, 1370
+	-->
+]
+<B_album_defaut>
+	<div class="grid album" data-layout="thirds">
+		<BOUCLE_album_defaut(DOCUMENTS)
+			{id_album=#ENV{id_album}}
+			{tout}
+			{par rang_lien, num titre, id_document}
+			{!par date}
+			{tout}
+		>
+			[(#SET{fichier, #FICHIER|image_reduire{1370}|extraire_attribut{src}})][
+			(#SET{2, #GET{fichier}|image_reduire{932,0}|extraire_attribut{src}})][
+			(#SET{3, #GET{fichier}|image_reduire{685,0}|extraire_attribut{src}})][
+			(#SET{4, #GET{fichier}|image_reduire{466,0}|extraire_attribut{src}})][
+			(#SET{5, #GET{fichier}|image_reduire{320,0}|extraire_attribut{src}})][
+
+			(#SET{srcset, #GET{5}|concat{' 320w,'}
+				|concat{#GET{4}}|concat{' 466w,'}
+				|concat{#GET{3}}|concat{' 685w,'}
+				|concat{#GET{2}}|concat{' 932w,'}
+				|concat{#GET{fichier}}|concat{' 1370w,'}
+			})][
+			(#SET{src, #GET{4}})][
+			(#SET{sizes, #VAL{'(min-width:1024px) 438px, (min-width:740px) 50vw, 100vw'}})]
+			<INCLURE{fond=inclure/contenu/figure, id_document, src=#GET{src}, srcset=#GET{srcset}, sizes=#GET{sizes}}/>
+		</BOUCLE_album_defaut>
+	</div>
+</B_album_defaut>
+#FILTRE{trim}

@@ -1,0 +1,15 @@
+<BOUCLE_figure(DOCUMENTS){id_document=#ENV{id_document}}{tout}>
+	[(#SET{alt, [(#ALT|sinon{#DESCRIPTIF}|sinon{#TITRE}|attribut_html)][. (#CREDITS|attribut_html)]})]
+	<figure class="album_figure">
+		<a href="#URL_DOCUMENT" class="figure_link photoswipe" type="#MIME_TYPE" data-pswp-width="#LARGEUR" data-pswp-height="#HAUTEUR">
+			[<img src="(#ENV{src})"
+				width="[(#ENV{src}|largeur)]"
+				height="[(#ENV{src}|hauteur)]"
+				[srcset="(#ENV{srcset}|trim)"]
+				[sizes="(#ENV{sizes}trim)"]
+				alt="[(#ALT|sinon{#DESCRIPTIF}|sinon{#TITRE}|attribut_html)][ (#CREDITS|attribut_html)]"
+				loading="lazy">]
+		</a>
+	</figure>
+</BOUCLE_figure>
+#FILTRE{trim}

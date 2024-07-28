@@ -1,49 +1,33 @@
 <BOUCLE_article(ARTICLES){id_article}>
-<article class="article-self">
-    <div class="grid__item lap-and-up-two-thirds push--lap-and-up-one-third">
-        <div class="grid">
-            <div class="grid__item">
-                <header class="self__header">
-                    <h1 class="hN self__titre">#TITRE[ <small>(#SOUSTITRE)</small>]</h1>
-                </header>
-            </div><!-- /.grid__item -->
-            <div class="grid__item lap-and-up-one-half self__meta">
-                [<p><time datetime="(#DATE_REDAC|affdate{Y-m})">[(#DATE_REDAC|nom_mois) ][(#DATE_REDAC|annee)]</time></p>]
-            </div><!-- /.grid__item -->
-            [<div class="grid__item lap-and-up-one-half self__texte">
-                (#TEXTE)
-            </div><!-- /.grid__item -->]
-        </div><!-- /.grid -->
-    </div><!-- /.grid__item -->
-
-    <div class="grid__item self__portfolio">
-        <div class="grid">
-            <BOUCLE_documents(DOCUMENTS){id_article}{par titre,id_document}>
-            <BOUCLE_groupe(MOTS){id_document}{id_groupe=3}{technique=oui}>
-            <B_documents_groupe>
-            <div class="grid__item #TITRE">
-                <div class="grid">
-                    <BOUCLE_documents_groupe(DOCUMENTS){id_mot}{id_article}{par titre, id_document}{doublons}>
-                    [(#INCLURE{fond=modeles/media_portfolio,id_document,id_article})]
-                    </BOUCLE_documents_groupe>
-                </div>
-                <!-- /.grid -->
-            </div><!-- /.grid__item -->
-            </B_documents_groupe>
-            </BOUCLE_groupe>
-            [(#INCLURE{fond=modeles/media_portfolio,id_document,id_article})]
-            <//B_groupe>
-            </BOUCLE_documents>
-        </div><!-- /.grid -->
-    </div><!-- /.grid__item -->
-    <div class="grid__item">
-        <div class="grid grid--center">
-            #INCLURE{fond=nav/article-prev_next,id_article,env}
-        </div><!-- /.grid -->
-    </div>
-    <div class="grid__item lap-and-up-two-thirds push--lap-and-up-one-third">
-        <INCLURE{fond=breadcrumb/#ENV{type-page},env} />
-    </div><!-- /.grid__item -->
-</article>
+	<div class="object article gap-top-5xl-6xl">
+		<header class="object_header grid">
+			<div class="cluster">
+				<h1>#TITRE</h1>
+				[<p>(#SOUSTITRE)</p>]
+			</div>
+		</header>
+		<div class="object_prose prose grid">
+			<div class="prose_metadata flow">
+				<B_categories>
+					<p class="cluster">
+						<BOUCLE_categories(MOTS){id_article}{id_groupe=5}{par titre}><span>#TITRE</span></BOUCLE_categories>
+					</p>
+				</B_categories>
+				[<p>
+					<time datetime="(#DATE_REDAC|affdate{Y-m})">
+						[(#DATE_REDAC|nom_mois)][ (#DATE_REDAC|annee)]
+					</time>
+				</p>]
+			</div>
+			[<div class="prose_text">(#TEXTE)</div>]
+		</div>
+		<B_albums_article>
+			<div class="object_portfolio gap-top-5xl-6xl">
+				<BOUCLE_albums_article(ALBUMS albums_liens){id_article}{vu=non}{par rang_lien}{par date}>
+					<INCLURE{fond=#COMPOSITION|compositions_selectionner{album, defaut}, id_album}/>
+				</BOUCLE_albums_article>
+			</div>
+		</B_albums_article>
+	</div>
 </BOUCLE_article>
-#FILTRE{mini_html}
+#FILTRE{trim}

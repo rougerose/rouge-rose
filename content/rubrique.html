@@ -6,7 +6,9 @@
 	[(#SET{articles_total, #GET{articles}|count})]
 	<div class="object rubrique gap-top-5xl-6xl">
 		<header class="object_header grid">
-			<h1>#TITRE</h1>
+			<div class="cluster">
+				<h1>#TITRE</h1>
+			</div>
 		</header>
 		<INCLURE{fond=inclure/contenu/projets, id_rubrique, articles_total=#GET{articles_total}, articles=#GET{articles}, ajax=projets, env}/>
 	</div>

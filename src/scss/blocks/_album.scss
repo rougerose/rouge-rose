@@ -1,0 +1,52 @@
+// ========================================
+// album, portfolio des articles
+// ========================================
+
+@use "../tools" as tools;
+
+.album {
+	// Mise en page des variantes de grilles
+	&.grid {
+		&[data-layout] {
+			--grid-gutter: var(--layout-grid-gutter-row)
+				var(--layout-grid-gutter-column);
+			grid-template-columns: 1fr;
+		}
+
+		// 3 tiers
+		&[data-layout="thirds"] {
+			@include tools.mq($from: medium) {
+				grid-template-columns: repeat(2, 1fr);
+			}
+
+			@include tools.mq($from: large) {
+				grid-template-columns: repeat(3, 1fr);
+			}
+		}
+
+		// 50-50 : 2 colonnes égales
+		&[data-layout="50-50"] {
+			--layout-grit-gutter-row: var(--space-xl);
+
+			@include tools.mq($from: medium) {
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
+
+		// 1/3 - 2/3 - 2/3 - 1/3
+		&[data-layout="thirds-one-two-alternate"] {
+			@include tools.mq($from: medium) {
+				grid-template-columns: repeat(3, 1fr);
+
+				& > *:nth-child(4n + 1),
+				& > *:nth-child(4n + 4) {
+					grid-column: auto / span 2;
+				}
+			}
+		}
+	}
+
+	& + & {
+		margin-top: var(--layout-grid-gutter-row);
+	}
+}

@@ -7,20 +7,59 @@
 
 // .object {}
 
-.object_header {
-	--grid-gutter: 0 var(--space-l);
+.object_header,
+.object_prose {
+	--grid-gutter: 0 var(--layout-grid-gutter-column);
 	grid-template-columns: 1fr;
+}
 
-	& h1 {
-		border-bottom: 2px solid variables.$color-theme-ink;
-		padding-bottom: var(--space-m);
+.object_header {
+	& > div {
+		--cluster-gap: var(--space-xs);
+		--cluster-vertical-alignment: baseline;
+		border-bottom: 1px solid variables.$color-theme-ink;
+		padding-bottom: var(--space-s);
 	}
 
-	@include tools.mq($from: large) {
-		grid-template-columns: repeat(3, 1fr);
+	& h1 {
+		font-size: var(--step-3);
+	}
 
-		& h1 {
+	& p {
+		color: variables.$color-theme-text-light;
+	}
+}
+
+.object_prose {
+	padding-top: var(--space-s);
+	color: variables.$color-theme-text-light;
+}
+
+@include tools.mq($from: medium) {
+	.object_prose {
+		grid-template-columns: 1fr 1fr;
+
+		& .prose_metadata {
+			grid-column: 1/2;
+		}
+	}
+}
+
+@include tools.mq($from: large) {
+	.object_header,
+	.object_prose {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.object_header {
+		& > div {
 			grid-column: 2/-1;
+		}
+	}
+
+	.object_prose {
+		& .prose_metadata {
+			grid-column: 2/3;
 		}
 	}
 }

@@ -8,10 +8,10 @@
 		minmax(var(--grid-min-item-size, 20rem), 1fr)
 	);
 
-	// 3 tiers
+	// Mise en page liste des projets
 	&[data-layout="thirds"] {
-		--grid-gutter: var(--space-3xl) var(--space-l);
-		grid-template-columns: 1fr;
+		--grid-gutter: var(--layout-grid-gutter-row)
+			var(--layout-grid-gutter-column);
 
 		@include tools.mq($from: medium) {
 			grid-template-columns: repeat(2, 1fr);

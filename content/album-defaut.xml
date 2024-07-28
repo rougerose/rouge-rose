@@ -1,0 +1,5 @@
+<composition>
+    <nom>Album : 50-50</nom>
+    <description>Album d'images présentées sur 2 colonnes égales (identique à la composition par défaut)</description>
+    <icon>img/composition-album-deux-colonnes.svg</icon>
+</composition>

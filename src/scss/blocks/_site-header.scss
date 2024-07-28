@@ -6,13 +6,10 @@
 @use "../tools" as tools;
 
 .site-header {
-	--grid-gutter: var(--space-s) var(--space-l);
+	--grid-gutter: var(--space-s) var(--layout-grid-gutter-column);
 	grid-template-columns: 1fr;
 	align-items: baseline;
 	margin-top: var(--space-l);
-	// position: sticky;
-	// top: 0;
-	// z-index: 100;
 }
 
 .site-header_name {
@@ -42,10 +39,8 @@
 
 .site-header_nav {
 	& ul {
-		display: grid;
+		gap: var(--layout-grid-gutter-column);
 		grid-template-columns: repeat(2, 1fr);
-
-		gap: var(--space-l);
 		margin: 0;
 		font-size: var(--step-2);
 	}
