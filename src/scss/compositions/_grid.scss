@@ -12,13 +12,40 @@
 	&[data-layout="thirds"] {
 		--grid-gutter: var(--layout-grid-gutter-row)
 			var(--layout-grid-gutter-column);
+	}
 
-		@include tools.mq($from: medium) {
-			grid-template-columns: repeat(2, 1fr);
+	// Mise en page des articles
+	&[data-layout="master"] {
+		--grid-gutter: var(--space-s) var(--layout-grid-gutter-column);
+		grid-template-columns: 1fr;
+	}
+}
+
+@include tools.mq($from: medium) {
+	.grid {
+		&[data-layout="thirds"] {
+			grid-template-columns: 1fr 1fr;
 		}
 
-		@include tools.mq($from: large) {
+		&[data-layout="master"] {
+			&.object_prose {
+				grid-template-columns: 1fr 1fr;
+			}
+		}
+	}
+}
+
+@include tools.mq($from: large) {
+	.grid {
+		&[data-layout="thirds"] {
 			grid-template-columns: repeat(3, 1fr);
+		}
+
+		&[data-layout="master"] {
+			&,
+			&.object_prose {
+				grid-template-columns: repeat(3, 1fr);
+			}
 		}
 	}
 }

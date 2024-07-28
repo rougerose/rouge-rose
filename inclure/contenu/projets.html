@@ -5,7 +5,7 @@
 	<B_articles_projet>
 		#ANCRE_PAGINATION
 		<BOUCLE_test_filtres(MOTS mots_liens){mots.id_groupe=#GET{id_groupe}}{mots_liens.objet=article}{mots_liens.id_objet IN #ENV{articles}}{0,1}> </BOUCLE_test_filtres>
-			<div class="filters grid">
+			<div class="filters grid" data-layout="master">
 				<div class="ajax">
 					[(#FORMULAIRE_FILTRER_ARTICLES{#ID_RUBRIQUE, #GET{id_groupe}, #ENV{articles}, #GET{self}})]
 					<B_compteur_articles>

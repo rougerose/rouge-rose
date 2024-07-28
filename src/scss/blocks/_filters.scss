@@ -6,12 +6,9 @@
 @use "../tools" as tools;
 
 .filters {
-	--grid-gutter: 0 var(--space-l);
-	grid-template-columns: 1fr;
+	--grid-gutter: 0 var(--layout-grid-gutter-column);
 
 	@include tools.mq($from: large) {
-		grid-template-columns: repeat(3, 1fr);
-
 		& > div {
 			grid-column: 2/-1;
 		}

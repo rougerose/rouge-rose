@@ -7,12 +7,6 @@
 
 // .object {}
 
-.object_header,
-.object_prose {
-	--grid-gutter: 0 var(--layout-grid-gutter-column);
-	grid-template-columns: 1fr;
-}
-
 .object_header {
 	& > div {
 		--cluster-gap: var(--space-xs);
@@ -37,8 +31,6 @@
 
 @include tools.mq($from: medium) {
 	.object_prose {
-		grid-template-columns: 1fr 1fr;
-
 		& .prose_metadata {
 			grid-column: 1/2;
 		}
@@ -46,11 +38,6 @@
 }
 
 @include tools.mq($from: large) {
-	.object_header,
-	.object_prose {
-		grid-template-columns: repeat(3, 1fr);
-	}
-
 	.object_header {
 		& > div {
 			grid-column: 2/-1;
