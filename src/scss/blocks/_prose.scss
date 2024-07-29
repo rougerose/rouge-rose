@@ -1,10 +1,15 @@
 // ========================================
 // .prose
 //
-// Règles pour le contenu produit par Spip
+// Règles pour les blocs et le contenu
+// produits par Spip.
 // ========================================
 
+@use "../abstract" as variables;
+@use "../tools" as tools;
+
 .prose {
+	// Blocs
 	& .prose_metadata,
 	& .prose_text {
 		--flow-space: var(--space-s);
@@ -14,5 +19,91 @@
 		& .tags {
 			--cluster-gap: 0 var(--space-xs);
 		}
+	}
+
+	// & .prose_text {}
+
+	&[data-layout="infos"] {
+		&.prose {
+			& :is(h2, legend) {
+				&::before {
+					display: block;
+					margin-bottom: var(--space-xs);
+					width: 2ch;
+					height: 1px;
+					background-color: variables.$color-theme-ink;
+					content: "";
+				}
+			}
+		}
+
+		& .prose_text {
+			font-size: var(--step-2);
+
+			& :is(h1, h2, h3, h4, h5, p, ul, ol, blockquote, hr) {
+				max-width: 45ch;
+			}
+		}
+	}
+}
+
+.prose_references-clients {
+	--flow-space: var(--space-xs);
+
+	& h2 {
+		font-size: var(--step-1);
+	}
+
+	& h3 {
+		font-size: var(--step-0);
+		font-weight: variables.$text-font-weight-regular;
+		font-style: italic;
+	}
+
+	& ul {
+		margin-top: var(--space-3xs);
+		// font-size: var(--step-0);
+		max-width: 50ch;
+	}
+
+	& li {
+		display: inline;
+
+		&::after {
+			content: ", ";
+		}
+
+		&:last-child::after {
+			content: ".";
+		}
+	}
+}
+
+.prose_contact {
+	--flow-space: var(--space-2xs);
+
+	& legend,
+	& h2 {
+		font-size: var(--step-3);
+	}
+
+	& h2 {
+		margin-bottom: var(--space-l);
+	}
+
+	& p {
+		font-size: var(--step-1);
+	}
+
+	@include tools.mq($until: medium) {
+		& section + section {
+			margin-top: var(--space-2xl-3xl);
+		}
+	}
+}
+
+.prose_credits {
+	& h2 {
+		font-size: var(--step-1);
 	}
 }

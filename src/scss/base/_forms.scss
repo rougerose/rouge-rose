@@ -26,7 +26,7 @@ textarea {
 	background-color: variables.$color-theme-paper;
 	border: 1px solid variables.$color-theme-ink;
 	// color: map.get(variables.$tokens, "color", "theme", "ink");
-	// padding: map.get(variables.$tokens, "button", "padding");
+	padding: variables.$dimension-button-default-padding;
 	width: 100%;
 	appearance: none;
 }
@@ -35,6 +35,8 @@ input,
 textarea {
 	&:focus-visible {
 		outline-offset: 0;
+		// outline-color: variables.$color-theme-ink;
+		border-color: variables.$color-theme-primary-pink;
 	}
 }
 

@@ -1,0 +1,5 @@
+<BOUCLE_principale_article(ARTICLES){id_article}>
+	<INCLURE{fond=structure, id_rubrique=#ENV{id_rubrique, #ID_RUBRIQUE},
+		id_secteur=#ID_SECTEUR, type-page=article, composition=#COMPOSITION, env}/>
+</BOUCLE_principale_article>
+#FILTRE{trim}

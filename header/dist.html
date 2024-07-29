@@ -6,8 +6,8 @@
 <nav class="site-header_nav" aria-label="Menu principal">
     <ul class="grid" role="list">
         <BOUCLE_rubriques(RUBRIQUES){id_rubrique=1}>
-        	<li class="nav-main__item[ (#EXPOSE|oui)nav__item--active]"><a href="#URL_RUBRIQUE" class="link--soft">#TITRE</a></li>
+        	<li><a href="#URL_RUBRIQUE">#TITRE</a></li>
         </BOUCLE_rubriques>
-        <li class="nav-main__item"><a href="[(#URL_SITE_SPIP)/#about]" class="link--soft"><:local:about:></a></li>
+        <li><a href="[(#URL_PAGE_UNIQUE{infos_contact})]"><:about:></a></li>
     </ul>
 </nav>

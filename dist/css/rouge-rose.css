@@ -153,6 +153,10 @@ textarea:not([rows]) {
   font-weight: 900;
   font-display: swap;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   color: hsl(0, 0%, 0%);
@@ -250,6 +254,7 @@ textarea {
   display: block;
   background-color: hsl(0, 0%, 100%);
   border: 1px solid hsl(0, 0%, 0%);
+  padding: 0.3em 0.3em;
   width: 100%;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -259,6 +264,7 @@ textarea {
 input:focus-visible,
 textarea:focus-visible {
   outline-offset: 0;
+  border-color: hsl(317, 70%, 50%);
 }
 
 input[type=checkbox] {
@@ -315,25 +321,49 @@ legend {
   --grid-gutter: var(--layout-grid-gutter-row)
   	var(--layout-grid-gutter-column);
 }
-.grid[data-layout=master] {
+.grid[data-layout=master], .grid[data-layout=infos] {
   --grid-gutter: var(--space-s) var(--layout-grid-gutter-column);
   grid-template-columns: 1fr;
 }
+.grid[data-layout=infos] {
+  row-gap: var(--space-2xl-3xl);
+}
 
 @media screen and (min-width: 46.25em) {
-  .grid[data-layout=thirds] {
+  .grid[data-layout=thirds], .grid[data-layout=master], .grid[data-layout=infos] {
     grid-template-columns: 1fr 1fr;
   }
-  .grid[data-layout=master].object_prose {
-    grid-template-columns: 1fr 1fr;
+  .grid[data-layout=master].object_header > div {
+    grid-column: 1/-1;
+  }
+  .grid[data-layout=master] .prose_metadata {
+    grid-column: 1/2;
+  }
+  .grid[data-layout=infos] > [class^=prose_] {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-s) var(--space-s);
+  }
+  .grid[data-layout=infos] > [class^=prose_] :first-child {
+    grid-column: 1/4;
+  }
+  .grid[data-layout=infos] .prose_text {
+    display: block;
   }
 }
 @media screen and (min-width: 64em) {
-  .grid[data-layout=thirds] {
+  .grid[data-layout=thirds], .grid[data-layout=master], .grid[data-layout=infos] {
     grid-template-columns: repeat(3, 1fr);
   }
-  .grid[data-layout=master], .grid[data-layout=master].object_prose {
-    grid-template-columns: repeat(3, 1fr);
+  .grid[data-layout=master].object_header > div {
+    grid-column: 2/-1;
+  }
+  .grid[data-layout=master] .prose_metadata {
+    grid-column: 2/3;
+  }
+  .grid[data-layout=infos] > [class^=prose_] {
+    grid-column: 2/-1;
   }
 }
 .wrapper {
@@ -417,6 +447,46 @@ legend {
 }
 .formulaire_spip.formulaire_filtrer_articles button[type=submit] {
   width: min(40ch, 100%);
+}
+.formulaire_spip.formulaire_ecrire_auteur {
+  margin-right: var(--space-l);
+}
+.formulaire_spip.formulaire_ecrire_auteur fieldset {
+  border: none;
+  padding: 0;
+}
+.formulaire_spip.formulaire_ecrire_auteur fieldset + fieldset {
+  margin-top: var(--space-xl);
+}
+.formulaire_spip.formulaire_ecrire_auteur legend + div {
+  margin-top: var(--space-l);
+}
+.formulaire_spip.formulaire_ecrire_auteur label, .formulaire_spip.formulaire_ecrire_auteur input {
+  font-size: var(--step-1);
+}
+.formulaire_spip.formulaire_ecrire_auteur .editer-groupe, .formulaire_spip.formulaire_ecrire_auteur .editer {
+  margin-top: var(--space-m);
+}
+.formulaire_spip.formulaire_ecrire_auteur .editer > * + * {
+  margin-top: var(--space-xs);
+}
+.formulaire_spip.formulaire_ecrire_auteur .previsu > div > * + * {
+  margin-top: var(--space-xs);
+  font-size: var(--step-1);
+}
+.formulaire_spip.formulaire_ecrire_auteur p.boutons {
+  max-width: none;
+  margin-top: var(--space-m);
+}
+.formulaire_spip .reponse_formulaire {
+  padding: 1rem;
+  margin-bottom: var(--space-m);
+  background-color: hsl(91, 96%, 95%);
+  border-left: 0.5rem solid hsl(91, 96%, 50%);
+}
+.formulaire_spip .reponse_formulaire.reponse_formulaire_erreur {
+  background-color: hsl(349, 100%, 95%);
+  border-left: 0.5rem solid hsl(0, 95%, 42%);
 }
 
 .pagination {
@@ -691,7 +761,7 @@ html.no-js .filters_item.button-reset, .filters_item.button-reset.is-disabled {
   padding-bottom: var(--space-s);
 }
 .object_header h1 {
-  font-size: var(--step-3);
+  font-size: var(--step-4);
 }
 .object_header p {
   color: hsl(0, 5%, 41%);
@@ -699,22 +769,14 @@ html.no-js .filters_item.button-reset, .filters_item.button-reset.is-disabled {
 
 .object_prose {
   padding-top: var(--space-s);
+}
+.object_prose[data-layout=master] {
   color: hsl(0, 5%, 41%);
 }
+.object_prose[data-layout=infos] {
+  padding-top: var(--space-2xl-3xl);
+}
 
-@media screen and (min-width: 46.25em) {
-  .object_prose .prose_metadata {
-    grid-column: 1/2;
-  }
-}
-@media screen and (min-width: 64em) {
-  .object_header > div {
-    grid-column: 2/-1;
-  }
-  .object_prose .prose_metadata {
-    grid-column: 2/3;
-  }
-}
 .album.grid[data-layout] {
   --grid-gutter: var(--layout-grid-gutter-row)
   	var(--layout-grid-gutter-column);
@@ -755,6 +817,67 @@ html.no-js .filters_item.button-reset, .filters_item.button-reset.is-disabled {
 }
 .prose .prose_metadata .tags {
   --cluster-gap: 0 var(--space-xs);
+}
+.prose[data-layout=infos].prose :is(h2, legend)::before {
+  display: block;
+  margin-bottom: var(--space-xs);
+  width: 2ch;
+  height: 1px;
+  background-color: black;
+  content: "";
+}
+.prose[data-layout=infos] .prose_text {
+  font-size: var(--step-2);
+}
+.prose[data-layout=infos] .prose_text :is(h1, h2, h3, h4, h5, p, ul, ol, blockquote, hr) {
+  max-width: 45ch;
+}
+
+.prose_references-clients {
+  --flow-space: var(--space-xs);
+}
+.prose_references-clients h2 {
+  font-size: var(--step-1);
+}
+.prose_references-clients h3 {
+  font-size: var(--step-0);
+  font-weight: 400;
+  font-style: italic;
+}
+.prose_references-clients ul {
+  margin-top: var(--space-3xs);
+  max-width: 50ch;
+}
+.prose_references-clients li {
+  display: inline;
+}
+.prose_references-clients li::after {
+  content: ", ";
+}
+.prose_references-clients li:last-child::after {
+  content: ".";
+}
+
+.prose_contact {
+  --flow-space: var(--space-2xs);
+}
+.prose_contact legend, .prose_contact h2 {
+  font-size: var(--step-3);
+}
+.prose_contact h2 {
+  margin-bottom: var(--space-l);
+}
+.prose_contact p {
+  font-size: var(--step-1);
+}
+@media screen and (max-width: 46.24em) {
+  .prose_contact section + section {
+    margin-top: var(--space-2xl-3xl);
+  }
+}
+
+.prose_credits h2 {
+  font-size: var(--step-1);
 }
 
 .site-header {

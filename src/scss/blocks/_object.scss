@@ -16,7 +16,7 @@
 	}
 
 	& h1 {
-		font-size: var(--step-3);
+		font-size: var(--step-4);
 	}
 
 	& p {
@@ -26,27 +26,12 @@
 
 .object_prose {
 	padding-top: var(--space-s);
-	color: variables.$color-theme-text-light;
-}
 
-@include tools.mq($from: medium) {
-	.object_prose {
-		& .prose_metadata {
-			grid-column: 1/2;
-		}
-	}
-}
-
-@include tools.mq($from: large) {
-	.object_header {
-		& > div {
-			grid-column: 2/-1;
-		}
+	&[data-layout="master"] {
+		color: variables.$color-theme-text-light;
 	}
 
-	.object_prose {
-		& .prose_metadata {
-			grid-column: 2/3;
-		}
+	&[data-layout="infos"] {
+		padding-top: var(--space-2xl-3xl);
 	}
 }

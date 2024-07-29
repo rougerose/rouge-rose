@@ -1,0 +1,63 @@
+{
+    "a": {
+        "1": {
+            "name": "Institutions",
+            "value": [
+                "CNRS",
+                "Conseil national du sida",
+                "Fondation Chanel",
+                "Fondation Maison des sciences de l’homme",
+                "Université Panthéon-Sorbonne Paris 1",
+                "Université Paris-Nanterre",
+                "Ville de Nanterre"
+            ]
+        },
+        "2": {
+            "name": "Cinéma",
+            "value": [
+                "Ecce Films",
+                "Épicentre Films",
+                "Festival Chéries-Chéris",
+                "Remora Films",
+                "Shellac"
+            ]
+        },
+        "3": {
+            "name": "Art",
+            "value": [
+                "Antoine Perrot",
+                "Association Pour Magnelli",
+                "Compagnie Quand on est trois",
+                "Galerie Lahumière",
+                "Laurent Fiévet",
+                "Millon et associés"
+            ]
+        },
+        "4": {
+            "name": "Architecture",
+            "value": ["Agence Laurent Lainé Architectes"]
+        },
+        "5": {
+            "name": "Humanitaire",
+            "value": [
+                "Act Up-Paris",
+                "Comité Pluridisciplinaire des Artistes-Auteurs et des Artistes-Autrices (Caap)",
+                "Fédération des réseaux et associations d’artistes plasticiennes et plasticiens (Fraap)",
+                "Médecins du monde",
+                "Migreurop",
+                "ODSE (Observatoire du droit à la santé des étrangers)",
+                "Treatment Action Group (TAG)",
+                "TRT-5"
+            ]
+        },
+        "6": {
+            "name": "Édition",
+            "value": [
+                "Cette France-là",
+                "Éditions La Découverte",
+                "La revue internationale des livres et des idées",
+                "Vacarme"
+            ]
+        }
+    }
+}

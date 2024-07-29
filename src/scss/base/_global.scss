@@ -4,6 +4,10 @@
 
 @use "../abstract" as variables;
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	margin: 0;
 	color: variables.$color-theme-ink;

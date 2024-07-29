@@ -1,3 +1,7 @@
+// ========================================
+// Règles de grille générique et variations
+// ========================================
+
 @use "../tools" as tools;
 
 .grid {
@@ -14,37 +18,88 @@
 			var(--layout-grid-gutter-column);
 	}
 
-	// Mise en page des articles
-	&[data-layout="master"] {
+	// Mise en page des articles (master)
+	// et de la page Infos
+	&[data-layout="master"],
+	&[data-layout="infos"] {
 		--grid-gutter: var(--space-s) var(--layout-grid-gutter-column);
 		grid-template-columns: 1fr;
+	}
+
+	&[data-layout="infos"] {
+		row-gap: var(--space-2xl-3xl);
 	}
 }
 
 @include tools.mq($from: medium) {
 	.grid {
-		&[data-layout="thirds"] {
+		&[data-layout="thirds"],
+		&[data-layout="master"],
+		&[data-layout="infos"] {
 			grid-template-columns: 1fr 1fr;
 		}
 
 		&[data-layout="master"] {
-			&.object_prose {
-				grid-template-columns: 1fr 1fr;
+			&.object_header {
+				& > div {
+					grid-column: 1/-1;
+				}
 			}
+
+			& .prose_metadata {
+				grid-column: 1/2;
+			}
+		}
+
+		&[data-layout="infos"] {
+			& > [class^="prose_"] {
+				grid-column: 1/-1;
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+				gap: var(--space-s) var(--space-s);
+
+				& :first-child {
+					grid-column: 1/4;
+				}
+			}
+
+			// Pas de grille pour ce bloc
+			& .prose_text {
+				display: block;
+			}
+
+			// & .prose_references-clients {
+			// 	display: grid;
+			// 	grid-template-columns: repeat(3, 1fr);
+			// 	gap: var(--space-xs) var(--space-s);
+			// }
 		}
 	}
 }
 
 @include tools.mq($from: large) {
 	.grid {
-		&[data-layout="thirds"] {
+		&[data-layout="thirds"],
+		&[data-layout="master"],
+		&[data-layout="infos"] {
 			grid-template-columns: repeat(3, 1fr);
 		}
 
 		&[data-layout="master"] {
-			&,
-			&.object_prose {
-				grid-template-columns: repeat(3, 1fr);
+			&.object_header {
+				& > div {
+					grid-column: 2/-1;
+				}
+			}
+
+			& .prose_metadata {
+				grid-column: 2/3;
+			}
+		}
+
+		&[data-layout="infos"] {
+			& > [class^="prose_"] {
+				grid-column: 2/-1;
 			}
 		}
 	}

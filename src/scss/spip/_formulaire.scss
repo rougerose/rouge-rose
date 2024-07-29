@@ -56,103 +56,80 @@
 	}
 
 	// Formulaire de contact
-	// &.formulaire_ecrire_auteur {
-	// 	& fieldset {
-	// 		border: none;
-	// 		padding: 0;
+	&.formulaire_ecrire_auteur {
+		margin-right: var(--space-l);
 
-	// 		& + fieldset {
-	// 			margin-top: var(--space-l);
-	// 		}
-	// 	}
+		& fieldset {
+			border: none;
+			padding: 0;
 
-	// 	& legend {
-	// 		font-weight: 750;
+			& + fieldset {
+				margin-top: var(--space-xl);
+			}
+		}
 
-	// 		& + div {
-	// 			margin-top: var(--space-l);
-	// 		}
-	// 	}
+		& legend {
+			& + div {
+				margin-top: var(--space-l);
+			}
+		}
 
-	// 	& legend,
-	// 	& label {
-	// 		font-family: var(--font-monospace);
-	// 		font-feature-settings: map.get(
-	// 			variables.$tokens,
-	// 			"font-feature-settings",
-	// 			"auger",
-	// 			"angular"
-	// 		);
-	// 	}
+		& :is(label, input, textarea) {
+			font-size: var(--step-1);
+		}
 
-	// 	& .editer-groupe,
-	// 	& .editer {
-	// 		margin-top: var(--space-m);
-	// 	}
+		& .editer-groupe,
+		& .editer {
+			margin-top: var(--space-m);
+		}
 
-	// 	& .editer {
-	// 		& > * + * {
-	// 			margin-top: var(--space-xs);
-	// 		}
-	// 	}
+		& .editer {
+			& > * + * {
+				margin-top: var(--space-xs);
+			}
+		}
 
-	// 	& .previsu {
-	// 		& > div {
-	// 			& > * + * {
-	// 				margin-top: var(--space-xs);
-	// 			}
-	// 		}
-	// 	}
+		& .previsu {
+			& > div {
+				& > * + * {
+					margin-top: var(--space-xs);
+					font-size: var(--step-1);
+				}
+			}
+		}
 
-	// 	& p.boutons {
-	// 		max-width: none;
-	// 		margin-top: var(--space-m);
-	// 	}
+		& p.boutons {
+			max-width: none;
+			margin-top: var(--space-m);
+		}
 
-	// 	& input[type="submit"] {
-	// 		background-color: map.get(
-	// 			variables.$tokens,
-	// 			"color",
-	// 			"theme",
-	// 			"ink"
-	// 		);
-	// 		border: 2px solid
-	// 			map.get(variables.$tokens, "color", "theme", "ink");
-	// 		color: map.get(variables.$tokens, "color", "theme", "paper");
+		// & input[type="submit"] {
+		// 	background-color: map.get(
+		// 		variables.$tokens,
+		// 		"color",
+		// 		"theme",
+		// 		"ink"
+		// 	);
+		// 	border: 2px solid
+		// 		map.get(variables.$tokens, "color", "theme", "ink");
+		// 	color: map.get(variables.$tokens, "color", "theme", "paper");
 
-	// 		&:focus-visible,
-	// 		&:hover {
-	// 			color: map.get(variables.$tokens, "color", "theme", "link");
-	// 		}
-	// 	}
-	// }
+		// 	&:focus-visible,
+		// 	&:hover {
+		// 		color: map.get(variables.$tokens, "color", "theme", "link");
+		// 	}
+		// }
+	}
 
-	// .reponse_formulaire {
-	// 	padding: 1rem;
-	// 	margin-bottom: var(--space-m);
-	// 	background-color: map.get(
-	// 		variables.$tokens,
-	// 		"color",
-	// 		"theme",
-	// 		"message-bg"
-	// 	);
-	// 	border-left: 0.5rem solid
-	// 		map.get(variables.$tokens, "color", "theme", "message-border");
+	& .reponse_formulaire {
+		padding: 1rem;
+		margin-bottom: var(--space-m);
+		background-color: hsl(91, 96%, 95%);
+		border-left: 0.5rem solid hsl(91, 96%, 50%);
 
-	// 	&.reponse_formulaire_erreur {
-	// 		background-color: map.get(
-	// 			variables.$tokens,
-	// 			"color",
-	// 			"theme",
-	// 			"message-error-bg"
-	// 		);
-	// 		border-left: 0.5rem solid
-	// 			map.get(
-	// 				variables.$tokens,
-	// 				"color",
-	// 				"theme",
-	// 				"message-error-border"
-	// 			);
-	// 	}
-	// }
+		&.reponse_formulaire_erreur {
+			background-color: hsl(349, 100%, 95%);
+			border-left: 0.5rem solid variables.$color-theme-primary-red;
+		}
+	}
 }

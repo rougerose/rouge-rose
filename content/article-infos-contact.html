@@ -1,0 +1,70 @@
+<BOUCLE_article(ARTICLES){id_article}>
+	<article class="object article gap-top-5xl-6xl">
+		<header class="object_header grid" data-layout="master">
+			<div class="cluster">
+				<h1>#TITRE</h1>
+				[<p>(#SOUSTITRE)</p>]
+			</div>
+		</header>
+		<div class="object_prose prose grid" data-layout="infos">
+			<!-- <div class="prose_metadata flow"> </div> -->
+			[<div class="prose_text">
+				<div class="flow">
+					(#TEXTE)
+				</div>
+			</div>]
+
+			[(#SET{clients, #CHEMIN{json/clients.json}})]
+			<B_clients>
+				<div class="prose_references">
+					<section class="prose_references-clients flow">
+						<BOUCLE_clients(DATA){source json, #GET{clients}}>
+							[(#COMPTEUR_BOUCLE|=={1}|oui)
+								<h2>Clients</h2>
+							]
+							<div class="flow">
+								<BOUCLE_colonne_items(DATA){source table, #VALEUR}>
+									<section class="clients_group flow">
+										<h3>#VALEUR{name}</h3>
+										<ul role="list">
+											<BOUCLE_liste(DATA){source table, #VALEUR}{datapath value}>
+												<li>#VALEUR</li>
+											</BOUCLE_liste>
+										</ul>
+									</section>
+								</BOUCLE_colonne_items>
+							</div>
+						</BOUCLE_clients>
+					</section>
+				</div>
+			</B_clients>
+
+			<div id="envoyer_message" class="prose_contact">
+				<section>
+					[(#FORMULAIRE_ECRIRE_AUTEUR)]
+				</section>
+				<section class="flow">
+					<BOUCLE_auteur(AUTEURS){id_article}{tout}>
+						<h2>Et aussi</h2>
+						<BOUCLE_numero(NUMEROS){id_auteur}>
+							<p>#NUMERO</p>
+						</BOUCLE_numero>
+						<BOUCLE_adresse(ADRESSES){id_auteur}>
+							<p><span>#VOIE</span> <span>#CODE_POSTAL</span> <span>#VILLE</span></p>
+						</BOUCLE_adresse>
+					</BOUCLE_auteur>
+				</section>
+			</div>
+
+			<div class="prose_credits">
+				<section class="flow">
+					<h2>Crédits</h2>
+					<p>Le design de ce site, les textes et les photos (sauf mentions contraires) sont de Christophe Le Drean. Tous droits réservés.</p>
+					<p>Le site est réalisé avec <a href="https://spip.net">Spip</a> et hébergé par <a href="https://nursit.com">Nursit</a>.</p>
+				</section>
+			</div>
+		</div>
+	</article>
+	<INCLURE{fond=breadcrumb/article, id_article}/>
+</BOUCLE_article>
+#FILTRE{trim}
