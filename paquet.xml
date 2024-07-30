@@ -4,7 +4,7 @@
     version="2.0.2"
     etat="stable"
     compatibilite="[4.2.6;4.2.*]"
-    logo="img/rougerose-48.png"
+    logo="img/rouge_rose-48.png"
 >
     <nom>rouge-rose</nom>
     <auteur>christophe le drean</auteur>
