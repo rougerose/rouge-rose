@@ -13,9 +13,9 @@
     <necessite nom="coordonnees" />
     <necessite nom="critere_mots" />
     <necessite nom="grappes" />
+    <necessite nom="metasplus" />
     <necessite nom="mots_techniques" />
     <necessite nom="oembed" />
     <necessite nom="pages" />
-    <necessite nom="suivant_precedent" />
     <necessite nom="Zcore" />
 </paquet>
