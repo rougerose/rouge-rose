@@ -5,9 +5,7 @@
 @use "../tools" as tools;
 @use "../abstract" as variables;
 
-.breadcrumb {
-	margin-top: var(--space-5xl);
-}
+// .breadcrumb {}
 
 .breadcrumb_list {
 	--cluster-gap: 0 0.4em;
