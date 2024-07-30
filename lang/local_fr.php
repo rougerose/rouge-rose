@@ -14,7 +14,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = [
 	// F
 	'formulaire_filtrer_articles_btn_reset' => 'Effacer votre sélection',
 	'formulaire_filtrer_articles_legend' => 'Filtrer par catégorie',
-	'form_message_confirm' => "confirmer l'envoi",
+	// 'form_message_confirm' => "confirmer l'envoi",
 	// 'form_message_send' => 'envoyer votre message',
 
 	// I
@@ -29,6 +29,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = [
 	'projets_nb_pluriel' => '@nb@ projets affichés',
 	'projets_total' => ', sur @nb@ disponibles',
 	'previous' => 'précédent',
+
+	// R
+	'projects_related_label' => 'Poursuivre avec d’autres projets',
 
 	// S
 	'send_message' => 'envoyer un message',

@@ -1,0 +1,19 @@
+// ========================================
+// related : articles en prolongement
+// ========================================
+
+@use "../abstract" as variables;
+
+.related {
+	& > h2 {
+		font-size: var(--step-2);
+		&::before {
+			display: block;
+			margin-bottom: var(--space-xs);
+			width: 2ch;
+			height: 1px;
+			background-color: variables.$color-theme-ink;
+			content: "";
+		}
+	}
+}

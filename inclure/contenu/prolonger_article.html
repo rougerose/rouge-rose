@@ -1,0 +1,18 @@
+<BOUCLE_prolonger_article(ARTICLES){id_article}>
+	#SET{mots, #ARRAY}
+	<BOUCLE_mots(MOTS){id_article}{id_groupe=5}>
+		[(#SET{mots, #GET{mots}|push{#ID_MOT}})]
+	</BOUCLE_mots>
+	<B_articles_lies>
+		<div class="related gap-top-5xl">
+			<h2><:projects_related_label:></h2>
+			<ul class="grid gap-top-xl" role="list" data-layout="thirds">
+				<BOUCLE_articles_lies(ARTICLES){mots 100% #GET{mots} !tri}{exclus}{0,3}>
+					<li>
+						<INCLURE{fond=inclure/resumes/article, id_article} />
+					</li>
+				</BOUCLE_articles_lies>
+			</ul>
+		</div>
+	</B_articles_lies>
+</BOUCLE_prolonger_article>
