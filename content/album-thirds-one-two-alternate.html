@@ -22,9 +22,9 @@
 		Formats retenus : 320, 438, 685, 876, 1370
 	-->
 ]
-<B_album_defaut>
+<B_album_thirds_alt>
 	<div class="grid album" data-layout="thirds-one-two-alternate">
-		<BOUCLE_album_defaut(DOCUMENTS)
+		<BOUCLE_album_thirds_alt(DOCUMENTS)
 			{id_album=#ID_ALBUM}
 			{tout}
 			{par rang_lien, num titre, id_document}
@@ -65,7 +65,7 @@
 				(#SET{sizes, #VAL{'(min-width:740px) 438px, 100vw'}})]
 			]
 			<INCLURE{fond=inclure/contenu/figure, id_document, src=#GET{src}, srcset=#GET{srcset}, sizes=#GET{sizes}}/>
-		</BOUCLE_album_defaut>
+		</BOUCLE_album_thirds_alt>
 	</div>
-</B_album_defaut>
+</B_album_thirds_alt>
 #FILTRE{trim}
