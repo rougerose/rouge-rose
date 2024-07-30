@@ -38,6 +38,7 @@
         "chokidar-cli": "^3.0.0",
         "dom-parents": "^1.1.4",
         "npm-run-all2": "^6.2.2",
+        "photoswipe": "^5.4.4",
         "postcss": "^8.4.39",
         "postcss-cli": "^11.0.0",
         "postcss-csso": "^6.0.1",
