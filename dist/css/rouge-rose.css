@@ -879,6 +879,9 @@ html.no-js .filters_item.button-reset, .filters_item.button-reset.is-disabled {
 .prose_credits h2 {
   font-size: var(--step-1);
 }
+.prose_credits p {
+  max-width: 40ch;
+}
 
 .site-header {
   --grid-gutter: var(--space-s) var(--layout-grid-gutter-column);

@@ -4,7 +4,7 @@ if (!defined('_ECRIRE_INC_VERSION')) { return;
 }
 $GLOBALS[$GLOBALS['idx_lang']] = [
 	// A
-	'about'        => 'Infos & contact',
+	'about'        => 'infos & contact',
 
 	// C
 	'contact'      => 'contact',
