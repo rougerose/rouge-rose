@@ -381,6 +381,10 @@ legend {
   align-items: var(--cluster-vertical-alignment, center);
 }
 
+.gap-top-xl {
+  margin-top: var(--space-xl);
+}
+
 .gap-top-3xl {
   margin-top: var(--space-3xl);
 }
@@ -465,7 +469,7 @@ legend {
 .formulaire_spip.formulaire_ecrire_auteur legend + div {
   margin-top: var(--space-l);
 }
-.formulaire_spip.formulaire_ecrire_auteur label, .formulaire_spip.formulaire_ecrire_auteur input {
+.formulaire_spip.formulaire_ecrire_auteur :is(label, input, textarea) {
   font-size: var(--step-1);
 }
 .formulaire_spip.formulaire_ecrire_auteur .editer-groupe, .formulaire_spip.formulaire_ecrire_auteur .editer {
@@ -622,7 +626,7 @@ button.button {
 }
 
 .card:hover img {
-  transform: scale(1.03);
+  transform: scale(1.02);
   box-shadow: 0 0 5px hsl(0, 7%, 84%);
 }
 
@@ -816,6 +820,14 @@ html.no-js .filters_item.button-reset, .filters_item.button-reset.is-disabled {
   margin-top: var(--layout-grid-gutter-row);
 }
 
+.album_figure a img {
+  transition: transform 0.3s linear;
+}
+.album_figure a:hover img {
+  transform: scale(1.02);
+  box-shadow: 0 0 5px hsl(0, 7%, 84%);
+}
+
 .prose .prose_metadata, .prose .prose_text {
   --flow-space: var(--space-s);
 }
@@ -827,7 +839,7 @@ html.no-js .filters_item.button-reset, .filters_item.button-reset.is-disabled {
   margin-bottom: var(--space-xs);
   width: 2ch;
   height: 1px;
-  background-color: black;
+  background-color: hsl(0, 0%, 0%);
   content: "";
 }
 .prose[data-layout=infos] .prose_text {
@@ -885,6 +897,18 @@ html.no-js .filters_item.button-reset, .filters_item.button-reset.is-disabled {
 }
 .prose_credits p {
   max-width: 40ch;
+}
+
+.related > h2 {
+  font-size: var(--step-2);
+}
+.related > h2::before {
+  display: block;
+  margin-bottom: var(--space-xs);
+  width: 2ch;
+  height: 1px;
+  background-color: hsl(0, 0%, 0%);
+  content: "";
 }
 
 .site-header {

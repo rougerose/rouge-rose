@@ -2,6 +2,7 @@
 // album, portfolio des articles
 // ========================================
 
+@use "../abstract" as variables;
 @use "../tools" as tools;
 
 .album {
@@ -48,5 +49,20 @@
 
 	& + & {
 		margin-top: var(--layout-grid-gutter-row);
+	}
+}
+
+.album_figure {
+	& a {
+		& img {
+			transition: transform 0.3s linear;
+		}
+
+		&:hover {
+			& img {
+				transform: scale(1.02);
+				box-shadow: 0 0 5px variables.$color-theme-card-shadow;
+			}
+		}
 	}
 }
