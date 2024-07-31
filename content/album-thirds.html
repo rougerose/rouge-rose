@@ -30,9 +30,9 @@
 				|concat{#GET{4}}|concat{' 466w,'}
 				|concat{#GET{3}}|concat{' 685w,'}
 				|concat{#GET{2}}|concat{' 932w,'}
-				|concat{#GET{fichier}}|concat{' 1370w,'}
+				|concat{#GET{fichier}}|concat{' 1370w'}
 			})][
-			(#SET{src, #GET{4}})][
+			(#SET{src, #GET{3}})][
 			(#SET{sizes, #VAL{'(min-width:1024px) 438px, (min-width:740px) 50vw, 100vw'}})]
 			<INCLURE{fond=inclure/contenu/figure, id_document, src=#GET{src}, srcset=#GET{srcset}, sizes=#GET{sizes}}/>
 		</BOUCLE_album_thirds>

@@ -15,7 +15,13 @@
 		}
 
 		// 1 colonne
-		// &[data-layout="full"] {}
+		&[data-layout="full"] {
+			& .album_figure {
+				max-width: 1280px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
 
 		// 3 tiers
 		&[data-layout="thirds"] {
@@ -37,7 +43,7 @@
 			}
 		}
 
-		// 1/3 - 2/3 - 2/3 - 1/3
+		// 2/3 - 1/3 - 1/3 - 2/3
 		&[data-layout="thirds-one-two-alternate"] {
 			@include tools.mq($from: medium) {
 				grid-template-columns: repeat(3, 1fr);
@@ -61,7 +67,11 @@
 	// Note : le code html ne provient pas du modèle image de Spip.
 	& .album_figure {
 		& a {
+			display: flex;
+
 			& img {
+				width: 100%;
+				height: auto;
 				transition: transform 0.3s linear;
 			}
 
@@ -82,13 +92,10 @@
 	// 		plus génériques dans spip/document.scss
 	& .spip_document {
 		&.oembed_video {
-			& .oembed {
-				margin-right: unset;
-			}
-
 			& .spip_doc_legende {
 				max-width: var(--video-maxwidth);
 				margin-left: auto;
+				margin-right: auto;
 			}
 		}
 	}

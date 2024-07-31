@@ -44,9 +44,9 @@
 					|concat{#GET{4}}|concat{' 685w,'}
 					|concat{#GET{3}}|concat{' 912w,'}
 					|concat{#GET{2}}|concat{' 1370w,'}
-					|concat{#GET{fichier}}|concat{' 1824w,'}
+					|concat{#GET{fichier}}|concat{' 1824w'}
 				})][
-				(#SET{src, #GET{3}})][
+				(#SET{src, #GET{4}})][
 				(#SET{sizes, #VAL{'(min-width:740px) 912px, 100vw'}})]
 			][(#GET{variante}|=={2}|oui)
 				[(#SET{fichier, #FICHIER|image_reduire{1370}|extraire_attribut{src}})][
@@ -59,7 +59,7 @@
 					|concat{#GET{4}}|concat{' 438w,'}
 					|concat{#GET{3}}|concat{' 685w,'}
 					|concat{#GET{2}}|concat{' 876w,'}
-					|concat{#GET{fichier}}|concat{' 1370w,'}
+					|concat{#GET{fichier}}|concat{' 1370w'}
 				})][
 				(#SET{src, #GET{4}})][
 				(#SET{sizes, #VAL{'(min-width:740px) 438px, 100vw'}})]

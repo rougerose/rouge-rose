@@ -1,5 +1,5 @@
 <composition>
     <nom>Album : 1 colonne</nom>
-    <description>Album d'images présentées sur 1 colonne</description>
+    <description>Album d'images présentées sur 1 colonne et centrée, format max 2560px.</description>
     <icon>img/composition-album-deux-colonnes.svg</icon>
 </composition>
