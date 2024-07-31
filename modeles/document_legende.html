@@ -1,0 +1,34 @@
+[(#REM)
+	<!--
+		Légende pour les documents
+		Surcharges :
+			- Identation du code
+			- Remplacer les <div> des éléments de légende par des <p>
+			- Supprimer le strong sur le titre.
+	-->
+]
+#SET{masquer,#VAL{trim}|array_map{#ENV{masquer}|explode{','}|}}
+<BOUCLE_legendaire(DOCUMENTS)
+	{id_document=#ENV{id,#ENV{id_document}}}
+	{tout}
+	{si #GET{masquer}|find{legende}|non}
+>
+	[(#ENV*{titre,#TITRE}|trim|sinon{#ENV*{descriptif,#DESCRIPTIF}|trim}|sinon{#ENV*{credits,#CREDITS}|trim}|oui)
+		<figcaption class='spip_doc_legende'>
+			[(#GET{masquer}|find{titre}|non)
+				[<p class='spip_doc_titre [(#ENV{titre}|non)#EDIT{titre}]'>
+					(#ENV*{titre,#TITRE*|supprimer_numero}|propre|ptobr)
+				</p>]
+			][(#GET{masquer}|find{descriptif}|non)
+				[<p class='spip_doc_descriptif [(#ENV{descriptif}|non)#EDIT{descriptif}]'>
+					(#ENV*{descriptif,#DESCRIPTIF*}|propre|PtoBR)[(#NOTES|PtoBR)]
+				</p>]
+			][(#GET{masquer}|find{credits}|non)
+				[<p class='spip_doc_credits [(#ENV{credits}|non)#EDIT{credits}]'>
+					(#ENV*{credits,#CREDITS*}|propre|PtoBR)
+				</p>]
+			]
+		</figcaption>
+	]
+</BOUCLE_legendaire>
+#FILTRE{trim}

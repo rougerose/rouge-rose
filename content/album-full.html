@@ -1,0 +1,75 @@
+[(#REM)
+<!--
+		Formats d'images
+		==================
+
+		VARIANTE 1 (image 2/3)
+		Device		Mediaquery		 x1		 x2
+		========================================
+		1440		min 740			912		1824
+		739							685		1370
+		375							320		640
+
+		Formats retenus : 320, 685, 912, 1370, 1824
+
+		VARIANTE 2 (image 1/3)
+		Device		Mediaquery		 x1		 x2
+		========================================
+		1440		min 740			438		876
+		739							685		1370
+		375							320		640
+
+		Formats retenus : 320, 438, 685, 876, 1370
+	-->
+]
+<B_album_full>
+	<div class="grid album" data-layout="full"[ style="--video-maxwidth:(#CONFIG{oembed/maxwidth})px;"]>
+		<BOUCLE_album_full(DOCUMENTS)
+			{id_album=#ID_ALBUM}
+			{tout}
+			{par rang_lien, num titre, id_document}
+			{media IN image, video}
+			{!par date}
+		>
+			<BOUCLE_condition_image(CONDITION){si #MEDIA|=={image}}>
+				[(#SET{variante, 1})][
+				(#COMPTEUR_BOUCLE|alterner{1,2,2,1}|=={2}|oui) #SET{variante, 2}][
+				(#GET{variante}|=={1}|oui)
+					[(#SET{fichier, #FICHIER|image_reduire{1824}|extraire_attribut{src}})][
+					(#SET{2, #GET{fichier}|image_reduire{1370,0}|extraire_attribut{src}})][
+					(#SET{3, #GET{fichier}|image_reduire{912,0}|extraire_attribut{src}})][
+					(#SET{4, #GET{fichier}|image_reduire{685,0}|extraire_attribut{src}})][
+					(#SET{5, #GET{fichier}|image_reduire{320,0}|extraire_attribut{src}})][
+
+					(#SET{srcset, #GET{5}|concat{' 320w,'}
+						|concat{#GET{4}}|concat{' 685w,'}
+						|concat{#GET{3}}|concat{' 912w,'}
+						|concat{#GET{2}}|concat{' 1370w,'}
+						|concat{#GET{fichier}}|concat{' 1824w,'}
+					})][
+					(#SET{src, #GET{3}})][
+					(#SET{sizes, #VAL{'(min-width:740px) 912px, 100vw'}})]
+				][(#GET{variante}|=={2}|oui)
+					[(#SET{fichier, #FICHIER|image_reduire{1370}|extraire_attribut{src}})][
+					(#SET{2, #GET{fichier}|image_reduire{876,0}|extraire_attribut{src}})][
+					(#SET{3, #GET{fichier}|image_reduire{685,0}|extraire_attribut{src}})][
+					(#SET{4, #GET{fichier}|image_reduire{438,0}|extraire_attribut{src}})][
+					(#SET{5, #GET{fichier}|image_reduire{320,0}|extraire_attribut{src}})][
+
+					(#SET{srcset, #GET{5}|concat{' 320w,'}
+						|concat{#GET{4}}|concat{' 438w,'}
+						|concat{#GET{3}}|concat{' 685w,'}
+						|concat{#GET{2}}|concat{' 876w,'}
+						|concat{#GET{fichier}}|concat{' 1370w,'}
+					})][
+					(#SET{src, #GET{4}})][
+					(#SET{sizes, #VAL{'(min-width:740px) 438px, 100vw'}})]
+					]
+					<INCLURE{fond=inclure/contenu/figure, id_document, src=#GET{src}, srcset=#GET{srcset}, sizes=#GET{sizes}}/>
+			</BOUCLE_condition_image>
+				<INCLURE{fond=modeles/video, id_document, masquer_titre=oui, env}/>
+			<//B_condition_image>
+		</BOUCLE_album_full>
+	</div>
+</B_album_full>
+#FILTRE{trim}

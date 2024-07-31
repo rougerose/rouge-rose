@@ -14,6 +14,9 @@
 			grid-template-columns: 1fr;
 		}
 
+		// 1 colonne
+		// &[data-layout="full"] {}
+
 		// 3 tiers
 		&[data-layout="thirds"] {
 			@include tools.mq($from: medium) {
@@ -52,16 +55,40 @@
 	}
 }
 
-.album_figure {
-	& a {
-		& img {
-			transition: transform 0.3s linear;
-		}
-
-		&:hover {
+// Un album peut afficher soit des images soit des vidéos. //
+.album {
+	// Hypothèse image
+	// Note : le code html ne provient pas du modèle image de Spip.
+	& .album_figure {
+		& a {
 			& img {
-				transform: scale(1.02);
-				box-shadow: 0 0 5px variables.$color-theme-card-shadow;
+				transition: transform 0.3s linear;
+			}
+
+			&:hover {
+				& img {
+					transform: scale(1.02);
+					box-shadow: 0 0 5px variables.$color-theme-card-shadow;
+				}
+			}
+		}
+	}
+
+	// Hypothèse vidéo
+	// Notes :
+	// 	- 	le code html provient du modèle vidéo Spip/Oembed.
+	//  - 	une vidéo est appelée uniquement par la composition [data-layout=full]
+	//  - 	ci-dessous les règles spécifiques à ce cas de figure et les règles
+	// 		plus génériques dans spip/document.scss
+	& .spip_document {
+		&.oembed_video {
+			& .oembed {
+				margin-right: unset;
+			}
+
+			& .spip_doc_legende {
+				max-width: var(--video-maxwidth);
+				margin-left: auto;
 			}
 		}
 	}

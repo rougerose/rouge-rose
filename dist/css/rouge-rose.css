@@ -556,6 +556,26 @@ legend {
   }
 }
 
+.spip_document .oembed {
+  background: none;
+  padding: 0;
+  border: none;
+}
+
+.spip_doc_legende {
+  margin-top: var(--space-2xs);
+  display: flex;
+  flex-wrap: wrap;
+  -moz-column-gap: 1ch;
+       column-gap: 1ch;
+}
+.spip_doc_legende p {
+  font-size: var(--step--1);
+}
+.spip_doc_legende a {
+  text-decoration-thickness: 1px;
+}
+
 /*! PhotoSwipe main CSS by Dmytro Semenov | photoswipe.com */
 .pswp {
   --pswp-bg: #000;
@@ -1222,12 +1242,19 @@ html.no-js .filters_item.button-reset, .filters_item.button-reset.is-disabled {
   margin-top: var(--layout-grid-gutter-row);
 }
 
-.album_figure a img {
+.album .album_figure a img {
   transition: transform 0.3s linear;
 }
-.album_figure a:hover img {
+.album .album_figure a:hover img {
   transform: scale(1.02);
   box-shadow: 0 0 5px hsl(0, 7%, 84%);
+}
+.album .spip_document.oembed_video .oembed {
+  margin-right: unset;
+}
+.album .spip_document.oembed_video .spip_doc_legende {
+  max-width: var(--video-maxwidth);
+  margin-left: auto;
 }
 
 .prose .prose_metadata, .prose .prose_text {
