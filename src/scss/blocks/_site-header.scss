@@ -16,7 +16,7 @@
 	display: flex;
 	justify-content: center;
 	font-size: 3.3rem;
-	font-weight: variables.$text-font-weight-medium;
+	font-weight: variables.$text-font-weight-bold;
 	text-decoration: none;
 
 	& svg {
@@ -35,6 +35,11 @@
 			}
 		}
 	}
+}
+
+.site-header_link {
+	display: flex;
+	text-decoration: none;
 }
 
 .site-header_nav {
@@ -59,7 +64,7 @@
 
 // Mediaqueries //
 @include tools.mq($from: medium) {
-	.site-header_name {
+	.site-header_link {
 		margin-left: -1rem;
 	}
 
@@ -79,6 +84,9 @@
 
 	.site-header_name {
 		justify-content: start;
+	}
+
+	.site-header_link {
 		margin-left: 0;
 	}
 
