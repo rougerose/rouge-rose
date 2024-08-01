@@ -1,5 +1,6 @@
 <BOUCLE_figure(DOCUMENTS){id_document=#ENV{id_document}}{tout}>
 	[(#SET{alt, [(#ALT|sinon{#DESCRIPTIF}|sinon{#TITRE}|attribut_html)][. (#CREDITS|attribut_html)]})]
+	[(#SET{legende,#INCLURE{fond=modeles/document_legende, env}|trim})]
 	<figure class="album_figure">
 		<a href="#URL_DOCUMENT" class="figure_link photoswipe" type="#MIME_TYPE" data-pswp-width="#LARGEUR" data-pswp-height="#HAUTEUR">
 			[<img src="(#ENV{src})"
@@ -10,6 +11,7 @@
 				alt="[(#ALT|sinon{#DESCRIPTIF}|sinon{#TITRE}|attribut_html)][ (#CREDITS|attribut_html)]"
 				loading="lazy">]
 		</a>
+		#GET{legende}
 	</figure>
 </BOUCLE_figure>
 #FILTRE{trim}
