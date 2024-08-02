@@ -9039,7 +9039,7 @@ class PhotoSwipe extends PhotoSwipeBase {
  * Le script est chargé pour tous les articles,
  * mais photoswipe n'est pas forcément nécessaire.
  */
-let $portfolio = document.querySelectorAll(".object_portfolio .album");
+let $portfolio = document.querySelectorAll(".object_portfolio");
 
 if ($portfolio) {
 	const lightbox = new PhotoSwipeLightbox({
