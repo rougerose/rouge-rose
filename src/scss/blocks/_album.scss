@@ -55,7 +55,7 @@
 			}
 		}
 
-		// 12 colonnes. La première image sur 6 colonnes, à partir de la 2e.
+		// 12 colonnes. La première image sur 6 colonnes, à partir de la 1ere.
 		// puis les 2 images suivantes sont à droite, sur 4 colonnes.
 		&[data-layout="twelve-6-4-4"] {
 			@include tools.mq($from: medium) {
@@ -77,7 +77,7 @@
 				}
 
 				& > .album_figure:nth-child(3n + 1) {
-					grid-column: 2 / span 6;
+					grid-column: 1 / span 6;
 					grid-row-end: span 3;
 				}
 			}

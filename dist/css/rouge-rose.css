@@ -1258,7 +1258,7 @@ html.no-js .filters_item.button-reset, .filters_item.button-reset.is-disabled {
     grid-column: 9/span 4;
   }
   .album.grid[data-layout=twelve-6-4-4] > .album_figure:nth-child(3n+1) {
-    grid-column: 2/span 6;
+    grid-column: 1/span 6;
     grid-row-end: span 3;
   }
 }
