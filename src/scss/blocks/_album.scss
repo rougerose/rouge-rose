@@ -54,6 +54,34 @@
 				}
 			}
 		}
+
+		// 12 colonnes. La première image sur 6 colonnes, à partir de la 2e.
+		// puis les 2 images suivantes sont à droite, sur 4 colonnes.
+		&[data-layout="twelve-6-4-4"] {
+			@include tools.mq($from: medium) {
+				grid-template-columns: repeat(12, 1fr);
+
+				& > .album_figure {
+					grid-column: auto / span 5;
+				}
+
+				& > *:nth-child(3n + 1) {
+					grid-column: 1 / span 7;
+					grid-row-end: span 3;
+				}
+			}
+
+			@include tools.mq($from: large) {
+				& > .album_figure {
+					grid-column: 9 / span 4;
+				}
+
+				& > .album_figure:nth-child(3n + 1) {
+					grid-column: 2 / span 6;
+					grid-row-end: span 3;
+				}
+			}
+		}
 	}
 
 	& + & {
