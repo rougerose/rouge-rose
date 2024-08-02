@@ -1,0 +1,68 @@
+[(#REM)
+<!--
+		Formats d'images
+		==================
+
+		VARIANTE 1 (images sur 4 col)
+		Device		Mediaquery		 x1		 x2
+		========================================
+		1440		min 1024		675		1350
+		1023		min 740			550		1100
+		739							685		1370
+		375							320		640
+
+		Formats retenus : 320, 685, 1100, 1370
+
+		VARIANTE 2 (image sur 6)
+		Device		Mediaquery		 x1		 x2
+		========================================
+		1440		min 1024		438		876
+		1023		min 740			383		766
+		739							685		1370
+		375							320		640
+
+		Formats retenus : 320, 685, 876, 1370
+	-->
+]
+<B_album_thirds_alt>
+	<div class="grid album" data-layout="twelve-4-4-6">
+		<BOUCLE_album_thirds_alt(DOCUMENTS)
+			{id_album=#ID_ALBUM}
+			{tout}
+			{par rang_lien, num titre, id_document}
+			{!par date}
+			{tout}
+		>
+			[(#SET{variante, 1})][
+			(#COMPTEUR_BOUCLE|alterner{1,2,1}|=={2}|oui) #SET{variante, 2}]
+			[(#GET{variante}|=={1}|oui)
+				[(#SET{fichier, #FICHIER|image_reduire{1370,0}|extraire_attribut{src}})][
+				(#SET{2, #GET{fichier}|image_reduire{876,0}|extraire_attribut{src}})][
+				(#SET{3, #GET{fichier}|image_reduire{685,0}|extraire_attribut{src}})][
+				(#SET{4, #GET{fichier}|image_reduire{320,0}|extraire_attribut{src}})][
+				(#SET{srcset, #GET{4}|concat{' 320w,'}
+					|concat{#GET{3}}|concat{' 685w,'}
+					|concat{#GET{2}}|concat{' 876w,'}
+					|concat{#GET{fichier}}|concat{' 1370w'}
+				})][
+				(#SET{src, #GET{4}})][
+				(#SET{sizes, #VAL{'(min-width:740px) 383px, (min-width:124px) 438px, 100vw'}})]
+			]
+			[(#GET{variante}|=={2}|oui)
+				[(#SET{fichier, #FICHIER|image_reduire{1370,0}|extraire_attribut{src}})][
+				(#SET{2, #GET{fichier}|image_reduire{1100,0}|extraire_attribut{src}})][
+				(#SET{3, #GET{fichier}|image_reduire{685,0}|extraire_attribut{src}})][
+				(#SET{4, #GET{fichier}|image_reduire{320,0}|extraire_attribut{src}})][
+				(#SET{srcset, #GET{4}|concat{' 320w,'}
+					|concat{#GET{3}}|concat{' 685w,'}
+					|concat{#GET{2}}|concat{' 1100w,'}
+					|concat{#GET{fichier}}|concat{' 1370w'}
+				})][
+				(#SET{src, #GET{4}})][
+				(#SET{sizes, #VAL{'(min-width:740px) 550px, (min-width:124px) 675px, 100vw'}})]
+			]
+			<INCLURE{fond=inclure/contenu/figure, id_document, src=#GET{src}, srcset=#GET{srcset}, sizes=#GET{sizes}}/>
+		</BOUCLE_album_thirds_alt>
+	</div>
+</B_album_thirds_alt>
+#FILTRE{trim}

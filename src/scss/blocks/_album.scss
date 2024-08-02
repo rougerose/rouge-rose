@@ -82,6 +82,34 @@
 				}
 			}
 		}
+
+		// 12 colonnes. 2 premières images sont empilées sur 4 colonnes,
+		// puis la 3e sur 6 colonnes (restent 2 colonnes de marge à droite).
+		&[data-layout="twelve-4-4-6"] {
+			@include tools.mq($from: medium) {
+				grid-template-columns: repeat(12, 1fr);
+
+				& > .album_figure {
+					grid-column: 1 / span 5;
+				}
+
+				& > *:nth-child(3n + 2) {
+					grid-column: 6 / span 7;
+					grid-row-end: span 3;
+				}
+			}
+
+			@include tools.mq($from: large) {
+				& > .album_figure {
+					grid-column: 1 / span 4;
+				}
+
+				& > .album_figure:nth-child(3n + 2) {
+					grid-column: 5 / span 6;
+					grid-row-end: span 3;
+				}
+			}
+		}
 	}
 
 	& + & {

@@ -1,0 +1,5 @@
+<composition>
+    <nom>Album : 3 images sur 2 colonnes (4-4-6)</nom>
+    <description>Les deux premières images sont sur 4 colonnes, les unes au-dessus des autres. Puis la troisième est sur 6 colonnes (reste 2 colonnes de marge à droite).</description>
+    <icon>img/composition-album-deux-colonnes.svg</icon>
+</composition>

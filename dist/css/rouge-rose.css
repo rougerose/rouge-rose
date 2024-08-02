@@ -1262,6 +1262,27 @@ html.no-js .filters_item.button-reset, .filters_item.button-reset.is-disabled {
     grid-row-end: span 3;
   }
 }
+@media screen and (min-width: 46.25em) {
+  .album.grid[data-layout=twelve-4-4-6] {
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .album.grid[data-layout=twelve-4-4-6] > .album_figure {
+    grid-column: 1/span 5;
+  }
+  .album.grid[data-layout=twelve-4-4-6] > *:nth-child(3n+2) {
+    grid-column: 6/span 7;
+    grid-row-end: span 3;
+  }
+}
+@media screen and (min-width: 64em) {
+  .album.grid[data-layout=twelve-4-4-6] > .album_figure {
+    grid-column: 1/span 4;
+  }
+  .album.grid[data-layout=twelve-4-4-6] > .album_figure:nth-child(3n+2) {
+    grid-column: 5/span 6;
+    grid-row-end: span 3;
+  }
+}
 .album + .album {
   margin-top: var(--layout-grid-gutter-row);
 }
