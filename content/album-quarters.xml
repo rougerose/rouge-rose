@@ -1,0 +1,5 @@
+<composition>
+    <nom>Album : images par quart</nom>
+    <description>Album d'images présentées sur 4 colonnes égales</description>
+    <icon>img/composition-album-deux-colonnes.svg</icon>
+</composition>

@@ -1225,6 +1225,16 @@ html.no-js .filters_item.button-reset, .filters_item.button-reset.is-disabled {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+@media screen and (min-width: 46.25em) {
+  .album.grid[data-layout=quaters] {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 64em) {
+  .album.grid[data-layout=quaters] {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 .album.grid[data-layout="50-50"] {
   --layout-grit-gutter-row: var(--space-xl);
 }

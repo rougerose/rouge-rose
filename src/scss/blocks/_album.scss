@@ -34,6 +34,17 @@
 			}
 		}
 
+		// Images par 4
+		&[data-layout="quaters"] {
+			@include tools.mq($from: medium) {
+				grid-template-columns: repeat(2, 1fr);
+			}
+
+			@include tools.mq($from: large) {
+				grid-template-columns: repeat(4, 1fr);
+			}
+		}
+
 		// 50-50 : 2 colonnes égales
 		&[data-layout="50-50"] {
 			--layout-grit-gutter-row: var(--space-xl);
