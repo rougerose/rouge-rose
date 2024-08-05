@@ -2,8 +2,7 @@
 
 @font-face {
 	font-family: "NewPanamSkyline";
-	src: local("NewPanam Skyline"),
-		url("../webfonts/NewPanamSkyline-Regular-WebS.woff2") format("woff2"),
+	src: url("../webfonts/NewPanamSkyline-Regular-WebS.woff2") format("woff2"),
 		url("../webfonts/NewPanamSkyline-Regular-WebS.woff") format("woff");
 	font-style: normal;
 	font-weight: variables.$text-font-weight-regular;
@@ -12,8 +11,7 @@
 
 @font-face {
 	font-family: "NewPanamSkyline";
-	src: local("NewPanam Skyline"),
-		url("../webfonts/NewPanamSkyline-RegularItalic-WebS.woff2")
+	src: url("../webfonts/NewPanamSkyline-RegularItalic-WebS.woff2")
 			format("woff2"),
 		url("../webfonts/NewPanamSkyline-RegularItalic-WebS.woff")
 			format("woff");
@@ -24,8 +22,7 @@
 
 @font-face {
 	font-family: "NewPanamSkyline";
-	src: local("NewPanam Skyline"),
-		url("../webfonts/NewPanamSkyline-Medium-WebS.woff2") format("woff2"),
+	src: url("../webfonts/NewPanamSkyline-Medium-WebS.woff2") format("woff2"),
 		url("../webfonts/NewPanamSkyline-Medium-WebS.woff") format("woff");
 	font-style: normal;
 	font-weight: variables.$text-font-weight-medium;
@@ -34,8 +31,7 @@
 
 @font-face {
 	font-family: "NewPanamSkyline";
-	src: local("NewPanam Skyline"),
-		url("../webfonts/NewPanamSkyline-MediumItalic-WebS.woff2")
+	src: url("../webfonts/NewPanamSkyline-MediumItalic-WebS.woff2")
 			format("woff2"),
 		url("../webfonts/NewPanamSkyline-MediumItalic-WebS.woff") format("woff");
 	font-style: italic;
@@ -45,8 +41,7 @@
 
 @font-face {
 	font-family: "NewPanamSkyline";
-	src: local("NewPanam Skyline"),
-		url("../webfonts/NewPanamSkyline-Bold-WebS.woff2") format("woff2"),
+	src: url("../webfonts/NewPanamSkyline-Bold-WebS.woff2") format("woff2"),
 		url("../webfonts/NewPanamSkyline-Bold-WebS.woff") format("woff");
 	font-style: normal;
 	font-weight: variables.$text-font-weight-bold;
@@ -55,8 +50,8 @@
 
 @font-face {
 	font-family: "NewPanamSkyline";
-	src: local("NewPanam Skyline"),
-		url("../webfonts/NewPanamSkyline-BoldItalic-WebS.woff2") format("woff2"),
+	src: url("../webfonts/NewPanamSkyline-BoldItalic-WebS.woff2")
+			format("woff2"),
 		url("../webfonts/NewPanamSkyline-BoldItalic-WebS.woff") format("woff");
 	font-style: italic;
 	font-weight: variables.$text-font-weight-bold;
@@ -65,8 +60,7 @@
 
 @font-face {
 	font-family: "NewPanamSkyline";
-	src: local("NewPanam Skyline"),
-		url("../webfonts/NewPanamSkyline-Black-WebS.woff2") format("woff2"),
+	src: url("../webfonts/NewPanamSkyline-Black-WebS.woff2") format("woff2"),
 		url("../webfonts/NewPanamSkyline-Black-WebS.woff") format("woff");
 	font-style: normal;
 	font-weight: variables.$text-font-weight-black;
@@ -75,8 +69,7 @@
 
 @font-face {
 	font-family: "NewPanamSkyline";
-	src: local("NewPanam Skyline"),
-		url("../webfonts/NewPanamSkyline-BlackItalic-WebS.woff2")
+	src: url("../webfonts/NewPanamSkyline-BlackItalic-WebS.woff2")
 			format("woff2"),
 		url("../webfonts/NewPanamSkyline-BlackItalic-WebS.woff") format("woff");
 	font-style: italic;
