@@ -4,7 +4,7 @@
 		[(#SET{mots, #GET{mots}|push{#ID_MOT}})]
 	</BOUCLE_mots>
 	<B_articles_lies>
-		<div class="related gap-top-5xl">
+		<div class="related gap-top-5xl pad-top-4xl">
 			<h2><:projects_related_label:></h2>
 			<ul class="grid gap-top-xl" role="list" data-layout="thirds">
 				<BOUCLE_articles_lies(ARTICLES){mots 100% #GET{mots} !tri}{exclus}{0,3}>
