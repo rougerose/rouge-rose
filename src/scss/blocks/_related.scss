@@ -3,8 +3,21 @@
 // ========================================
 
 @use "../abstract" as variables;
+@use "../tools" as tools;
 
 .related {
+	@include tools.mq($from: medium) {
+		& .grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	@include tools.mq($from: large) {
+		& .grid {
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+
 	& > h2 {
 		font-size: var(--step-2);
 		&::before {

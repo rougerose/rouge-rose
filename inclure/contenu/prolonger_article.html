@@ -1,13 +1,13 @@
 <BOUCLE_prolonger_article(ARTICLES){id_article}>
 	#SET{mots, #ARRAY}
-	<BOUCLE_mots(MOTS){id_article}{id_groupe=5}>
+	<BOUCLE_mots(MOTS){id_article}{id_groupe IN 5,6}>
 		[(#SET{mots, #GET{mots}|push{#ID_MOT}})]
 	</BOUCLE_mots>
 	<B_articles_lies>
 		<div class="related gap-top-5xl pad-top-4xl">
 			<h2><:projects_related_label:></h2>
 			<ul class="grid gap-top-xl" role="list" data-layout="thirds">
-				<BOUCLE_articles_lies(ARTICLES){mots 100% #GET{mots} !tri}{exclus}{0,3}>
+				<BOUCLE_articles_lies(ARTICLES){mots 50% #GET{mots} !tri}{exclus}{0,4}>
 					<li>
 						<INCLURE{fond=inclure/resumes/article, id_article} />
 					</li>
