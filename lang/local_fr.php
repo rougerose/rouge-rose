@@ -31,7 +31,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = [
 	'previous' => 'précédent',
 
 	// R
-	'projects_related_label' => 'Poursuivre avec d’autres projets',
+	'projects_related_label' => 'Poursuivre avec des projets similaires',
 
 	// S
 	'send_message' => 'envoyer un message',
