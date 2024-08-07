@@ -29,5 +29,5 @@ function build(src, dist, name, format) {
 
 export default [
 	build("index.js", "rouge_rose.js", "", "iife"),
-	build("photoswipe.js", "rouge_rose_photoswipe.js", "", "es"),
+	build("photoswipe.js", "rouge_rose_photoswipe.js", "", "iife"),
 ];
