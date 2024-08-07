@@ -381,6 +381,10 @@ legend {
   align-items: var(--cluster-vertical-alignment, center);
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .gap-top-xl {
   margin-top: var(--space-xl);
 }
@@ -1007,10 +1011,10 @@ button.button {
   color: hsl(0, 0%, 0%);
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   padding: 0.3em 0.3em;
   min-width: 10ch;
   min-height: 44px;
-  text-align: center;
   transition: color 0.3s ease, box-shadow 0.3s ease;
 }
 .button.with-icon-left .icon {
@@ -1039,6 +1043,10 @@ button.button {
 .button[data-type=pagination]:focus-visible, .button[data-type=pagination]:hover, .button[data-type=pagination]:active {
   box-shadow: none;
   color: hsl(317, 70%, 50%);
+}
+.button[data-type=projects-all] {
+  padding-left: var(--space-l-xl);
+  padding-right: var(--space-l-xl);
 }
 .button:focus-visible, .button:hover {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);

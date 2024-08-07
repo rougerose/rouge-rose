@@ -27,11 +27,11 @@ button.button {
 	color: variables.$color-theme-button-default-label;
 	display: inline-flex;
 	align-items: center;
-	// justify-content: center;
+	justify-content: center;
 	padding: variables.$dimension-button-default-padding;
 	min-width: variables.$dimension-button-default-min-width;
 	min-height: variables.$dimension-button-default-min-height;
-	text-align: center;
+	// text-align: center;
 	transition: color 0.3s ease, box-shadow 0.3s ease;
 
 	&.with-icon-left {
@@ -76,6 +76,11 @@ button.button {
 			box-shadow: none;
 			color: variables.$color-theme-button-hover-label;
 		}
+	}
+
+	&[data-type="projects-all"] {
+		padding-left: var(--space-l-xl);
+		padding-right: var(--space-l-xl);
 	}
 
 	&:focus-visible,
