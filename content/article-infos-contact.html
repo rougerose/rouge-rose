@@ -20,7 +20,7 @@
 					<section class="prose_references-clients flow">
 						<BOUCLE_clients(DATA){source json, #GET{clients}}>
 							[(#COMPTEUR_BOUCLE|=={1}|oui)
-								<h2>Clients</h2>
+								<h2>Références</h2>
 							]
 							<div class="flow">
 								<BOUCLE_colonne_items(DATA){source table, #VALEUR}>
