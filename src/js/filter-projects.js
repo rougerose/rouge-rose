@@ -5,7 +5,7 @@ function filterProjects(event) {
 	let target = event.target;
 
 	// Clic est sur un checkbox ?
-	if (target.closest("input[type='checkbox'")) {
+	if (target.closest("input[type='checkbox']")) {
 		// Chercher l'élément <form>
 		let [form] = getParents(target, "form");
 		// Récupérer la liste des checkbox
