@@ -33,7 +33,7 @@
         "@rollup/plugin-node-resolve": "^15.2.3",
         "@rollup/plugin-terser": "^0.4.4",
         "autoprefixer": "^10.4.19",
-        "browser-sync": "^3.0.2",
+        "browser-sync": "^3.0.3",
         "chalk": "^5.3.0",
         "chokidar-cli": "^3.0.0",
         "dom-parents": "^1.1.4",
