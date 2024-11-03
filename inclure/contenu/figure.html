@@ -7,7 +7,7 @@
 				width="[(#ENV{src}|largeur)]"
 				height="[(#ENV{src}|hauteur)]"
 				[srcset="(#ENV{srcset}|trim)"]
-				[sizes="(#ENV{sizes}trim)"]
+				[sizes="(#ENV{sizes}|trim)"]
 				alt="[(#ALT|sinon{#DESCRIPTIF}|sinon{#TITRE}|attribut_html)][ (#CREDITS|attribut_html)]"
 				loading="lazy">]
 		</a>
