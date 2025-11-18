@@ -1,32 +1,66 @@
-import StyleDictionary from "style-dictionary-utils";
+import StyleDictionary from "style-dictionary";
+import {
+	logBrokenReferenceLevels,
+	logVerbosityLevels,
+	logWarningLevels,
+	transformTypes,
+} from "style-dictionary/enums";
+import { isFontFamily } from "style-dictionary-utils/filter/isFontFamily.js";
+import { processFontFamilySCSS } from "./style-dictionary-modules/transform.js";
 
-const config = {
+/**
+ * CUSTOM TRANSFORM fontFamily/scss
+ * Modifier une chaîne ou un tableau font-family en variable scss
+ */
+StyleDictionary.registerTransform({
+	type: `value`,
+	transitive: true,
+	name: `fontFamily/scss`,
+	filter: (token) => {
+		return isFontFamily(token);
+	},
+	transform: (token) => {
+		return processFontFamilySCSS(token.$value);
+	},
+});
+
+const sd = new StyleDictionary({
 	source: ["src/design-tokens/**/*.json"],
 	platforms: {
 		scss: {
-			buildPath: "src/",
+			buildPath: "src/scss/",
 			transforms: [
 				"attribute/cti",
-				"name/cti/kebab",
+				"name/kebab",
 				"time/seconds",
-				"content/icon",
+				"html/icon",
 				"size/rem",
+				"color/css",
 				"color/hsl",
-				"fontWeight/number",
-				// utiliser fontFamily/css. Permet d'entourer de guillemets simples
-				// les noms de fontes avec espace.
-				"fontFamily/css",
+				"cubicBezier/css",
+				"strokeStyle/css/shorthand",
+				"border/css/shorthand",
+				"typography/css/shorthand",
+				"transition/css/shorthand",
+				"shadow/css/shorthand",
+				"fontFamily/scss",
 			],
 			files: [
 				{
-					destination: "scss/abstract/_variables.scss",
+					destination: "abstract/_variables.scss",
 					format: "scss/variables",
 					options: { outputReferences: true },
 				},
 			],
 		},
 	},
-};
+	log: {
+		warnings: logWarningLevels.warn, // 'warn' | 'error' | 'disabled'
+		verbosity: logVerbosityLevels.verbose, // 'default' | 'silent' | 'verbose'
+		errors: {
+			brokenReferences: logBrokenReferenceLevels.console, // 'throw' | 'console'
+		},
+	},
+});
 
-const sd = StyleDictionary.extend(config);
 sd.buildAllPlatforms();

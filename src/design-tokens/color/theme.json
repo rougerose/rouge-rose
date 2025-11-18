@@ -1,0 +1,134 @@
+{
+    "color": {
+        "theme": {
+            "ink": {
+                "$value": "{color.base.black}",
+                "$type": "color"
+            },
+            "paper": {
+                "$value": "{color.base.white}",
+                "$type": "color"
+            },
+            "primary": {
+                "red": {
+                    "$value": "{color.base.red}",
+                    "$type": "color"
+                },
+                "pink": {
+                    "$value": "{color.base.magenta}",
+                    "$type": "color"
+                }
+            },
+            "text": {
+                "light": {
+                    "$value": "{color.base.gray-warm.650}",
+                    "$type": "color"
+                }
+            },
+            "button": {
+                "default": {
+                    "bg": {
+                        "$value": "{color.theme.paper}",
+                        "$type": "color"
+                    },
+                    "border": {
+                        "$value": "{color.theme.ink}",
+                        "$type": "color"
+                    },
+                    "label": {
+                        "$value": "{color.theme.ink}",
+                        "$type": "color"
+                    }
+                },
+                "hover": {
+                    "border": {
+                        "$value": "{color.theme.primary.pink}",
+                        "$type": "color"
+                    },
+                    "label": {
+                        "$value": "{color.theme.primary.pink}",
+                        "$type": "color"
+                    }
+                },
+                "pagination": {
+                    "bg": {
+                        "$value": "{color.theme.primary.pink}",
+                        "$type": "color"
+                    },
+                    "label": {
+                        "$value": "{color.theme.primary.pink}",
+                        "$type": "color"
+                    },
+                    "hoverBg": {
+                        "$value": "{color.theme.primary.pink}",
+                        "$type": "color"
+                    },
+                    "hoverLabel": {
+                        "$value": "{color.theme.ink}",
+                        "$type": "color"
+                    }
+                },
+                "paginationLink": {
+                    "hoverBorder": {
+                        "$value": "{color.theme.primary.pink}",
+                        "$type": "color"
+                    },
+                    "hoverLabel": {
+                        "$value": "{color.theme.ink}",
+                        "$type": "color"
+                    },
+                    "activeBg": {
+                        "$value": "{color.theme.ink}",
+                        "$type": "color"
+                    },
+                    "activeLabel": {
+                        "$value": "{color.theme.paper}",
+                        "$type": "color"
+                    }
+                },
+                "disabled": {
+                    "bg": {
+                        "$value": "transparent",
+                        "$type": "color"
+                    },
+                    "border": {
+                        "$value": "{color.base.gray-warm.150}",
+                        "$type": "color"
+                    },
+                    "label": {
+                        "$value": "{color.base.gray-warm.600}",
+                        "$type": "color"
+                    }
+                }
+            },
+            "card": {
+                "shadow": {
+                    "$value": "{color.base.gray-warm.200}",
+                    "$type": "color"
+                },
+                "border": {
+                    "$value": "{color.base.gray-warm.100}",
+                    "$type": "color"
+                }
+            },
+            "admin": {
+                "bg": {
+                    "$value": "{color.base.gray-warm.250}",
+                    "$type": "color"
+                },
+                "bg-hover": {
+                    "$value": "{color.base.gray-warm.700}",
+                    "$type": "color"
+                },
+                "hover": {
+                    "$value": "{color.base.gray-warm.50}",
+                    "$type": "color"
+                },
+                "shadow": {
+                    "$value": "{color.base.gray-warm.900}",
+                    "$type": "color"
+                }
+            }
+        }
+    }
+}
