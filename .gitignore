@@ -3,13 +3,8 @@
 .DS_Store
 
 # éléments à ignorer
-/projets
-googlehostedservice.html
-
-.sass-cache
+dist/css/rouge-rose.tmp.css
 node_modules/
-bower_components/
-
+vendor/
 
 # sauf
-

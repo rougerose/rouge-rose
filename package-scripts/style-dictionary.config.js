@@ -1,50 +1,19 @@
-import StyleDictionary from "style-dictionary";
+import { StyleDictionary } from "style-dictionary-utils";
 import {
 	logBrokenReferenceLevels,
 	logVerbosityLevels,
 	logWarningLevels,
-	transformTypes,
+	transformGroups,
 } from "style-dictionary/enums";
-import { isFontFamily } from "style-dictionary-utils/filter/isFontFamily.js";
-import { processFontFamilySCSS } from "./style-dictionary-modules/transform.js";
 
-/**
- * CUSTOM TRANSFORM fontFamily/scss
- * Modifier une chaîne ou un tableau font-family en variable scss
- */
-StyleDictionary.registerTransform({
-	type: `value`,
-	transitive: true,
-	name: `fontFamily/scss`,
-	filter: (token) => {
-		return isFontFamily(token);
-	},
-	transform: (token) => {
-		return processFontFamilySCSS(token.$value);
-	},
-});
+const myStyleDictionary = new StyleDictionary();
 
-const sd = new StyleDictionary({
+const extendedSD = await myStyleDictionary.extend({
 	source: ["src/design-tokens/**/*.json"],
 	platforms: {
 		scss: {
 			buildPath: "src/scss/",
-			transforms: [
-				"attribute/cti",
-				"name/kebab",
-				"time/seconds",
-				"html/icon",
-				"size/rem",
-				"color/css",
-				"color/hsl",
-				"cubicBezier/css",
-				"strokeStyle/css/shorthand",
-				"border/css/shorthand",
-				"typography/css/shorthand",
-				"transition/css/shorthand",
-				"shadow/css/shorthand",
-				"fontFamily/scss",
-			],
+			transformGroup: "scss",
 			files: [
 				{
 					destination: "abstract/_variables.scss",
@@ -63,4 +32,4 @@ const sd = new StyleDictionary({
 	},
 });
 
-sd.buildAllPlatforms();
+extendedSD.buildAllPlatforms();
