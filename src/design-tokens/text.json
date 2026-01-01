@@ -3,23 +3,11 @@
         "font": {
             "sans": {
                 "$type": "fontFamily",
-                "$value": [
-                    "NewPanamSkyline",
-                    "system-ui",
-                    "sans-serif",
-                    "Apple Color Emoji",
-                    "Segoe UI Emoji",
-                    "Segoe UI Symbol"
-                ]
+                "$value": ["NewPanamSkyline", "sans-serif"]
             },
             "monospace": {
                 "$type": "fontFamily",
-                "$value": [
-                    "monospace",
-                    "Apple Color Emoji",
-                    "Segoe UI Emoji",
-                    "Segoe UI Symbol"
-                ]
+                "$value": "monospace"
             }
         },
         "lineHeight": {
@@ -46,19 +34,19 @@
         },
         "fontWeight": {
             "regular": {
-                "$value": "regular",
+                "$value": "400",
                 "$type": "fontWeight"
             },
             "medium": {
-                "$value": "medium",
+                "$value": "500",
                 "$type": "fontWeight"
             },
             "bold": {
-                "$value": "bold",
+                "$value": "600",
                 "$type": "fontWeight"
             },
             "black": {
-                "$value": "black",
+                "$value": "800",
                 "$type": "fontWeight"
             }
         }

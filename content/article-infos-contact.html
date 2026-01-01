@@ -43,24 +43,18 @@
 				<section>
 					[(#FORMULAIRE_ECRIRE_AUTEUR)]
 				</section>
-				<section class="flow">
-					<BOUCLE_auteur(AUTEURS){id_article}{tout}>
-						<h2>Et aussi</h2>
-						<BOUCLE_numero(NUMEROS){id_auteur}>
-							<p>#NUMERO</p>
-						</BOUCLE_numero>
-						<BOUCLE_adresse(ADRESSES){id_auteur}>
-							<p><span>#VOIE</span> <span>#CODE_POSTAL</span> <span>#VILLE</span></p>
-						</BOUCLE_adresse>
-					</BOUCLE_auteur>
-				</section>
+				<!-- <section class="flow">
+
+				</section> -->
 			</div>
+
 
 			<div class="prose_credits">
 				<section class="flow">
-					<h2>Crédits</h2>
-					<p>Le design de ce site, les textes et les photos (sauf mentions contraires) sont de Christophe Le Drean. Tous droits réservés.</p>
-					<p>Le site est réalisé avec <a href="https://spip.net">Spip</a> et hébergé par <a href="https://nursit.com">Nursit</a>.</p>
+					<BOUCLE_encart_credits(ENCARTS){id_article=2}{vu=non}{0,1}>
+						<h2>#TITRE</h2>
+						[(#TEXTE)]
+					</BOUCLE_encart_credits>
 				</section>
 			</div>
 		</div>
