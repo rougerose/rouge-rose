@@ -40,7 +40,7 @@
         "photoswipe": "^5.4.4",
         "prettier": "^3.7.4",
         "rimraf": "^6.1.2",
-        "rollup": "^4.54.0",
+        "rollup": "^4.59.0",
         "sass": "^1.97.1",
         "sass-mq": "^7.0.0",
         "style-dictionary": "^5.1.1",
